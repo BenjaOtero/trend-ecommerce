@@ -1,0 +1,1 @@
+http://blog.ulf-wendel.de/2011/using-mysql-stored-procedures-with-php-mysqli/

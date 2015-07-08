@@ -1,0 +1,3 @@
+https://karminnaweb.googlecode.com/svn/trunk/ karminnaweb --username oterobenjamin@gmail.com
+
+ password: Yx3Dc2Fn9Df7

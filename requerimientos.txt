@@ -1,0 +1,30 @@
+﻿
+
+
+
+
+
+-info cupones de descuento
+-hacer carrito
+-implementar DineroMail pago carrito
+-Informes DineroMail
+-mente cupones descuento
+
+
+
+
+
+
+
+
+
+-los contenidos deba adecuarse a los distintos dispositivos
+-posibilidad de guardar página del articulo en favoritos en cualquier dispositivo
+-SEO en todos los dispositivos
+-tener en cuenta todos los segmentos (edades, posiciones sociales, pesos)
+-El exceso de publicidad es una de las quejas más permanentes por todos los tipos de usuarios de medios.
+
+
+
+
+
