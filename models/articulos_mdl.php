@@ -1,0 +1,76 @@
+<?php
+require_once("../core/db_abstract_mdl.php");
+
+class ArticuloMDL extends DbAbstractMDL{
+
+    public function LoNuevo($id_local){
+        $conex= $this->conectar();
+        $sql="call Web_Lo_Nuevo($id_local);";
+        $registros=$this->consulta($sql,$conex);
+        $this->desconectar($conex);
+        $rows=$this->fetchAll($registros);
+        return $rows;
+    }
+
+    public function ArticulosByItem($id_local, $id_item){
+        $conex= $this->conectar();
+        $sql="call Web_Articulos_by_Item($id_local, $id_item);";
+        $registros=$this->consulta($sql,$conex);
+        $this->desconectar($conex);
+        $rows=$this->fetchAll($registros);
+        return $rows;
+    }
+    
+    public function Articulo($id_local, $id_articulo, &$ImagenART, &$ImagenBackART, &$talleART){
+        $mysqli = new mysqli("localhost", "root", "", "ncsoftwa_re");
+        $mysqli->multi_query("call Web_Articulo999($id_local, '$id_articulo');");
+        $result = $mysqli->store_result();
+        while ($row = $result->fetch_row()) {
+            $dataset1[]=$row;
+        }
+        $mysqli->next_result();
+        $result2 = $mysqli->store_result();
+        while ($row = $result2->fetch_row()) {
+            $ImagenART[]=$row;
+        }  
+        $mysqli->next_result();
+        $result3 = $mysqli->store_result();
+        while ($row = $result3->fetch_row()) {
+            $ImagenBackART[]=$row;
+        } 
+        $mysqli->next_result();
+        $result4 = $mysqli->store_result();
+        while ($row = $result4->fetch_row()) {
+            $talleART[]=$row;
+        }         
+        return $dataset1;
+    }   
+    
+    public function ArticuloMaximizar($id_local, $id_articulo, &$ImagenART, &$ImagenBackART, &$DescripcionWebART){
+        $mysqli = new mysqli("localhost", "root", "", "ncsoftwa_re");
+        $mysqli->multi_query("call Web_Articulo_Maximizar($id_local, '$id_articulo');");
+        $result1 = $mysqli->store_result();
+        while ($row = $result1->fetch_row()) {
+            $ImagenART[]=$row;
+        }  
+        $mysqli->next_result();
+        $result2 = $mysqli->store_result();
+        while ($row = $result2->fetch_row()) {
+            $ImagenBackART[]=$row;
+        } 
+        $mysqli->next_result();
+        $result3 = $mysqli->store_result();
+        while ($row = $result3->fetch_row()) {
+            $DescripcionWebART=$row;
+        } 
+       // return $dataset1;
+    }     
+        public function Articulo999($id_local, $id_articulo){
+        $conex= $this->conectar();
+        $sql="call Web_Articulo($id_local, '$id_articulo');";
+        $registros=$this->consulta($sql,$conex);
+        $this->desconectar($conex);
+        $rows=$this->fetchAll($registros);
+        return $rows;
+    }  
+}
