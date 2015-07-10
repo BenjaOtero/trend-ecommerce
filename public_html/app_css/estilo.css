@@ -92,7 +92,7 @@ body{
   padding-top: 1px;
   height: 40px;
   width: 970px;
-  color: #C0C0C0;
+  color: #999999;
 }
 #dvMenu li{
   display: inline;
@@ -103,9 +103,11 @@ body{
 }
 #dvMenu li:hover{
   cursor: pointer;
+  color: #ffffff;
 }
 .active{
   color: #ffffff;
+  font-weight: bold;
 }
 
 #content{
@@ -238,7 +240,7 @@ outline: 1px solid #6D006D;
 }
 #compra{
   float: left;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-left: 5px;
 }
 #compra h4{
@@ -314,19 +316,26 @@ outline: 1px solid #6D006D;
   float: left;
   margin-right: 4px;
 }
-#talles label{
+.activas{
   border: 1px solid #000000;
   display: block;
   margin: 2px;
   overflow: hidden;
   padding: 1px;
 }
-#talles label:hover{
-  outline: 2px solid #444444;
-  cursor: pointer;
+.inactivas{
+  border: 1px solid #999999;
+  display: block;
+  margin: 2px;
+  overflow: hidden;
+  padding: 1px;
 }
 .talle-inactivos{
     display: none;
+}
+.activas:hover{
+  outline: 2px solid #444444;
+  cursor: pointer;
 }
 .picker {
     display: block;
@@ -340,8 +349,14 @@ outline: 1px solid #6D006D;
     width: 30px;
 }
 .talle {
-    background-color: #FFFFFF;
-    color: #0637B3;
+    background-color: #666666;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.sin-talle {
+    background-color: #E1E1E1;
+    color: #FFFFFF;
     letter-spacing: -1px;
     text-align: center;
 }

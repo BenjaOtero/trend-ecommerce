@@ -18,12 +18,12 @@ $(document).ready(function(){
         $.loader({className:"blue-with-image-2",content:''});
         $("#dvMenu li").each(function (){$(this).removeClass('active');});
         $(this).addClass('active');
-        var local=$(this).attr('data-local');  //obtengo el id que guardamos en data-id
+    //    var local=$(this).attr('data-local');  //obtengo el id que guardamos en data-id
         //preparo los parametros
         params={};
         params.action='catalogo';
         params.actionCatalogo='loNuevo';
-        params.local=local;
+   //     params.local=local;
         $('#dvPrincipal').load("index.php",params,function(responseTxt,statusTxt,xhr){
             $(document).waitForImages(function() {
                $('.columnas').equalCols();
@@ -36,7 +36,7 @@ $(document).ready(function(){
     $('.catalogo').live('click',function(){
         $.loader({className:"blue-with-image-2",content:''});
         var idItem=$(this).attr('data-idItem');
-        var local=$(this).attr('data-local');
+      //  var local=$(this).attr('data-local');
         var titulo=$(this).attr('data-desc');
         params={};
         params.action='catalogo';
@@ -49,7 +49,7 @@ $(document).ready(function(){
             params.actionCatalogo='byItem';
         }
         params.idItem=idItem;
-        params.local=local;
+    //    params.local=local;
         params.titulo=titulo;
         $('#articulos').load("index.php",params,function(){
             $(document).waitForImages(function() {
@@ -85,9 +85,9 @@ $(document).ready(function(){
     });
     
     $('#ampliar').live('click',function(){
-        var local=$(this).attr('data-loc');
+      //  var local=$(this).attr('data-loc');
         var imagen=$(this).attr('data-imagen');
-        var params = '?action=maximizarArticulo&actionCatalogo=maximizarArticulo&imagen=' + imagen + '&local=' + local; 
+        var params = '?action=maximizarArticulo&actionCatalogo=maximizarArticulo&imagen=' + imagen; 
         var alto = $( window ).height();
         window.open ('index.php' + params,'','height=' + alto + 'px,width=790px,top=10,left=10,scrollbars=1');
         return false;
@@ -118,8 +118,8 @@ $(document).ready(function(){
     })
 
     $('.talle').live('click',function(){
-      $("#talles label").each(function (){$(this).removeClass();})
-      $(this).parent().addClass("selected"); ;
+     /* $("#talles label").each(function (){$(this).removeClass();})
+      $(this).parent().addClass("selected"); ;*/
     })
     
     $('#contacto').live('click',function(){
