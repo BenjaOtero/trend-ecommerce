@@ -64,9 +64,8 @@ echo                "</ul>
                 </div>
                 <div id='talles'>
                     <p>Talles:</p>";
-                    if(count($talleART)>0)
-                    { 
-                        $i = 0;
+
+
                         foreach($ImagenART as $imagen)  // hago un foreach por imagen color
                         {
                             if($foto===$imagen[0])
@@ -79,27 +78,36 @@ echo                "</ul>
                             }
                             foreach($talleART as $talle)  
                             {
-                                $articulo = $imagen[0].$talle[0];                                
-                                if (in_array($articulo, array_column($view_articulos->articulos, 0), true)) 
+                                if($talle[0] != null)
                                 {
-                                    echo "<li>
-                                            <label class='activas'>
-                                            <span class='picker talle' title='' style='width: 30px;' >".$talle[0]."</span>                                    
-                                            </label>
-                                          </li>";
+                                    $articulo = $imagen[0].$talle[0];                                
+                                    if (in_array($articulo, array_column($view_articulos->articulos, 0), true)) 
+                                    {
+                                        echo "<li>
+                                                <label class='activas'>
+                                                <span class='picker talle' title='' style='width: 30px;' >".$talle[0]."</span>                                    
+                                                </label>
+                                              </li>";
+                                    }
+                                    else
+                                    {
+                                        echo "<li>
+                                                <label class='inactivas'>
+                                                <span class='picker sin-talle' title='' style='width: 30px;' >".$talle[0]."</span>                                    
+                                                </label>
+                                              </li>";
+                                    }                                    
                                 }
                                 else
                                 {
-                                    echo "<li>
-                                            <label class='inactivas'>
-                                            <span class='picker sin-talle' title='' style='width: 30px;' >".$talle[0]."</span>                                    
-                                            </label>
-                                          </li>";
+                                        echo "<li>
+                                                <label>
+                                                <span title='' style='width: 30px;' >Art&iacuteculo talle &uacutenico.</span>                                    
+                                                </label>
+                                              </li>"; 
                                 }
                             }
-                            echo "</ul>";
-                            $i++;
-                        }                                                                         
+                            echo "</ul>";                                   
                     } 
 echo           "</div>
             </div>

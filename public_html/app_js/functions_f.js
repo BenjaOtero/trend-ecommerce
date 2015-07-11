@@ -94,7 +94,18 @@ $(document).ready(function(){
     });   
     
     $('.tumbhMax').live('click',function(){
-        var imagen= 'images/' + $(this).attr('data-imagen') + '_medium.jpg';
+        var imagen;
+    /*   var isFound = $(this).attr('data-imagen');
+        if(isFound.contains("front"))
+        {
+            imagen= 'images/' + $(this).attr('data-imagen') + '_medium.jpg';
+        }
+        else
+        {
+            imagen= 'images/' + $(this).attr('data-imagen') + '_medium.jpg';
+        }*/
+        
+        imagen= 'images/' + $(this).attr('data-imagen') + '_medium.jpg';
         $('#imgMax').attr('src',imagen);
     });      
 

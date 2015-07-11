@@ -27,8 +27,8 @@ h4{color: #777777; margin-left: 10px;}
             foreach($ImagenBackART as $imagen)
             {
                 echo "<li>
-                        <img class= 'tumbhMax' src='images/".$imagen[0]."_small.jpg' height='120' width='90' 
-                            data-imagen=".$imagen[0]." />
+                        <img class= 'tumbhMax' src='images/".$imagen[0]."_bck_medium.jpg' height='120' width='90' 
+                            data-imagen=".$imagen[0]."_bck />
                      </li>";
             }          
         ?>
