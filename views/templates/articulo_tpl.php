@@ -101,9 +101,9 @@ echo                "</ul>
                                 else
                                 {
                                         echo "<li>
-                                                <label>
-                                                <span title='' style='width: 30px;' >Art&iacuteculo talle &uacutenico.</span>                                    
-                                                </label>
+                                                <p>
+                                                    Art&iacuteculo talle &uacutenico.                                  
+                                                </p>
                                               </li>"; 
                                 }
                             }

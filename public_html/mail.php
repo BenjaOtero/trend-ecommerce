@@ -5,7 +5,7 @@
 	$string=htmlspecialchars($string);
     return $string;
   }
-$mailTo = "info@karminna.com.ar";
+$mailTo = "info@karminna.com";
 $mailNombre = cleanString($_POST['txtNombre']);
 $mailFrom = cleanString($_POST['txtMail']);
 $mailFromName = cleanString($_POST['txtNombre']);

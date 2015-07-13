@@ -1,5 +1,6 @@
 <div id="popupmail"></div>
 <div id="blockmail"></div>
+<div id="dvMap" class="left-column-3"></div>
 <div id="dvContacto" class="left-column-6">
     <h1>Servicio al cliente - Contactanos</h1>
     <form id="frmContacto" name="frmContacto" action="" method="post">
@@ -14,9 +15,6 @@
         <input id="enviar" type="button" value="Enviar"/>
         <p id="requerido">Requerido&nbsp;<font>*</font></p>
     </form>
-</div>
-<div id="dvMap" class="left-column-6">
-    <h1>Hotel Amérian - Termas de Río Hondo</h1>
 </div>
 <div class="clear"></div>
 <div class="left-column-12">

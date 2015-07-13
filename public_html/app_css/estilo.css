@@ -466,7 +466,6 @@ outline: 1px solid #6D006D;
 }
 
 #dvContacto {
-    width: 450px;
     color: #993998;
     padding-bottom: 10px;
     padding-left: 20px;
@@ -522,7 +521,6 @@ font{
 }
 
 #dvMap{
-  width: 450px;
   background: #fff;
   padding-bottom: 10px;
 }

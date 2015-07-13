@@ -57,7 +57,7 @@ $(document).ready(function(){
                $.loader('close');
             });
         });
-    })
+    });
 
     $('.articulo').live('click',function(){
         $.loader({className:"blue-with-image-2",content:''});
@@ -105,7 +105,7 @@ $(document).ready(function(){
             imagen= 'images/' + $(this).attr('data-imagen') + '_medium.jpg';
         }*/
         
-        imagen= 'images/' + $(this).attr('data-imagen') + '_medium.jpg';
+        imagen= 'images/' + $(this).attr('data-imagen') + '_large.jpg';
         $('#imgMax').attr('src',imagen);
     });      
 

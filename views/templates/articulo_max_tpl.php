@@ -36,7 +36,7 @@ h4{color: #777777; margin-left: 10px;}
 </div>
 <div class="left-column-8">
         <?php
-            echo "<img id='imgMax'  src='images/".$_SESSION['id_articulo']."_medium.jpg' height='800' width='600'/>";
+            echo "<img id='imgMax'  src='images/".$_SESSION['id_articulo']."_large.jpg' height='800' width='600'/>";
          ?>
 </div>
 
