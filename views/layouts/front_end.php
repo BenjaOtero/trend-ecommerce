@@ -7,16 +7,18 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="congresos, 'congresos argentina', congreso" />
   <meta name="description" content="Congresos en argentina" />
-  <link rel="shortcut icon" href="app_images/favicon.ico" />
-  <link rel="stylesheet" href="app_css/estilo.css" />
+  <link rel="shortcut icon" href="app_images/favicon.ico" />  
   <link rel="stylesheet" href="nivo-slider/themes/default/default.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="nivo-slider/nivo-slider.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="app_css/tabs.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="app_css/jquery.jqzoom.css" type="text/css">
+  <link rel="stylesheet" href="app_css/flexslider.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="app_css/estilo.css" />
   <script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="app_js/jquery.waitforimages.js"></script>
   <script type="text/javascript" src="app_js/functions_f.js"></script>
   <script type="text/javascript" src="app_js/jquery.loader.min.js"></script>
+  <script type="text/javascript" src="app_js/jquery.flexslider.js"></script>
   <script type="text/javascript" src="nivo-slider/jquery.nivo.slider.pack.js"></script>
   <script type="text/javascript" src="app_js/jquery.jqzoom-core.js"></script>
   <script type="text/javascript" src="app_js/jquery.fancybox.js" charset="utf-8"></script>
@@ -43,14 +45,12 @@ $(window).load(function() {
               </ul>
           </div>
           <div id="content">
-              <div id="dvPrincipal">
                   <?php include_once ($view->contentTemplate); // incluyo el template que corresponda ?>
-              </div>
           </div>
       </div>
       <div class="clear"></div>
       <div id="footer">
-        <div class="container" id="direccion">
+        <div id="direccion">
             <p >Av. Colón 3502 local 3, ciudad de Córdoba. TE 0351 487 0111</p>
             <p >Tucumán 481, ciudad de Jesús María. TE  03525 606 403</p>
         </div>

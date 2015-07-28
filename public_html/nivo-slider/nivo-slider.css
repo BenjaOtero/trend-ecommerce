@@ -19,6 +19,9 @@
 	top:0px;
 	left:0px;
 }
+#slider .nivoSlider img {
+	width: 100%;
+}
 /* If an image is wrapped in a link */
 .nivoSlider a.nivo-imageLink {
 	position:absolute;
