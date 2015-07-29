@@ -1,7 +1,6 @@
 <div id="popupmail"></div>
 <div id="blockmail"></div>
-<div id="dvMap" class="left-column-3"></div>
-<div id="dvContacto" class="left-column-6">
+<div id="dvContacto">
     <h1>Servicio al cliente - Contactanos</h1>
     <form id="frmContacto" name="frmContacto" action="" method="post">
         <p>Nombre<font>&nbsp;*</font></p>
@@ -16,7 +15,4 @@
         <p id="requerido">Requerido&nbsp;<font>*</font></p>
     </form>
 </div>
-<div class="clear"></div>
-<div class="left-column-12">
-    <hr style="border: 1px solid #000000;"/>
-</div>
+<hr style="border: 1px solid #000000;"/>

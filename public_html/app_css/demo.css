@@ -150,6 +150,236 @@ body{
 flexslider img{
     width:100%;   
 }
+/*---------------catalogo-------------------------*/
+#dvCatalogo {
+        width: 20%;
+        border: 1px #999999 solid;
+        margin: 10px;
+}
+
+#dvCatalogo ul{
+margin : 0px 10px 0px 0px;
+padding: 20px 0px 0px 10px;
+list-style: none;
+}
+
+#dvCatalogo li{
+color: #6D006D;
+font-size: 13px;
+padding-left: 14px;
+background: transparent url(../app_images/bullet.gif) 0 4px no-repeat;
+margin-bottom: 10px;
+margin-left:10px;
+}
+
+#dvCatalogo li:hover {
+    cursor: pointer;
+}
+
+#dvArticulos{
+    width: 80%;
+    border: 1px #999999 solid;
+    margin: 10px 10px 10px 0px;    
+}
+.calle-1{width: 185px; float: left; overflow: auto;}
+.calle-x{width: 185px; float: left; margin-left: 10px; overflow: auto;}
+#titulo{
+  padding: 15px 0 20px 20px;
+  text-align: center;
+  color: #444444;
+}
+
+.descripcion{
+  text-align: center;
+  font-family: Verdana,Arial,Sans-serif;
+  font-size: 10px;
+  color: #666666;
+}
+.precio{
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: Verdana,Arial,Sans-serif;
+  font-size: 10px;
+  color: #000000;
+}
+.verMas{
+  text-align: center;
+  font-family: Verdana,Arial,Sans-serif;
+  font-size: 10px;
+  color: #FF6600;
+}
+.verMas:hover{
+  cursor: pointer;
+}
+/*------------------articulo-----------------------*/
+.articulo{
+    cursor: pointer;
+}
+#foto{
+  float: left;
+  margin-left: 80px;
+  margin-top: 30px;
+}
+#lupita{
+ float:left;
+ left:50%;
+ list-style-type:none;
+ margin:0 auto;
+ position:relative;
+}
+#lupita >li{
+ background-image: url(../app_images/lupa.gif);
+ background-repeat: no-repeat;
+}
+#lupita li{
+ float:left;
+ position:relative;
+ padding: 0 20px;
+ right:50%;
+ font-size: x-small;
+ color: #666666;
+}
+#ampliar {
+ cursor: pointer;
+}
+#compra{
+  float: left;
+  margin-top: 50px;
+  margin-left: 5px;
+}
+#compra h4{
+  margin-left: 20px;
+  color: #777777;
+}
+#color-talle{
+  margin-top: 10px;
+  margin-left: 20px;
+  height: 200px;
+  width: 270px;
+  outline: 1px solid #888888;
+}
+/*------ colores -------*/
+#colors >p{
+  padding: 10px 0 5px 10px;
+  color: #666666;
+  font-size: 13px;
+}
+#colors ul{
+  padding: 0 10px 0px 10px;
+  list-style: none outside none;
+  overflow: auto;
+}
+#colors ul li{
+  float: left;
+  margin-right: 4px;
+}
+#colors label{
+  border: 1px solid #000000;
+  display: block;
+  margin: 3px;
+  overflow: hidden;
+  padding: 1px;
+  width: 25px;
+  height: 25px;
+}
+#colors label:hover{
+  outline: 2px solid #444444;
+  cursor: pointer;
+}
+#colors .color {
+    display: block;
+    float: left;
+    height: 20px;
+    margin: 0;
+    overflow: hidden;
+    padding: 2.5px 0;
+    position: relative;
+    text-align: center;
+    width: 25px;
+}
+.selected-color{
+    outline: 2px solid #444444;
+}
+/*-----talles-------*/
+#talles div{
+  overflow: auto;
+  margin-top: 5px;
+  padding: 10px;;
+}
+#talles >p{
+  padding: 10px 0 5px 10px;
+  color: #666666;
+  font-size: 13px;
+}
+#talles ul{
+  padding: 0 10px 10px 10px;
+  list-style: none outside none;
+  overflow: auto;
+}
+#talles ul li{
+  float: left;
+  margin-right: 4px;
+}
+.activas{
+  border: 1px solid #000000;
+  display: block;
+  margin: 2px;
+  overflow: hidden;
+  padding: 1px;
+}
+.inactivas{
+  border: 1px solid #999999;
+  display: block;
+  margin: 2px;
+  overflow: hidden;
+  padding: 1px;
+}
+.talle-inactivos{
+    display: none;
+}
+.activas:hover{
+  outline: 2px solid #444444;
+  cursor: pointer;
+}
+.picker {
+    display: block;
+    float: left;
+    height: 20px;
+    margin: 0;
+    overflow: hidden;
+    padding: 2.5px 0;
+    position: relative;
+    text-align: center;
+    width: 30px;
+}
+.talle {
+    background-color: #666666;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.sin-talle {
+    background-color: #E1E1E1;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.selected .talle {
+    background-color: #0637B3;
+    color: #FFFFFF;
+}
+/*---------------contacto-------------------------*/
+#dvContacto{
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:flex;
+    -moz-flex-direction:row;
+    flex-direction:column;      
+    align-items: center;
+    justify-content: center;
+}
 #footer{
     display:-webkit-box;
     display:-moz-box;

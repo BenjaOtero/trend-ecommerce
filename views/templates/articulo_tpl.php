@@ -111,20 +111,4 @@ echo                "</ul>
                     } 
 echo           "</div>
             </div>
-        </div>
-        
-        <div class='clear'></div>
-        <div id='descuentos' class=''>
-        <div>
-            <p>
-                <img src='app_images/descuento_dinero.jpg' alt='' />
-                <img id='cupon' class='articulo' src='app_images/descuento_cupon.jpg' alt='' />
-            </p>
-        </div>
-        </div>
-        <br />
-        <div id='dineroMail' class='left-column-10 pull'>
-            <p>
-                <img class='articulo' src='app_images/dinero_mail.jpg' alt='' />
-            </p>
         </div>";

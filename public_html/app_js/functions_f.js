@@ -8,8 +8,9 @@ $(document).ready(function(){
         $(this).addClass('active');
         params={};
         params.action='refreshIndex';
-        $('#dvPrincipal').load("index.php", params, function(){
-            $('#slider').nivoSlider();
+        $('#dvContenido').load("index.php", params, function(){
+         //   $('#slider').nivoSlider();
+            $('.flexslider').flexslider();
             $.loader('close');
         });
     });
@@ -24,7 +25,7 @@ $(document).ready(function(){
         params.action='catalogo';
         params.actionCatalogo='loNuevo';
    //     params.local=local;
-        $('#dvPrincipal').load("index.php",params,function(responseTxt,statusTxt,xhr){
+        $('#dvContenido').load("index.php",params,function(responseTxt,statusTxt,xhr){
             $(document).waitForImages(function() {
                $('.columnas').equalCols();
                $.loader('close');
@@ -51,7 +52,7 @@ $(document).ready(function(){
         params.idItem=idItem;
     //    params.local=local;
         params.titulo=titulo;
-        $('#articulos').load("index.php",params,function(){
+        $('#dvArticulos').load("index.php",params,function(){
             $(document).waitForImages(function() {
                $('.columnas').equalCols();
                $.loader('close');
@@ -68,14 +69,14 @@ $(document).ready(function(){
         params.actionCatalogo='articulo';
         params.local=local;
         params.articulo=articulo;
-        $('#articulos').load("index.php",params,function(){
+        $('#dvArticulos').load("index.php",params,function(){
           $('.jqzoom').jqzoom({
             zoomType: 'standard',
             lens:true,
             preloadImages: false,
             alwaysOn:false
           });
-          $('#articulos').removeAttr('style');
+          $('#dvArticulos').removeAttr('style');
         //  $('.columnas').equalCols();
             $(document).waitForImages(function() {
                $('.columnas').equalCols();
@@ -134,12 +135,12 @@ $(document).ready(function(){
     })
     
     $('#contacto').live('click',function(){
-      $.loader({className:"blue-with-image-2",content:''});
+   //   $.loader({className:"blue-with-image-2",content:''});
       $("#dvMenu li").each(function (){$(this).removeClass('active');})
       $(this).addClass('active');
         params={};
         params.action='refreshContacto';
-        $('#dvPrincipal').load("index.php",params,function(){
+        $('#dvContenido').load("index.php",params,function(){
             $.loader('close');
       })
     })    
