@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="es-ES"><!--<![endif]--><head>
+    <title>Instalar y configurar un servidor FTP en windows 7 fácil | NKSistemas</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jorge">
+    <link rel="pingback" href="http://nksistemas.com/xmlrpc.php">
+
+    <meta property="og:image" content="http://nksistemas.com/wp-content/uploads/2012/05/ftp1.png"><link rel="icon" type="image/png" href="https://nksistemas.com/wp-content/uploads/2014/08/favicon.gif"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/nksistemas.gif"><link rel="alternate" type="application/rss+xml" title="NKSistemas » Feed" href="http://nksistemas.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="NKSistemas » RSS de los comentarios" href="http://nksistemas.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="NKSistemas » Instalar y configurar un servidor FTP en windows 7 fácil RSS de los comentarios" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/feed/">
+		<script async="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/cbgapi.loaded_1"></script><script async="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/cbgapi.loaded_0"></script><script src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ca-pub-4037047254099301.js" type="text/javascript" async=""></script><script gapi_processed="true" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/plusone.js" async="" type="text/javascript"></script><script src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/widgets.js" id="twitter-wjs"></script><script src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/analytics.js" async=""></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/nksistemas.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/wp-emoji-release.js"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="rs-plugin-settings-css" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/settings.css" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+</style>
+<link rel="stylesheet" id="wp-polls-css" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/polls-css.css" type="text/css" media="all">
+<style id="wp-polls-inline-css" type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('http://nksistemas.com/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+
+</style>
+<link rel="stylesheet" id="jetpack_css-css" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/jquery.js"></script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/jquery-migrate.js"></script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/jquery_002.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://nksistemas.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://nksistemas.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.3.1">
+<link rel="canonical" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/">
+<link rel="shortlink" href="http://wp.me/p4weil-An">
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				// CUSTOM AJAX CONTENT LOADING FUNCTION
+				var ajaxRevslider = function(obj) {
+				
+					// obj.type : Post Type
+					// obj.id : ID of Content to Load
+					// obj.aspectratio : The Aspect Ratio of the Container / Media
+					// obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+					
+					var content = "";
+
+					data = {};
+					
+					data.action = 'revslider_ajax_call_front';
+					data.client_action = 'get_slider_html';
+					data.token = '93fd7cbd37';
+					data.type = obj.type;
+					data.id = obj.id;
+					data.aspectratio = obj.aspectratio;
+					
+					// SYNC AJAX REQUEST
+					jQuery.ajax({
+						type:"post",
+						url:"http://nksistemas.com/wp-admin/admin-ajax.php",
+						dataType: 'json',
+						data:data,
+						async:false,
+						success: function(ret, textStatus, XMLHttpRequest) {
+							if(ret.success == true)
+								content = ret.data;								
+						},
+						error: function(e) {
+							console.log(e);
+						}
+					});
+					
+					 // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+					 return content;						 
+				};
+				
+				// CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+				var ajaxRemoveRevslider = function(obj) {
+					return jQuery(obj.selector+" .rev_slider").revkill();
+				};
+
+				// EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+				var extendessential = setInterval(function() {
+					if (jQuery.fn.tpessential != undefined) {
+						clearInterval(extendessential);
+						if(typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+							jQuery.fn.tpessential.defaults.ajaxTypes.push({type:"revslider",func:ajaxRevslider,killfunc:ajaxRemoveRevslider,openAnimationSpeed:0.3});   
+							// type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+							// func: the Function Name which is Called once the Item with the Post Type has been clicked
+							// killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+							// openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+						}
+					}
+				},30);
+			});
+		</script>
+		<style type="text/css">img#wpstats{display:none}</style><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://nksistemas.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="http://nksistemas.com/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]-->
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Instalar y configurar un servidor FTP en windows 7 fácil">
+<meta property="og:url" content="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/">
+<meta property="og:description" content="Vamos a ver como se instala y configura un servidor FTP en Windows 7 de forma simple, también nos va a servir para colocar una web, la idea es probar y conocer un poco más las herramientas de windo…">
+<meta property="article:published_time" content="2012-05-14T11:13:49+00:00">
+<meta property="article:modified_time" content="2014-10-29T17:16:34+00:00">
+<meta property="og:site_name" content="NKSistemas">
+<meta property="og:image" content="http://nksistemas.com/wp-content/uploads/2012/05/ftp1.png">
+<meta property="og:image:width" content="539">
+<meta property="og:image:height" content="525">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:site" content="@nksistemas">
+<meta name="twitter:image" content="http://nksistemas.com/wp-content/uploads/2012/05/ftp1.png?w=640">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- JS generated by theme -->
+
+<script>
+    
+
+var td_blocks = []; //here we store all the items for the current page
+
+//td_block class - each ajax block uses a object of this class for requests
+function td_block() {
+    this.id = '';
+    this.block_type = 1; //block type id (1-234 etc)
+    this.atts = '';
+    this.td_cur_cat = '';
+    this.td_column_number = '';
+    this.td_current_page = 1; //
+    this.post_count = 0; //from wp
+    this.found_posts = 0; //from wp
+    this.max_num_pages = 0; //from wp
+    this.is_ajax_running = false;
+    this.header_color = '';
+    this.ajax_pagination_infinite_stop = ''; //show load more at page x
+}
+
+    
+var td_ad_background_click_link="";
+var td_ad_background_click_target="";
+var td_ajax_url="http://nksistemas.com/wp-admin/admin-ajax.php";
+var td_get_template_directory_uri="http://nksistemas.com/wp-content/themes/Newspaper";
+var tds_snap_menu="";
+var tds_header_style="";
+var tds_mobile_swipe="";
+var td_search_url="http://nksistemas.com/search/";
+var td_please_wait="Por favor espera...";
+var td_email_user_pass_incorrect="Usuario o password incorrecto";
+var td_email_user_incorrect="Correo o usuario incorrecto!";
+var td_email_incorrect="Dirección de correo incorrecta";
+var tds_more_articles_on_post_enable="show";
+var tds_more_articles_on_post_time_to_wait="";
+var tds_more_articles_on_post_pages_distance_from_top="0";
+var tds_theme_color_site_wide="#4db2ec";
+</script>
+
+<style>body {visibility:hidden;}</style><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49717685-1', 'auto');
+  ga('send', 'pageview');
+
+</script><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/services.css"><script src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/button.js" async="" charset="utf-8" type="text/javascript"></script></head>
+
+<body class="single single-post postid-2255 single-format-standard td-full-layout instalar-y-configurar-un-servidor-ftp-en-windows-7-facil single_template_1 wpb-js-composer js-comp-ver-4.7.4 vc_responsive">
+
+
+
+<div id="outer-wrap">
+    <div id="td-mobile-nav">
+    <!-- mobile menu close -->
+    <div class="td-mobile-close">
+        <a href="#">CERRAR</a>
+        <div class="td-nav-triangle"></div>
+    </div>
+
+    <div class="td-mobile-content">
+        <div class="menu-inicio-2-container"><ul id="menu-inicio-2" class=""><li id="menu-item-7847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-no-down-arrow menu-item-7847"><a href="http://nksistemas.com/"><span class="menu_icon td-sp td-sp-ico-categ"></span><span class="menu_hidden">CATEGORIAS</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-0" class="menu-item-0"><a href="http://nksistemas.com/category/infraestructura/backup-infraestructura/">Backup</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/infraestructura/redes/">Redes</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/infraestructura/redes/cisco/">Cisco</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/infraestructura/redes/configuraciones/">Configuraciones</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/infraestructura/redes/curso/">Curso</a></li>
+</ul>
+</li>
+<li id="menu-item-8617" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8617"><a href="http://nksistemas.com/category/linux/">Linux</a>
+<ul class="sub-menu">
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/linux/centos/">CentOS</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/linux/consola-linux/">Consola</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/linux/distribuciones/">Distribuciones</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/linux/internet-linux/">Internet</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/linux/noticias-linux/">Noticias</a></li>
+</ul>
+</li>
+<li id="menu-item-8618" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8618"><a href="http://nksistemas.com/category/cursos/">Cursos</a></li>
+<li id="menu-item-8619" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8619"><a href="http://nksistemas.com/category/celulares/android/">Android</a>
+<ul class="sub-menu">
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/celulares/android/aplicaciones/">Aplicaciones</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/celulares/android/equipos-android/">Equipos</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/celulares/android/equipos-android/galaxy-s4/">Galaxy S4</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/celulares/android/equipos-android/galaxy-s5/">Galaxy S5</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/celulares/android/equipos-android/motorola-razr-i-hd/">Motorola razr i HD</a></li>
+</ul>
+</li>
+<li id="menu-item-8620" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8620"><a href="http://nksistemas.com/category/seguridad-informatica/">Seguridad</a>
+<ul class="sub-menu">
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/seguridad-informatica/hacking/">Hacking</a></li>
+	<li class="menu-item-0"><a href="http://nksistemas.com/category/seguridad-informatica/informacion/">Informacion</a></li>
+</ul>
+</li>
+<li id="menu-item-8621" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8621"><a href="http://nksistemas.com/category/wordpress/">WordPress</a></li>
+</ul></div>    </div>
+</div>    <div id="inner-wrap" class="td-transition-content-and-menu">
+<div class="td-header-menu-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="span9">
+                                <div class="menu-top-container"><ul id="menu-principal" class="top-header-menu"><li id="menu-item-8624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-menu-item td-normal-menu menu-item-8624"><a href="http://nksistemas.com/acerca-de/">Conocenos</a></li>
+<li id="menu-item-8622" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-8622"><a href="http://nksistemas.com/web-amigas/">Webs Amigas</a></li>
+<li id="menu-item-12267" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-12267"><a href="http://nksistemas.com/soluciones-web/">Soluciones Web</a></li>
+<li id="menu-item-8623" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-8623"><a href="http://nksistemas.com/contacto/">Contacto</a></li>
+</ul></div>            </div>
+
+            <div class="span3">
+                            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- graphic logo and ad -->
+<div class="td-header-bg">
+    <div class="container td-logo-rec-wrap">
+        <div class="row">
+            <div class="span4 header-logo-wrap" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+                                        <a itemprop="url" href="http://nksistemas.com/"><img src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/nksistemas.gif" alt="" width="300"></a>
+                        <meta itemprop="name" content="NKSistemas">
+                                    </div>
+            <div class="span8 td-header-style-1">
+                
+ <!-- A generated by theme --> 
+
+<script async="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-header">
+<script type="text/javascript">
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1200 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 1019  && td_screen_width < 1200 ) {
+                        /* landscape tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width >= 768  && td_screen_width < 1019 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                </script><ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins></ins>
+</div>
+
+ <!-- end A --> 
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header menu -->
+
+<div class="td-menu-placeholder">
+
+    <div class="td-menu-background">
+        <div class="container td-menu-wrap">
+
+
+
+            <div class="row-fluid td-menu-header">
+
+                <div class="span11">
+                                            <div class="mobile-logo-wrap">
+                                    <a itemprop="url" href="http://nksistemas.com/"><img src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/nksistemas.gif" alt=""></a>
+        <meta itemprop="name" content="NKSistemas">
+                            </div>
+                    
+
+                    <div id="td-top-mobile-toggle">
+                        <ul class="sf-menu">
+                            <li>
+                                <a href="#">
+                                    <span class="menu_icon td-sp td-sp-ico-menu"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="td-top-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+                            <div class="menu-inicio-2-container"><ul id="menu-inicio-3" class="sf-menu sf-js-enabled"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-no-down-arrow td-menu-item td-mega-menu menu-item-7847"><a class="sf-with-ul" href="http://nksistemas.com/"><span class="menu_icon td-sp td-sp-ico-categ"></span><span class="menu_hidden">CATEGORIAS</span><span class="sf-sub-indicator"> »</span></a>
+<ul style="float: none; width: 10em; display: none;" class="sub-menu">
+	<li style="white-space: normal; float: left; width: 100%;" class="menu-item-0"><div class="td-mega-grid"><script>var block_td_uid_1_5625705a278b7 = new td_block();
+block_td_uid_1_5625705a278b7.id = "td_uid_1_5625705a278b7";
+block_td_uid_1_5625705a278b7.atts = '{"limit":4,"td_column_number":3,"ajax_pagination":"next_prev","category_id":"9","show_child_cat":"5"}';
+block_td_uid_1_5625705a278b7.td_cur_cat = "9";
+block_td_uid_1_5625705a278b7.td_column_number = "1";
+block_td_uid_1_5625705a278b7.block_type = "td_mega_menu";
+block_td_uid_1_5625705a278b7.post_count = "4";
+block_td_uid_1_5625705a278b7.found_posts = "264";
+block_td_uid_1_5625705a278b7.max_num_pages = "66";
+block_td_uid_1_5625705a278b7.header_color = "";
+block_td_uid_1_5625705a278b7.ajax_pagination_infinite_stop = "";
+td_blocks.push(block_td_uid_1_5625705a278b7);
+</script><div class="td_block_wrap td_block_mega_menu"><div class="td_mega_menu_sub_cats"><div class="block-mega-child-cats"><div><a class="cur-sub-cat ajax-sub-cat-mega sub-cat-td_uid_1_5625705a278b7" id="sub-cat-td_uid_1_5625705a278b7-9" data-cat_id="9" data-td_block_id="td_uid_1_5625705a278b7" href="http://nksistemas.com/category/infraestructura/">Todo</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_1_5625705a278b7" id="sub-cat-td_uid_1_5625705a278b7-47" data-cat_id="47" data-td_block_id="td_uid_1_5625705a278b7" href="http://nksistemas.com/category/infraestructura/backup-infraestructura/">Backup</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_1_5625705a278b7" id="sub-cat-td_uid_1_5625705a278b7-19" data-cat_id="19" data-td_block_id="td_uid_1_5625705a278b7" href="http://nksistemas.com/category/infraestructura/redes/">Redes</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_1_5625705a278b7" id="sub-cat-td_uid_1_5625705a278b7-2639" data-cat_id="2639" data-td_block_id="td_uid_1_5625705a278b7" href="http://nksistemas.com/category/infraestructura/redes/cisco/">Cisco</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_1_5625705a278b7" id="sub-cat-td_uid_1_5625705a278b7-2711" data-cat_id="2711" data-td_block_id="td_uid_1_5625705a278b7" href="http://nksistemas.com/category/infraestructura/redes/configuraciones/">Configuraciones</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_1_5625705a278b7" id="sub-cat-td_uid_1_5625705a278b7-50" data-cat_id="50" data-td_block_id="td_uid_1_5625705a278b7" href="http://nksistemas.com/category/infraestructura/redes/curso/">Curso</a></div></div></div><div id="td_uid_1_5625705a278b7" class="td_block_inner animated fadeInDown">
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/solucion-a-problemas-de-sincronizacion-de-hora-en-un-dominio/" rel="bookmark" title="Solución a problemas de sincronización de hora en un dominio"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/hora3-198x143.jpg" alt="" title="Solución a problemas de sincronización de hora en un dominio" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/solucion-a-problemas-de-sincronizacion-de-hora-en-un-dominio/" rel="bookmark" title="Solución a problemas de sincronización de hora en un dominio">Solución a problemas de sincronización de hora en un dominio</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/instalar-windows-en-un-ssd-y-no-morir-en-el-intento/" rel="bookmark" title="Instalar Windows en un SSD y no morir en el intento"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/evo850-198x143.jpg" alt="" title="Instalar Windows en un SSD y no morir en el intento" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/instalar-windows-en-un-ssd-y-no-morir-en-el-intento/" rel="bookmark" title="Instalar Windows en un SSD y no morir en el intento">Instalar Windows en un SSD y no morir en el intento</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/ocultar-unidades-en-equipo-por-gpo/" rel="bookmark" title="Ocultar unidades en Equipo por GPO"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/unidadred-198x143.jpg" alt="" title="Ocultar unidades en Equipo por GPO" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/ocultar-unidades-en-equipo-por-gpo/" rel="bookmark" title="Ocultar unidades en Equipo por GPO">Ocultar unidades en Equipo por GPO</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/saber-desde-que-dc-se-esta-tomando-una-politica-de-dominio/" rel="bookmark" title="Saber desde que DC se esta tomando una Política de dominio"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/gpresult-198x143.jpg" alt="" title="Saber desde que DC se esta tomando una Política de dominio" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/saber-desde-que-dc-se-esta-tomando-una-politica-de-dominio/" rel="bookmark" title="Saber desde que DC se esta tomando una Política de dominio">Saber desde que DC se esta tomando una Política de dominio</a></h4>            </div>
+        </div>
+        </div><div class="td-next-prev-wrap"><a href="#" class="td_ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_1_5625705a278b7" data-td_block_id="td_uid_1_5625705a278b7"></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_1_5625705a278b7" data-td_block_id="td_uid_1_5625705a278b7"></a></div><div class="clearfix"></div></div> <!-- ./block1 --></div></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-mega-menu menu-item-8617"><a class="sf-with-ul" href="http://nksistemas.com/category/linux/">Linux<span class="sf-sub-indicator"> »</span></a>
+<ul style="float: none; width: 10em; display: none;" class="sub-menu">
+	<li style="white-space: normal; float: left; width: 100%;" class="menu-item-0"><div class="td-mega-grid"><script>var block_td_uid_3_5625705a342a3 = new td_block();
+block_td_uid_3_5625705a342a3.id = "td_uid_3_5625705a342a3";
+block_td_uid_3_5625705a342a3.atts = '{"limit":4,"td_column_number":3,"ajax_pagination":"next_prev","category_id":"13","show_child_cat":"5"}';
+block_td_uid_3_5625705a342a3.td_cur_cat = "13";
+block_td_uid_3_5625705a342a3.td_column_number = "1";
+block_td_uid_3_5625705a342a3.block_type = "td_mega_menu";
+block_td_uid_3_5625705a342a3.post_count = "4";
+block_td_uid_3_5625705a342a3.found_posts = "302";
+block_td_uid_3_5625705a342a3.max_num_pages = "76";
+block_td_uid_3_5625705a342a3.header_color = "";
+block_td_uid_3_5625705a342a3.ajax_pagination_infinite_stop = "";
+td_blocks.push(block_td_uid_3_5625705a342a3);
+</script><div class="td_block_wrap td_block_mega_menu"><div class="td_mega_menu_sub_cats"><div class="block-mega-child-cats"><div><a class="cur-sub-cat ajax-sub-cat-mega sub-cat-td_uid_3_5625705a342a3" id="sub-cat-td_uid_3_5625705a342a3-13" data-cat_id="13" data-td_block_id="td_uid_3_5625705a342a3" href="http://nksistemas.com/category/linux/">Todo</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_3_5625705a342a3" id="sub-cat-td_uid_3_5625705a342a3-2778" data-cat_id="2778" data-td_block_id="td_uid_3_5625705a342a3" href="http://nksistemas.com/category/linux/centos/">CentOS</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_3_5625705a342a3" id="sub-cat-td_uid_3_5625705a342a3-49" data-cat_id="49" data-td_block_id="td_uid_3_5625705a342a3" href="http://nksistemas.com/category/linux/consola-linux/">Consola</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_3_5625705a342a3" id="sub-cat-td_uid_3_5625705a342a3-53" data-cat_id="53" data-td_block_id="td_uid_3_5625705a342a3" href="http://nksistemas.com/category/linux/distribuciones/">Distribuciones</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_3_5625705a342a3" id="sub-cat-td_uid_3_5625705a342a3-60" data-cat_id="60" data-td_block_id="td_uid_3_5625705a342a3" href="http://nksistemas.com/category/linux/internet-linux/">Internet</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_3_5625705a342a3" id="sub-cat-td_uid_3_5625705a342a3-16" data-cat_id="16" data-td_block_id="td_uid_3_5625705a342a3" href="http://nksistemas.com/category/linux/noticias-linux/">Noticias</a></div></div></div><div id="td_uid_3_5625705a342a3" class="td_block_inner animated fadeInDown">
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/medir-consumo-de-ancho-de-banda-con-vnstat/" rel="bookmark" title="Medir consumo de ancho de banda con vnstat"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/vnstat-198x143.png" alt="" title="Medir consumo de ancho de banda con vnstat" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/medir-consumo-de-ancho-de-banda-con-vnstat/" rel="bookmark" title="Medir consumo de ancho de banda con vnstat">Medir consumo de ancho de banda con vnstat</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/usar-comandos-linux-desde-el-historial/" rel="bookmark" title="Usar comandos linux desde el historial"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/hh-198x143.png" alt="" title="Usar comandos linux desde el historial" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/usar-comandos-linux-desde-el-historial/" rel="bookmark" title="Usar comandos linux desde el historial">Usar comandos linux desde el historial</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/dale-seguridad-a-tu-debian-o-ubuntu-con-buck-security/" rel="bookmark" title="Dale seguridad a tu Debian o Ubuntu con buck-security"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/buck-198x143.jpg" alt="" title="Dale seguridad a tu Debian o Ubuntu con buck-security" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/dale-seguridad-a-tu-debian-o-ubuntu-con-buck-security/" rel="bookmark" title="Dale seguridad a tu Debian o Ubuntu con buck-security">Dale seguridad a tu Debian o Ubuntu con buck-security</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/detectar-archivos-duplicados-en-linux-con-duff/" rel="bookmark" title="Detectar archivos duplicados en linux con Duff"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/duff-198x143.jpg" alt="" title="Detectar archivos duplicados en linux con Duff" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/detectar-archivos-duplicados-en-linux-con-duff/" rel="bookmark" title="Detectar archivos duplicados en linux con Duff">Detectar archivos duplicados en linux con Duff</a></h4>            </div>
+        </div>
+        </div><div class="td-next-prev-wrap"><a href="#" class="td_ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_3_5625705a342a3" data-td_block_id="td_uid_3_5625705a342a3"></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_3_5625705a342a3" data-td_block_id="td_uid_3_5625705a342a3"></a></div><div class="clearfix"></div></div> <!-- ./block1 --></div></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-mega-menu menu-item-8618"><a class="sf-with-ul" href="http://nksistemas.com/category/cursos/">Cursos<span class="sf-sub-indicator"> »</span></a>
+<ul style="float: none; width: 10em; display: none;" class="sub-menu">
+	<li style="white-space: normal; float: left; width: 100%;" class="menu-item-0"><div class="td-mega-grid"><script>var block_td_uid_5_5625705a3e6b1 = new td_block();
+block_td_uid_5_5625705a3e6b1.id = "td_uid_5_5625705a3e6b1";
+block_td_uid_5_5625705a3e6b1.atts = '{"limit":"5","td_column_number":3,"ajax_pagination":"next_prev","category_id":"4","show_child_cat":"5"}';
+block_td_uid_5_5625705a3e6b1.td_cur_cat = "4";
+block_td_uid_5_5625705a3e6b1.td_column_number = "1";
+block_td_uid_5_5625705a3e6b1.block_type = "td_mega_menu";
+block_td_uid_5_5625705a3e6b1.post_count = "5";
+block_td_uid_5_5625705a3e6b1.found_posts = "8";
+block_td_uid_5_5625705a3e6b1.max_num_pages = "2";
+block_td_uid_5_5625705a3e6b1.header_color = "";
+block_td_uid_5_5625705a3e6b1.ajax_pagination_infinite_stop = "";
+td_blocks.push(block_td_uid_5_5625705a3e6b1);
+</script><div class="td_block_wrap td_block_mega_menu td-no-subcats"><div id="td_uid_5_5625705a3e6b1" class="td_block_inner animated fadeInDown">
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/curso-de-armado-y-reparacion-de-pc/" rel="bookmark" title="Curso de armado y reparación de PC"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/soporte3-198x138.jpg" alt="" title="Curso de armado y reparación de PC" height="138" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/curso-de-armado-y-reparacion-de-pc/" rel="bookmark" title="Curso de armado y reparación de PC">Curso de armado y reparación de PC</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/que-hacer-despues-de-instalar-debian-wheezy/" rel="bookmark" title="¿Qué hacer después de instalar Debian Wheezy?"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/wheezy-198x143.jpg" alt="" title="¿Qué hacer después de instalar Debian Wheezy?" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/que-hacer-despues-de-instalar-debian-wheezy/" rel="bookmark" title="¿Qué hacer después de instalar Debian Wheezy?">¿Qué hacer después de instalar Debian Wheezy?</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/cursos-gratuitos-de-nicklabs-tu-blog-de-tecnologia/" rel="bookmark" title="Cursos gratuitos de NKSistemas"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/cursos-198x143.jpg" alt="" title="Cursos gratuitos de NKSistemas" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/cursos-gratuitos-de-nicklabs-tu-blog-de-tecnologia/" rel="bookmark" title="Cursos gratuitos de NKSistemas">Cursos gratuitos de NKSistemas</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/curso-windows-server-2008-r2/" rel="bookmark" title="Curso Windows Server 2008 r2"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/win2008st-198x143.jpg" alt="" title="Curso Windows Server 2008 r2" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/curso-windows-server-2008-r2/" rel="bookmark" title="Curso Windows Server 2008 r2">Curso Windows Server 2008 r2</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/curso-de-virtualizacion-online-y-gratuito-indice/" rel="bookmark" title="Curso de Virtualización online y gratuito – Indice"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/virtualizacion-198x143.jpg" alt="" title="Curso de Virtualización online y gratuito – Indice" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/curso-de-virtualizacion-online-y-gratuito-indice/" rel="bookmark" title="Curso de Virtualización online y gratuito – Indice">Curso de Virtualización online y gratuito – Indice</a></h4>            </div>
+        </div>
+        </div><div class="td-next-prev-wrap"><a href="#" class="td_ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_5_5625705a3e6b1" data-td_block_id="td_uid_5_5625705a3e6b1"></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_5_5625705a3e6b1" data-td_block_id="td_uid_5_5625705a3e6b1"></a></div><div class="clearfix"></div></div> <!-- ./block1 --></div></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-mega-menu menu-item-8619"><a class="sf-with-ul" href="http://nksistemas.com/category/celulares/android/">Android<span class="sf-sub-indicator"> »</span></a>
+<ul style="float: none; width: 10em; display: none;" class="sub-menu">
+	<li style="white-space: normal; float: left; width: 100%;" class="menu-item-0"><div class="td-mega-grid"><script>var block_td_uid_7_5625705a48c7d = new td_block();
+block_td_uid_7_5625705a48c7d.id = "td_uid_7_5625705a48c7d";
+block_td_uid_7_5625705a48c7d.atts = '{"limit":4,"td_column_number":3,"ajax_pagination":"next_prev","category_id":"44","show_child_cat":"5"}';
+block_td_uid_7_5625705a48c7d.td_cur_cat = "44";
+block_td_uid_7_5625705a48c7d.td_column_number = "1";
+block_td_uid_7_5625705a48c7d.block_type = "td_mega_menu";
+block_td_uid_7_5625705a48c7d.post_count = "4";
+block_td_uid_7_5625705a48c7d.found_posts = "206";
+block_td_uid_7_5625705a48c7d.max_num_pages = "52";
+block_td_uid_7_5625705a48c7d.header_color = "";
+block_td_uid_7_5625705a48c7d.ajax_pagination_infinite_stop = "";
+td_blocks.push(block_td_uid_7_5625705a48c7d);
+</script><div class="td_block_wrap td_block_mega_menu"><div class="td_mega_menu_sub_cats"><div class="block-mega-child-cats"><div><a class="cur-sub-cat ajax-sub-cat-mega sub-cat-td_uid_7_5625705a48c7d" id="sub-cat-td_uid_7_5625705a48c7d-44" data-cat_id="44" data-td_block_id="td_uid_7_5625705a48c7d" href="http://nksistemas.com/category/celulares/android/">Todo</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_7_5625705a48c7d" id="sub-cat-td_uid_7_5625705a48c7d-45" data-cat_id="45" data-td_block_id="td_uid_7_5625705a48c7d" href="http://nksistemas.com/category/celulares/android/aplicaciones/">Aplicaciones</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_7_5625705a48c7d" id="sub-cat-td_uid_7_5625705a48c7d-54" data-cat_id="54" data-td_block_id="td_uid_7_5625705a48c7d" href="http://nksistemas.com/category/celulares/android/equipos-android/">Equipos</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_7_5625705a48c7d" id="sub-cat-td_uid_7_5625705a48c7d-57" data-cat_id="57" data-td_block_id="td_uid_7_5625705a48c7d" href="http://nksistemas.com/category/celulares/android/equipos-android/galaxy-s4/">Galaxy S4</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_7_5625705a48c7d" id="sub-cat-td_uid_7_5625705a48c7d-2653" data-cat_id="2653" data-td_block_id="td_uid_7_5625705a48c7d" href="http://nksistemas.com/category/celulares/android/equipos-android/galaxy-s5/">Galaxy S5</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_7_5625705a48c7d" id="sub-cat-td_uid_7_5625705a48c7d-2489" data-cat_id="2489" data-td_block_id="td_uid_7_5625705a48c7d" href="http://nksistemas.com/category/celulares/android/equipos-android/motorola-razr-i-hd/">Motorola razr i HD</a></div></div></div><div id="td_uid_7_5625705a48c7d" class="td_block_inner animated fadeInDown">
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/el-misterio-del-chip-en-la-bateria-de-samsung/" rel="bookmark" title="El misterio del chip en la batería de Samsung"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/chipbaterys5-198x143.jpg" alt="" title="El misterio del chip en la batería de Samsung" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/el-misterio-del-chip-en-la-bateria-de-samsung/" rel="bookmark" title="El misterio del chip en la batería de Samsung">El misterio del chip en la batería de Samsung</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/mas-zoombies-en-android-juego-recomendado/" rel="bookmark" title="Más Zoombies en Android, juego recomendado"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/zoombie1-198x143.jpg" alt="" title="Más Zoombies en Android, juego recomendado" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/mas-zoombies-en-android-juego-recomendado/" rel="bookmark" title="Más Zoombies en Android, juego recomendado">Más Zoombies en Android, juego recomendado</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/solucion-error-497-en-android-descargando-aplicaciones/" rel="bookmark" title="Solución error 497 en Android descargando aplicaciones"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/497-1-198x143.png" alt="" title="Solución error 497 en Android descargando aplicaciones" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/solucion-error-497-en-android-descargando-aplicaciones/" rel="bookmark" title="Solución error 497 en Android descargando aplicaciones">Solución error 497 en Android descargando aplicaciones</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/controlar-memoria-ram-y-procesador-en-android/" rel="bookmark" title="Controlar Memoria Ram y procesador en Android"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/tiny1-198x143.jpg" alt="" title="Controlar Memoria Ram y procesador en Android" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/controlar-memoria-ram-y-procesador-en-android/" rel="bookmark" title="Controlar Memoria Ram y procesador en Android">Controlar Memoria Ram y procesador en Android</a></h4>            </div>
+        </div>
+        </div><div class="td-next-prev-wrap"><a href="#" class="td_ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_7_5625705a48c7d" data-td_block_id="td_uid_7_5625705a48c7d"></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_7_5625705a48c7d" data-td_block_id="td_uid_7_5625705a48c7d"></a></div><div class="clearfix"></div></div> <!-- ./block1 --></div></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-mega-menu menu-item-8620"><a class="sf-with-ul" href="http://nksistemas.com/category/seguridad-informatica/">Seguridad<span class="sf-sub-indicator"> »</span></a>
+<ul style="float: none; width: 10em; display: none;" class="sub-menu">
+	<li style="white-space: normal; float: left; width: 100%;" class="menu-item-0"><div class="td-mega-grid"><script>var block_td_uid_9_5625705a57948 = new td_block();
+block_td_uid_9_5625705a57948.id = "td_uid_9_5625705a57948";
+block_td_uid_9_5625705a57948.atts = '{"limit":4,"td_column_number":3,"ajax_pagination":"next_prev","category_id":"21","show_child_cat":"5"}';
+block_td_uid_9_5625705a57948.td_cur_cat = "21";
+block_td_uid_9_5625705a57948.td_column_number = "1";
+block_td_uid_9_5625705a57948.block_type = "td_mega_menu";
+block_td_uid_9_5625705a57948.post_count = "4";
+block_td_uid_9_5625705a57948.found_posts = "42";
+block_td_uid_9_5625705a57948.max_num_pages = "11";
+block_td_uid_9_5625705a57948.header_color = "";
+block_td_uid_9_5625705a57948.ajax_pagination_infinite_stop = "";
+td_blocks.push(block_td_uid_9_5625705a57948);
+</script><div class="td_block_wrap td_block_mega_menu"><div class="td_mega_menu_sub_cats"><div class="block-mega-child-cats"><div><a class="cur-sub-cat ajax-sub-cat-mega sub-cat-td_uid_9_5625705a57948" id="sub-cat-td_uid_9_5625705a57948-21" data-cat_id="21" data-td_block_id="td_uid_9_5625705a57948" href="http://nksistemas.com/category/seguridad-informatica/">Todo</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_9_5625705a57948" id="sub-cat-td_uid_9_5625705a57948-58" data-cat_id="58" data-td_block_id="td_uid_9_5625705a57948" href="http://nksistemas.com/category/seguridad-informatica/hacking/">Hacking</a></div><div><a class="ajax-sub-cat-mega sub-cat-td_uid_9_5625705a57948" id="sub-cat-td_uid_9_5625705a57948-59" data-cat_id="59" data-td_block_id="td_uid_9_5625705a57948" href="http://nksistemas.com/category/seguridad-informatica/informacion/">Informacion</a></div></div></div><div id="td_uid_9_5625705a57948" class="td_block_inner animated fadeInDown">
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/listar-los-recursos-compartidos-de-un-dominio/" rel="bookmark" title="Listar los recursos compartidos de un dominio"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ShareEnum-198x143.jpg" alt="" title="Listar los recursos compartidos de un dominio" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/listar-los-recursos-compartidos-de-un-dominio/" rel="bookmark" title="Listar los recursos compartidos de un dominio">Listar los recursos compartidos de un dominio</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/eliminar-contrasena-windows-7/" rel="bookmark" title="Eliminar contraseña windows 7"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/wind-198x143.jpg" alt="" title="Eliminar contraseña windows 7" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/eliminar-contrasena-windows-7/" rel="bookmark" title="Eliminar contraseña windows 7">Eliminar contraseña windows 7</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/lista-de-las-peores-claves-de-2013/" rel="bookmark" title="Lista de las peores claves de 2013"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/peoresclaves2013-198x143.jpg" alt="" title="Lista de las peores claves de 2013" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/lista-de-las-peores-claves-de-2013/" rel="bookmark" title="Lista de las peores claves de 2013">Lista de las peores claves de 2013</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/video-tutorial-instalacion-de-bugtraq-ii/" rel="bookmark" title="Video Tutorial – Instalación de bugtraq II"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/buqtraq1-198x54.png" alt="" title="Video Tutorial – Instalación de bugtraq II" height="54" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/video-tutorial-instalacion-de-bugtraq-ii/" rel="bookmark" title="Video Tutorial – Instalación de bugtraq II">Video Tutorial – Instalación de bugtraq II</a></h4>            </div>
+        </div>
+        </div><div class="td-next-prev-wrap"><a href="#" class="td_ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_9_5625705a57948" data-td_block_id="td_uid_9_5625705a57948"></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_9_5625705a57948" data-td_block_id="td_uid_9_5625705a57948"></a></div><div class="clearfix"></div></div> <!-- ./block1 --></div></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-mega-menu menu-item-8621"><a class="sf-with-ul" href="http://nksistemas.com/category/wordpress/">WordPress<span class="sf-sub-indicator"> »</span></a>
+<ul style="float: none; width: 10em; display: none;" class="sub-menu">
+	<li style="white-space: normal; float: left; width: 100%;" class="menu-item-0"><div class="td-mega-grid"><script>var block_td_uid_11_5625705a675db = new td_block();
+block_td_uid_11_5625705a675db.id = "td_uid_11_5625705a675db";
+block_td_uid_11_5625705a675db.atts = '{"limit":"5","td_column_number":3,"ajax_pagination":"next_prev","category_id":"43","show_child_cat":"5"}';
+block_td_uid_11_5625705a675db.td_cur_cat = "43";
+block_td_uid_11_5625705a675db.td_column_number = "1";
+block_td_uid_11_5625705a675db.block_type = "td_mega_menu";
+block_td_uid_11_5625705a675db.post_count = "5";
+block_td_uid_11_5625705a675db.found_posts = "37";
+block_td_uid_11_5625705a675db.max_num_pages = "8";
+block_td_uid_11_5625705a675db.header_color = "";
+block_td_uid_11_5625705a675db.ajax_pagination_infinite_stop = "";
+td_blocks.push(block_td_uid_11_5625705a675db);
+</script><div class="td_block_wrap td_block_mega_menu td-no-subcats"><div id="td_uid_11_5625705a675db" class="td_block_inner animated fadeInDown">
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/actualizacion-de-seguridad-para-wordpress-4-2-3/" rel="bookmark" title="Actualización de seguridad para WordPress 4.2.3"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/wordpress-update-198x143.jpg" alt="" title="Actualización de seguridad para WordPress 4.2.3" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/actualizacion-de-seguridad-para-wordpress-4-2-3/" rel="bookmark" title="Actualización de seguridad para WordPress 4.2.3">Actualización de seguridad para WordPress 4.2.3</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/programar-una-publicacion-en-wordpress/" rel="bookmark" title="Programar una publicación en WordPress"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/programarwp-198x143.jpg" alt="" title="Programar una publicación en WordPress" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/programar-una-publicacion-en-wordpress/" rel="bookmark" title="Programar una publicación en WordPress">Programar una publicación en WordPress</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/llego-wordpress-4-0-te-comentamos-sus-caracteristicas-nuevas/" rel="bookmark" title="Llego WordPress 4.0 te comentamos sus características nuevas"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/wordpress4-198x143.jpg" alt="" title="Llego WordPress 4.0 te comentamos sus características nuevas" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/llego-wordpress-4-0-te-comentamos-sus-caracteristicas-nuevas/" rel="bookmark" title="Llego WordPress 4.0 te comentamos sus características nuevas">Llego WordPress 4.0 te comentamos sus características nuevas</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/saber-que-tema-de-wordpress-usa-un-sitio-web/" rel="bookmark" title="Saber que tema de wordpress usa un sitio web"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/sabertema-198x143.jpg" alt="" title="Saber que tema de wordpress usa un sitio web" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/saber-que-tema-de-wordpress-usa-un-sitio-web/" rel="bookmark" title="Saber que tema de wordpress usa un sitio web">Saber que tema de wordpress usa un sitio web</a></h4>            </div>
+        </div>
+        
+        <div class="td_mod_mega_menu">
+            <div class="thumb-wrap"><a href="http://nksistemas.com/desactivar-comentarios-en-paginas-de-wordpress-3-9-x/" rel="bookmark" title="Desactivar comentarios en páginas de WordPress 3.9.x"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/comentarios-198x143.jpg" alt="" title="Desactivar comentarios en páginas de WordPress 3.9.x" height="143" width="198"></a></div>            <div class="item-details">
+                <h4 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/desactivar-comentarios-en-paginas-de-wordpress-3-9-x/" rel="bookmark" title="Desactivar comentarios en páginas de WordPress 3.9.x">Desactivar comentarios en páginas de WordPress 3.9.x</a></h4>            </div>
+        </div>
+        </div><div class="td-next-prev-wrap"><a href="#" class="td_ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_11_5625705a675db" data-td_block_id="td_uid_11_5625705a675db"></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_11_5625705a675db" data-td_block_id="td_uid_11_5625705a675db"></a></div><div class="clearfix"></div></div> <!-- ./block1 --></div></li>
+</ul>
+</li>
+</ul></div>                    </div>
+
+
+
+                </div>
+
+                <div class="span1" id="td-top-search">
+                    <!-- Search -->
+                    <div class="header-search-wrap">
+                        <div class="dropdown header-search">
+                            <a id="search-button" href="#" role="button" class="dropdown-toggle " data-toggle="dropdown"><span class="td-sp td-sp-ico-search"></span></a>
+                            <div class="dropdown-menu" aria-labelledby="search-button">
+                                <form role="search" method="get" class="td-search-form" action="http://nksistemas.com/">
+                                    <div class="td-head-form-search-wrap">
+                                        <input class="needsclick" id="td-header-search" name="s" autocomplete="off" type="text"><input class="wpb_button wpb_btn-inverse btn" id="td-header-search-top" value="Búsqueda" type="submit">
+                                    </div>
+                                </form>
+                                <div id="td-aj-search"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> <!-- /.row-fluid -->
+        </div> <!-- /.td-menu-wrap -->
+    </div> <!-- /.td-menu-background -->
+</div> <!-- /.td-menu-placeholder -->
+        <div class="container td-page-wrap">
+            <div class="row">
+                <div class="span12">
+                    <div class="td-grid-wrap">
+                        <div class="container-fluid">
+                            <div class="row-fluid ">
+                    <div class="span8 column_container td-post-content" role="main" itemprop="mainContentOfPage">
+                <div class="entry-crumbs"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a title="" class="entry-crumb" itemprop="url" href="http://nksistemas.com/"><span itemprop="title">INICIO</span></a></span> <span class="td-sp td-sp-breadcrumb-arrow td-bread-sep"></span> <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a title="Ver todos las publicaciones Infraestructura" class="entry-crumb" itemprop="url" href="http://nksistemas.com/category/infraestructura/"><span itemprop="title">Infraestructura</span></a></span> <span class="td-sp td-sp-breadcrumb-arrow td-bread-sep"></span> <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><meta itemprop="title" content="Instalar y configurar un servidor FTP en windows 7 fácil">Instalar y configurar un servidor FTP en windows 7 fácil</span></div>
+    <article id="post-2255" class="post-2255 post type-post status-publish format-standard has-post-thumbnail hentry category-infraestructura category-windows-7 tag-instalar-ftp-windows-7 tag-servidor-ftp tag-windows-7-ftp" itemscope="" itemtype="http://schema.org/Article">
+
+        <header>
+
+            <h1 itemprop="name" class="entry-title">Instalar y configurar un servidor FTP en windows 7 fácil</h1>
+            <div class="meta-info">
+                <ul class="td-category"><li class="entry-category"><a href="http://nksistemas.com/category/infraestructura/">Infraestructura</a></li><li class="entry-category"><a href="http://nksistemas.com/category/infraestructura/windows-7/">Windows 7</a></li></ul>                                <time itemprop="dateCreated" class="entry-date updated" datetime="2012-05-14T08:13:49+00:00">may 14, 2012</time><meta itemprop="interactionCount" content="UserComments:13">                <div class="entry-comments-views"><span class="td-sp td-sp-ico-comments td-fake-click" data-fake-click="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/#comments"></span>13 <span class="td-sp td-sp-ico-view"></span><span class="td-nr-views-2255">17877</span></div>            </div>
+        </header>
+
+
+        
+
+        
+        <div class="td-post-text-content">
+            
+ <!-- A generated by theme --> 
+
+<script async="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-content_top">
+<script type="text/javascript">
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1200 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 1019  && td_screen_width < 1200 ) {
+                        /* landscape tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width >= 768  && td_screen_width < 1019 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                </script><ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins></ins>
+</div>
+
+ <!-- end A --> 
+
+<p>Vamos a ver como se instala y configura un servidor FTP en Windows 7 
+de forma simple, también nos va a servir para colocar una web, la idea 
+es probar y conocer un poco más las herramientas de windows.</p>
+<p>No hace falta instalar nada, aunque no lo creas, windows trae las herramientas necesarias solo que hay que activarlas.</p>
+<p>1- Para ello vamos al panel de control, programas, activar o 
+desactivar las características de windows. O simplemente hacemos inicio,
+ en buscar programas o archivos colocamos “Activar o desactivar las 
+características de windows”</p>
+<p><a href="http://nksistemas.com/wp-content/uploads/2012/05/ftp1.png"><img class="aligncenter size-full wp-image-10810" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ftp1.png" alt="ftp1" height="525" width="539"></a></p>
+<p>Ahora hay que comprobar que el servicio este corriendo, por las 
+dudas, vamos a inicio ejecutar services.msc y buscamos el servicio que 
+dice, “Servicio FTP de Microsoft” boton derecho y lo iniciamos, si esta 
+activo continuamos con la guía.</p>
+<p style="text-align: center;">–</p>
+<p>2- Una vez que se cargue los programas, vamos al panel de control de 
+nuevo y en herramientas administrativas, seleccionamos “Administrador de
+ internet information Services (IIS)” o lo buscamos más rápido desde 
+inicio, buscar programas y archivos.</p>
+<p>Y le damos botón derecho al nombre del sitio y agregamos un sitio 
+FTP, como vemos también se puede instalar un sitio web, es muy similar.</p>
+<p><a href="http://nksistemas.com/wp-content/uploads/2012/05/ftp2.png"><img class="aligncenter size-full wp-image-10811" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ftp2.png" alt="ftp2" height="391" width="513"></a></p>
+<p style="text-align: center;">–</p>
+<p>3- Le vamos a asignar en este caso una IP al nombre y vamos a crear una carpeta que este en el disco C: y se llame FTP.</p>
+<p><a href="http://nksistemas.com/wp-content/uploads/2012/05/ftp3.png"><img class="aligncenter size-full wp-image-10812" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ftp3.png" alt="ftp3" height="443" width="581"></a></p>
+<p style="text-align: center;">–</p>
+<p>4- Seleccionamos puerto y si necesitamos SSL.</p>
+<p><a href="http://nksistemas.com/wp-content/uploads/2012/05/ftp4.png"><img class="aligncenter size-full wp-image-10813" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ftp4.png" alt="ftp4" height="443" width="581"></a></p>
+<p style="text-align: center;">–</p>
+<p>5- En esta sección elegimos la forma de autenticación, y podemos seleccionar usuarios específicos.</p>
+<p><a href="http://nksistemas.com/wp-content/uploads/2012/05/ftp5.png"><img class="aligncenter size-full wp-image-10814" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ftp5.png" alt="ftp5" height="443" width="581"></a></p>
+<p style="text-align: center;">–</p>
+<p>6- Vamos a comprobar que este bien configurado, así que abrimos un 
+navegador y colocamos el nombre del servidor, en este caso la dirección 
+IP. Previamente colocamos un archivo de texto en la carpeta principal en
+ nuestro ejemplo C:FTP. También se puede configurar algún cliente FTP 
+como filezilla o FireFTP que es el complemento de firefox.</p>
+<p><a href="http://nksistemas.com/wp-content/uploads/2012/05/ftp6.png"><img class="aligncenter size-full wp-image-10815" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ftp6.png" alt="ftp6" height="193" width="386"></a></p>
+<p style="text-align: center;">–</p>
+<p>Listo, así de simple. Saludos</p>
+
+ <!-- A generated by theme --> 
+
+<script async="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-content_bottom">
+<script type="text/javascript">
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1200 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 1019  && td_screen_width < 1200 ) {
+                        /* landscape tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width >= 768  && td_screen_width < 1019 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                </script><ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="4014508519"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins></ins>
+</div>
+
+ <!-- end A --> 
+
+        </div>
+
+
+        <div class="clearfix"></div>
+
+        <footer>
+                                                
+            <div class="td-social-sharing">
+                <div class="td-tags-and-social-wrapper-box "> <ul class="td-tags clearfix"><li><span class="td-tag-black">ETIQUETAS</span></li><li><a href="http://nksistemas.com/tag/instalar-ftp-windows-7/">instalar ftp windows 7</a></li><li><a href="http://nksistemas.com/tag/servidor-ftp/">servidor ftp</a></li><li><a href="http://nksistemas.com/tag/windows-7-ftp/">windows 7 ftp</a></li></ul></div>
+                <div class="td-tags-and-social-wrapper-box td-tags-and-social-wrapper-box-bottom-line">
+                    <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text=Instalar+y+configurar+un+servidor+FTP+en+windows+7+f%C3%A1cil&amp;url=http%3A%2F%2Fnksistemas.com%2Finstalar-y-configurar-un-servidor-ftp-en-windows-7-facil%2F&amp;via=NKSistemas" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}"><div class="td-sp td-sp-share-twitter"></div><div class="td-social-but-text">Twitter</div></a>
+                    <a class="td-social-sharing-buttons td-social-facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fnksistemas.com%2Finstalar-y-configurar-un-servidor-ftp-en-windows-7-facil%2F" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><div class="td-sp td-sp-share-facebook"></div><div class="td-social-but-text">Facebook</div></a>
+                    <a class="td-social-sharing-buttons td-social-google" href="http://plus.google.com/share?url=http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><div class="td-sp td-sp-share-google"></div><div class="td-social-but-text">Google +</div></a>
+                    <a class="td-social-sharing-buttons td-social-pinterest" href="http://pinterest.com/pin/create/button/?url=http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/&amp;media=http://nksistemas.com/wp-content/uploads/2012/05/ftp1.png" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><div class="td-sp td-sp-share-pinterest"></div><div class="td-social-but-text">Pinterest</div></a>
+                </div></div>            <div id="td_social_networks_buttons" class="td-social-like-tweet"><ul><li class="td-like-tweet-twitter"><iframe data-url="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/tweet_button.htm" title="Twitter Tweet Button" style="position: static; visibility: visible; width: 80px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0"></iframe> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li><li class="td-like-tweet-facebook"><iframe src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/like.htm" style="border:none; overflow:hidden; width:105px; height:21px; background-color:transparent;"></iframe></li><li class="td-like-tweet-google">
+                    <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/fastbutton.htm" name="I1_1445295299988" id="I1_1445295299988" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" frameborder="0" width="100%"></iframe></div>
+                    <script type="text/javascript">
+                        (function() {
+                            var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;
+                            po.src = "https://apis.google.com/js/plusone.js";
+                            var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);
+                        })();
+                    </script>
+                    </li></ul></div>                        <div class="author-box-wrap"><a href="http://nksistemas.com/author/jorge/"><img id="grav-4a77e15eb5eecb6558d4fff52b9c1f3a-0" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/4a77e15eb5eecb6558d4fff52b9c1f3a_002.png" srcset="http://1.gravatar.com/avatar/4a77e15eb5eecb6558d4fff52b9c1f3a?s=212&amp;r=g 2x" class="avatar avatar-106 photo grav-hashed" height="106" width="106"></a><div class="desc"><div class="td-author-name vcard author"><span class="fn"><a href="http://nksistemas.com/author/jorge/">Jorge</a></span></div><div>Soy
+ administrador de Infraestructura y creador de NKSistemas.com
+Trabajo con plataformas como Windows, Linux, Android, Cisco, VMware, 
+Citrix, Seguridad informática, Google Apps, wordpress, y muchas otras.</div><div class="td-author-social"></div><div class="clearfix"></div></div></div>
+
+            <meta itemprop="author" content="Jorge">        </footer>
+
+    </article> <!-- /.post -->
+
+    <div class="art-img-text-down similar-articles"><h4 class="block-title"><span>ARTICULOS SIMILARES</span></h4>
+
+	<div class="wpb_row row-fluid">
+
+	<div class="span6">
+
+        <div class="td_mod6 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/habilitar-el-acceso-al-registro-de-windows-en-forma-remota/" rel="bookmark" title="Habilitar el acceso al registro de Windows en forma remota"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/registroremoto1-326x159.jpg" alt="" title="Habilitar el acceso al registro de Windows en forma remota" height="159" width="326"></a></div>        <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/habilitar-el-acceso-al-registro-de-windows-en-forma-remota/" rel="bookmark" title="Habilitar el acceso al registro de Windows en forma remota">Habilitar el acceso al registro de Windows en forma remota</a></h3>
+        <div class="meta-info">
+                        <time itemprop="dateCreated" class="entry-date updated" datetime="2015-05-20T11:11:20+00:00">may 20, 2015</time><meta itemprop="interactionCount" content="UserComments:0">            <div class="entry-comments-views"><span class="td-sp td-sp-ico-comments td-fake-click" data-fake-click="http://nksistemas.com/habilitar-el-acceso-al-registro-de-windows-en-forma-remota/#comments"></span>0 <span class="td-sp td-sp-ico-view"></span><span class="td-nr-views-11783">224</span></div>        </div>
+
+
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+	</div> <!-- ./span6 -->
+
+	<div class="span6">
+
+        <div class="td_mod6 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/detalles-de-cisco-route-2015-en-argentina/" rel="bookmark" title="Detalles de Cisco Route 2015 en Argentina"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ciscoroute-326x159.jpg" alt="" title="Detalles de Cisco Route 2015 en Argentina" height="159" width="326"></a></div>        <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/detalles-de-cisco-route-2015-en-argentina/" rel="bookmark" title="Detalles de Cisco Route 2015 en Argentina">Detalles de Cisco Route 2015 en Argentina</a></h3>
+        <div class="meta-info">
+                        <time itemprop="dateCreated" class="entry-date updated" datetime="2015-04-09T13:03:19+00:00">abr 9, 2015</time><meta itemprop="interactionCount" content="UserComments:0">            <div class="entry-comments-views"><span class="td-sp td-sp-ico-comments td-fake-click" data-fake-click="http://nksistemas.com/detalles-de-cisco-route-2015-en-argentina/#comments"></span>0 <span class="td-sp td-sp-ico-view"></span><span class="td-nr-views-11775">112</span></div>        </div>
+
+
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+	</div> <!-- ./span6 --></div><!--./row-fluid--></div>
+                        <div class="comments" id="comments">
+                                                                                                <div class="comments-title-wrap">
+                                                                                <h4 class="block-title"><span>13 COMENTARIOS</span></h4>
+                                    </div>
+
+                                                                            <ol class="comment-list">
+                                                                        <li class="comment " id="li-comment-5524">
+                    <article>
+                        <footer>
+                            <img id="grav-b55273dc48eac9e76a1f33cb31103515-0" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/b55273dc48eac9e76a1f33cb31103515.jpg" srcset="http://2.gravatar.com/avatar/b55273dc48eac9e76a1f33cb31103515?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite><a href="https://www.facebook.com/interplanetpupiales" rel="external nofollow" class="url">enrique</a></cite>
+
+                                <a class="comment-link" href="#li-comment-5524">
+                                    <time pubdate="1417644235">dic 3, 2014 at 10:03 pm</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>como cambio la contraseña y usuario me sale usuario y contraseña al entrar como le quito o le cambio</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-5524">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=5524#respond" onclick='return addComment.moveForm( "comment-5524", "5524", "respond", "2255" )' aria-label="Responder a enrique">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <ul class="children">
+                            <li class="comment " id="li-comment-5572">
+                    <article>
+                        <footer>
+                            <img id="grav-4a77e15eb5eecb6558d4fff52b9c1f3a-1" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/4a77e15eb5eecb6558d4fff52b9c1f3a.png" srcset="http://1.gravatar.com/avatar/4a77e15eb5eecb6558d4fff52b9c1f3a?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite><a href="http://nksistemas.com/" rel="external nofollow" class="url">Jorge</a></cite>
+
+                                <a class="comment-link" href="#li-comment-5572">
+                                    <time pubdate="1417696875">dic 4, 2014 at 12:41 pm</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Enrique podes crear usuarios y crearles 
+contraseñas o si estas en una lan con AD usar los del dominio. Podes ver
+ esa configuración en IIS en FTP aislamiento y ftp. Saludos</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-5572">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=5572#respond" onclick='return addComment.moveForm( "comment-5572", "5572", "respond", "2255" )' aria-label="Responder a Jorge">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+                            <li class="comment " id="li-comment-1027">
+                    <article>
+                        <footer>
+                            <img id="grav-20026dfbc3f71a9a9106cabaa69303df-0" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/20026dfbc3f71a9a9106cabaa69303df.jpg" srcset="http://2.gravatar.com/avatar/20026dfbc3f71a9a9106cabaa69303df?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite>ernesto</cite>
+
+                                <a class="comment-link" href="#li-comment-1027">
+                                    <time pubdate="1406071256">jul 22, 2014 at 11:20 pm</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Gracias, muy agredecido….</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1027">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1027#respond" onclick='return addComment.moveForm( "comment-1027", "1027", "respond", "2255" )' aria-label="Responder a ernesto">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <ul class="children">
+                            <li class="comment " id="li-comment-1028">
+                    <article>
+                        <footer>
+                            <img id="grav-4a77e15eb5eecb6558d4fff52b9c1f3a-2" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/4a77e15eb5eecb6558d4fff52b9c1f3a.png" srcset="http://1.gravatar.com/avatar/4a77e15eb5eecb6558d4fff52b9c1f3a?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite><a href="http://www.nksistemas.com/" rel="external nofollow" class="url">Jorge</a></cite>
+
+                                <a class="comment-link" href="#li-comment-1028">
+                                    <time pubdate="1406113802">jul 23, 2014 at 11:10 am</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Gracias por comentar. Saludo</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1028">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1028#respond" onclick='return addComment.moveForm( "comment-1028", "1028", "respond", "2255" )' aria-label="Responder a Jorge">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+                            <li class="comment " id="li-comment-1024">
+                    <article>
+                        <footer>
+                            <img id="grav-c459bf08b1c13a78e4d99be5affc53a7-0" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/c459bf08b1c13a78e4d99be5affc53a7.jpg" srcset="http://0.gravatar.com/avatar/c459bf08b1c13a78e4d99be5affc53a7?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite>Luis Angel</cite>
+
+                                <a class="comment-link" href="#li-comment-1024">
+                                    <time pubdate="1371792808">jun 21, 2013 at 2:33 am</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>y que IP le asigno? puede ser cualquier IP?</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1024">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1024#respond" onclick='return addComment.moveForm( "comment-1024", "1024", "respond", "2255" )' aria-label="Responder a Luis Angel">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <ul class="children">
+                            <li class="comment " id="li-comment-1025">
+                    <article>
+                        <footer>
+                            <img id="grav-123bec28a1b42eb7a95e3e8490d6841b-0" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/123bec28a1b42eb7a95e3e8490d6841b.png" srcset="http://1.gravatar.com/avatar/123bec28a1b42eb7a95e3e8490d6841b?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite><a href="http://www.nickcomputers.com.ar/" rel="external nofollow" class="url">Jorge_</a></cite>
+
+                                <a class="comment-link" href="#li-comment-1025">
+                                    <time pubdate="1371825228">jun 21, 2013 at 11:33 am</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Luis, debería ser alguna del rango 
+interno si así lo vas a usar, para que puedas acceder desde otras 
+terminales, ej: si tu rango ip es 192.168.1.x debería tener 
+192.168.1.200. Saludos</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1025">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1025#respond" onclick='return addComment.moveForm( "comment-1025", "1025", "respond", "2255" )' aria-label="Responder a Jorge_">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+                            <li class="comment " id="li-comment-1022">
+                    <article>
+                        <footer>
+                            <img id="grav-5abd1c035098492d2376d298fad31d73-0" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/5abd1c035098492d2376d298fad31d73.jpg" srcset="http://2.gravatar.com/avatar/5abd1c035098492d2376d298fad31d73?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite>Octavio</cite>
+
+                                <a class="comment-link" href="#li-comment-1022">
+                                    <time pubdate="1363283351">mar 14, 2013 at 2:49 pm</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>HOla sabes que me pide usuario y contraseña , pongo mi usuario de windows y contraseña y no meda o que datos debo ingresar! ?</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1022">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1022#respond" onclick='return addComment.moveForm( "comment-1022", "1022", "respond", "2255" )' aria-label="Responder a Octavio">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <ul class="children">
+                            <li class="comment " id="li-comment-1023">
+                    <article>
+                        <footer>
+                            <img id="grav-123bec28a1b42eb7a95e3e8490d6841b-1" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/123bec28a1b42eb7a95e3e8490d6841b.png" srcset="http://1.gravatar.com/avatar/123bec28a1b42eb7a95e3e8490d6841b?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite><a href="http://www.nickcomputers.com.ar/" rel="external nofollow" class="url">Jorge_</a></cite>
+
+                                <a class="comment-link" href="#li-comment-1023">
+                                    <time pubdate="1363283813">mar 14, 2013 at 2:56 pm</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Tene en cuenta que este procedimeiento se
+ hizo en un dominio, en el server de FTP debes configurar el acceso para
+ todos, sin restricciones. Saludo</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1023">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1023#respond" onclick='return addComment.moveForm( "comment-1023", "1023", "respond", "2255" )' aria-label="Responder a Jorge_">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <ul class="children">
+                            <li class="comment " id="li-comment-1026">
+                    <article>
+                        <footer>
+                            <img id="grav-fa10455969b03487f2fde9d9328c3297-0" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/fa10455969b03487f2fde9d9328c3297.jpg" srcset="http://0.gravatar.com/avatar/fa10455969b03487f2fde9d9328c3297?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite>john</cite>
+
+                                <a class="comment-link" href="#li-comment-1026">
+                                    <time pubdate="1372305695">jun 27, 2013 at 1:01 am</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Hola, amigo me gustaría saber como hago 
+para asignar nombre de usuario y contraseña, ya que es para contenidos 
+privados y quiero restringir el acceso. al igual que al otro compañero 
+al poner la ip (la cual esta asignada al puerto 21 el cual ya esta 
+configurado para acceso publico desde Internet) me solicita usuario y 
+contraseña. me gustaría saber donde puedo saber estos ya que intento 
+utilizarlo para joomla.</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1026">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1026#respond" onclick='return addComment.moveForm( "comment-1026", "1026", "respond", "2255" )' aria-label="Responder a john">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+                            <li class="comment " id="li-comment-1020">
+                    <article>
+                        <footer>
+                            <img id="grav-fe8f043c8540cb29ba4810c9856660a5-0" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/fe8f043c8540cb29ba4810c9856660a5.jpg" srcset="http://0.gravatar.com/avatar/fe8f043c8540cb29ba4810c9856660a5?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite>Angelica Gabino</cite>
+
+                                <a class="comment-link" href="#li-comment-1020">
+                                    <time pubdate="1360942656">feb 15, 2013 at 12:37 pm</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Hola, soy nueva en esto &amp; al entrar 
+en las características de Windows, no me aparece el Servidor FTP, ni la 
+carpeta de consola de administración… me podrías apoyar.<br>
+Gracias</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1020">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1020#respond" onclick='return addComment.moveForm( "comment-1020", "1020", "respond", "2255" )' aria-label="Responder a Angelica Gabino">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <ul class="children">
+                            <li class="comment " id="li-comment-1021">
+                    <article>
+                        <footer>
+                            <img id="grav-123bec28a1b42eb7a95e3e8490d6841b-2" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/123bec28a1b42eb7a95e3e8490d6841b.png" srcset="http://1.gravatar.com/avatar/123bec28a1b42eb7a95e3e8490d6841b?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite><a href="http://www.nickcomputers.com.ar/" rel="external nofollow" class="url">Jorge_</a></cite>
+
+                                <a class="comment-link" href="#li-comment-1021">
+                                    <time pubdate="1361112181">feb 17, 2013 at 11:43 am</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Hola Angelica, antes que nada que versión de windows tenes?</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1021">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1021#respond" onclick='return addComment.moveForm( "comment-1021", "1021", "respond", "2255" )' aria-label="Responder a Jorge_">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+                            <li class="comment " id="li-comment-1018">
+                    <article>
+                        <footer>
+                            <img id="grav-ee5994031118ae73871ccecfb9e641f1-0" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/ee5994031118ae73871ccecfb9e641f1.jpg" srcset="http://2.gravatar.com/avatar/ee5994031118ae73871ccecfb9e641f1?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite>rabulu</cite>
+
+                                <a class="comment-link" href="#li-comment-1018">
+                                    <time pubdate="1355800140">dic 18, 2012 at 12:09 am</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Hola Nicklabs. tengo Windows 8 pro y se 
+supone esta basado en win 7, al menos que me equivoque.  el detalle es 
+que al intentar habilitar el servicio de ftp no lo encuentro por ningún 
+lado, o será que  ese servicio no viene en win8? gracias. saludos</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1018">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1018#respond" onclick='return addComment.moveForm( "comment-1018", "1018", "respond", "2255" )' aria-label="Responder a rabulu">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <ul class="children">
+                            <li class="comment " id="li-comment-1019">
+                    <article>
+                        <footer>
+                            <img id="grav-123bec28a1b42eb7a95e3e8490d6841b-3" alt="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/123bec28a1b42eb7a95e3e8490d6841b.png" srcset="http://1.gravatar.com/avatar/123bec28a1b42eb7a95e3e8490d6841b?s=100&amp;r=g 2x" class="avatar avatar-50 photo grav-hashed grav-hijack" height="50" width="50">                            <cite><a href="http://www.nickcomputers.com.ar/" rel="external nofollow" class="url">Jorge_</a></cite>
+
+                                <a class="comment-link" href="#li-comment-1019">
+                                    <time pubdate="1355833508">dic 18, 2012 at 9:25 am</time>
+                                </a>
+
+                        </footer>
+                        <div class="comment-content">
+                            <p>Rabulu, mira esta entrada: <a href="http://www.nicklabs.com.ar/?p=3323" rel="nofollow">http://www.nicklabs.com.ar/?p=3323</a><br>
+Saludo</p>
+
+                        </div>
+                        <div class="comment-meta" id="comment-1019">
+                            <a rel="nofollow" class="comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/?replytocom=1019#respond" onclick='return addComment.moveForm( "comment-1019", "1019", "respond", "2255" )' aria-label="Responder a Jorge_">Responder</a>                        </div>
+
+                    </article>
+                </li>
+            <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+                                        </ol>
+                                        <div class="comment-pagination">
+                                                                                    </div>
+                                                                                            						<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Deja tu Comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/#respond" style="display:none;">Cancelar respuesta</a></small></h3>
+									<form action="http://nksistemas.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+																										<p class="comment-form-input-wrap">
+            <span class="comment-req-wrap needsclick"><input class="" id="author" name="author" placeholder="Nombre:" size="30" type="text"></span></p>
+<p class="comment-form-input-wrap">
+            <span class="comment-req-wrap needsclick"><input class="" id="email" name="email" placeholder="Correo:" size="30" type="text"></span></p>
+<p class="comment-form-input-wrap needsclick">
+            <input class="" id="url" name="url" placeholder="Sitio Web:" size="30" type="text"></p>
+												<div class="clearfix"></div><p class="comment-form-input-wrap"><textarea class="needsclick" placeholder="Comentario: " id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						
+						<p class="form-submit"><input name="submit" id="submit" class="submit" value="Publicar comentario" type="submit"> <input name="comment_post_ID" value="2255" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="0e463ee4db" type="hidden"></p><p class="comment-subscription-form"><input name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" type="checkbox"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Recibir un email con los siguientes comentarios a esta entrada.</label></p><p class="comment-subscription-form"><input name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" type="checkbox"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Recibir un email con cada nueva entrada.</label></p><p style="display: none;"></p>					<input id="ak_js" name="ak_js" value="1445295269181" type="hidden"></form>
+							</div><!-- #respond -->
+			                                                    </div> <!-- /.content -->
+
+
+            </div>
+            <div class="span4 column_container td-post-sidebar" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+                <aside class="widget widget_text"><div class="block-title"><span>PATROCINADOR</span></div>			<div class="textwidget"><script async="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/adsbygoogle.js"></script>
+<!-- Recomendado por google -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="9266474110"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_3_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;" frameborder="0" height="280" width="336"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</aside><aside class="widget widget_categories"><div class="block-title"><span>Categorías</span></div><label class="screen-reader-text" for="cat">Categorías</label><select name="cat" id="cat" class="postform">
+	<option selected="selected" value="-1">Elegir categoría</option>
+	<option class="level-0" value="3">Celulares&nbsp;&nbsp;(211)</option>
+	<option class="level-1" value="44">&nbsp;&nbsp;&nbsp;Android&nbsp;&nbsp;(206)</option>
+	<option class="level-2" value="45">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aplicaciones&nbsp;&nbsp;(83)</option>
+	<option class="level-2" value="54">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Equipos&nbsp;&nbsp;(51)</option>
+	<option class="level-3" value="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Galaxy S4&nbsp;&nbsp;(27)</option>
+	<option class="level-3" value="2653">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Galaxy S5&nbsp;&nbsp;(17)</option>
+	<option class="level-3" value="2489">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Motorola razr i HD&nbsp;&nbsp;(2)</option>
+	<option class="level-2" value="61">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Juegos&nbsp;&nbsp;(18)</option>
+	<option class="level-2" value="64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Roteo&nbsp;&nbsp;(4)</option>
+	<option class="level-2" value="2571">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Soporte Tecnico&nbsp;&nbsp;(8)</option>
+	<option class="level-2" value="66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vs&nbsp;&nbsp;(38)</option>
+	<option class="level-1" value="2791">&nbsp;&nbsp;&nbsp;iPhone&nbsp;&nbsp;(1)</option>
+	<option class="level-1" value="41">&nbsp;&nbsp;&nbsp;Windows Mobile&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="4">Cursos&nbsp;&nbsp;(8)</option>
+	<option class="level-0" value="5">Diseño web&nbsp;&nbsp;(16)</option>
+	<option class="level-1" value="2047">&nbsp;&nbsp;&nbsp;SEO&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="6">Google&nbsp;&nbsp;(64)</option>
+	<option class="level-0" value="8">Humor&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="9">Infraestructura&nbsp;&nbsp;(264)</option>
+	<option class="level-1" value="47">&nbsp;&nbsp;&nbsp;Backup&nbsp;&nbsp;(6)</option>
+	<option class="level-1" value="19">&nbsp;&nbsp;&nbsp;Redes&nbsp;&nbsp;(41)</option>
+	<option class="level-2" value="2639">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cisco&nbsp;&nbsp;(3)</option>
+	<option class="level-2" value="2711">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuraciones&nbsp;&nbsp;(3)</option>
+	<option class="level-2" value="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Curso&nbsp;&nbsp;(13)</option>
+	<option class="level-2" value="55">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fortianalyzer&nbsp;&nbsp;(4)</option>
+	<option class="level-2" value="56">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fortigate&nbsp;&nbsp;(10)</option>
+	<option class="level-1" value="27">&nbsp;&nbsp;&nbsp;Soporte Técnico&nbsp;&nbsp;(93)</option>
+	<option class="level-2" value="51">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Curso&nbsp;&nbsp;(10)</option>
+	<option class="level-2" value="2739">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Netbooks&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="28">&nbsp;&nbsp;&nbsp;SQL Server&nbsp;&nbsp;(12)</option>
+	<option class="level-2" value="52">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Curso SQL&nbsp;&nbsp;(4)</option>
+	<option class="level-1" value="30">&nbsp;&nbsp;&nbsp;Tecnologias&nbsp;&nbsp;(4)</option>
+	<option class="level-1" value="34">&nbsp;&nbsp;&nbsp;Virtualización&nbsp;&nbsp;(14)</option>
+	<option class="level-1" value="35">&nbsp;&nbsp;&nbsp;VMWare&nbsp;&nbsp;(19)</option>
+	<option class="level-2" value="65">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Soporte Vmware&nbsp;&nbsp;(7)</option>
+	<option class="level-1" value="36">&nbsp;&nbsp;&nbsp;Windows 2003&nbsp;&nbsp;(13)</option>
+	<option class="level-1" value="37">&nbsp;&nbsp;&nbsp;Windows 2008&nbsp;&nbsp;(32)</option>
+	<option class="level-1" value="38">&nbsp;&nbsp;&nbsp;Windows 2012&nbsp;&nbsp;(5)</option>
+	<option class="level-1" value="39">&nbsp;&nbsp;&nbsp;Windows 7&nbsp;&nbsp;(27)</option>
+	<option class="level-1" value="40">&nbsp;&nbsp;&nbsp;Windows 8&nbsp;&nbsp;(16)</option>
+	<option class="level-1" value="42">&nbsp;&nbsp;&nbsp;Windows XP&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="10">Inicio&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="11">Internet&nbsp;&nbsp;(81)</option>
+	<option class="level-0" value="12">Juegos&nbsp;&nbsp;(10)</option>
+	<option class="level-0" value="13">Linux&nbsp;&nbsp;(302)</option>
+	<option class="level-1" value="2778">&nbsp;&nbsp;&nbsp;CentOS&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="49">&nbsp;&nbsp;&nbsp;Consola&nbsp;&nbsp;(56)</option>
+	<option class="level-1" value="53">&nbsp;&nbsp;&nbsp;Distribuciones&nbsp;&nbsp;(23)</option>
+	<option class="level-1" value="60">&nbsp;&nbsp;&nbsp;Internet&nbsp;&nbsp;(25)</option>
+	<option class="level-1" value="16">&nbsp;&nbsp;&nbsp;Noticias&nbsp;&nbsp;(11)</option>
+	<option class="level-1" value="17">&nbsp;&nbsp;&nbsp;Nvidia&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="18">&nbsp;&nbsp;&nbsp;Red&nbsp;&nbsp;(26)</option>
+	<option class="level-1" value="20">&nbsp;&nbsp;&nbsp;Repositorios&nbsp;&nbsp;(7)</option>
+	<option class="level-1" value="23">&nbsp;&nbsp;&nbsp;Software&nbsp;&nbsp;(46)</option>
+	<option class="level-1" value="26">&nbsp;&nbsp;&nbsp;Soporte&nbsp;&nbsp;(43)</option>
+	<option class="level-1" value="33">&nbsp;&nbsp;&nbsp;Varios&nbsp;&nbsp;(68)</option>
+	<option class="level-0" value="14">Microsoft&nbsp;&nbsp;(24)</option>
+	<option class="level-0" value="15">Noticias&nbsp;&nbsp;(46)</option>
+	<option class="level-0" value="21">Seguridad&nbsp;&nbsp;(42)</option>
+	<option class="level-1" value="58">&nbsp;&nbsp;&nbsp;Hacking&nbsp;&nbsp;(22)</option>
+	<option class="level-1" value="59">&nbsp;&nbsp;&nbsp;Informacion&nbsp;&nbsp;(14)</option>
+	<option class="level-0" value="1">Sin categoría&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="22">Software&nbsp;&nbsp;(102)</option>
+	<option class="level-1" value="46">&nbsp;&nbsp;&nbsp;Backup&nbsp;&nbsp;(14)</option>
+	<option class="level-1" value="62">&nbsp;&nbsp;&nbsp;Libre&nbsp;&nbsp;(18)</option>
+	<option class="level-1" value="63">&nbsp;&nbsp;&nbsp;Recuperacion&nbsp;&nbsp;(5)</option>
+	<option class="level-1" value="25">&nbsp;&nbsp;&nbsp;Sonido&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="32">&nbsp;&nbsp;&nbsp;Varios&nbsp;&nbsp;(64)</option>
+	<option class="level-0" value="43">Wordpress&nbsp;&nbsp;(37)</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			location.href = "http://nksistemas.com/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</aside><div id="td_uid_13_5625705ae2ed3" class="td_block_wrap td_social widget widget_social"><h4 class="block-title"><span>SOCIAL</span></h4><div class="td_social_type"><span class="td-social-icon-wrap"><a rel="nofollow" href="https://www.facebook.com/631975290210927"><span class="td-social-s1-32 td-s-s-32-facebook"></span></a></span><span class="td_social_info">308</span><span class="td_social_info">Seguidores</span><span class="td_social_button"><a rel="nofollow" href="https://www.facebook.com/631975290210927">Me gusta</a></span></div><div class="td_social_type"><span class="td-social-icon-wrap"><a rel="nofollow" href="https://plus.google.com/114568145901393210282"><span class="td-social-s1-32 td-s-s-32-googleplus"></span></a></span><span class="td_social_info">979</span><span class="td_social_info">Suscriptores</span><span class="td_social_button"><a rel="nofollow" href="https://plus.google.com/114568145901393210282">+1</a></span></div><div class="td_social_type"><span class="td-social-icon-wrap"><a rel="nofollow" href="https://twitter.com/@nksistemas"><span class="td-social-s1-32 td-s-s-32-twitter"></span></a></span><span class="td_social_info">1,934</span><span class="td_social_info">Seguidores</span><span class="td_social_button"><a rel="nofollow" href="https://twitter.com/@nksistemas">Seguir</a></span></div><div class="td_social_type"><span class="td-social-icon-wrap"><a rel="nofollow" href="http://www.youtube.com/user/jlnicklabs"><span class="td-social-s1-32 td-s-s-32-youtube"></span></a></span><span class="td_social_info">623</span><span class="td_social_info">Suscriptores</span><span class="td_social_button"><a rel="nofollow" href="http://www.youtube.com/user/jlnicklabs">Suscribirse</a></span></div></div> <!-- ./block --><style>#td_uid_13_5625705ae2ed3 .td_social_button a { background-color:#}</style><aside class="widget jetpack_subscription_widget"><div class="block-title"><span>Suscríbete por email</span></div>
+			<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				<div id="subscribe-text"></div><p>Únete a otros 86 suscriptores </p>
+					<p id="subscribe-email">
+						<label style="clip: rect(1px, 1px, 1px, 1px); position: absolute; height: 1px; width: 1px; overflow: hidden;" id="jetpack-subscribe-label" for="subscribe-field">
+							Dirección de email						</label>
+						<input name="email" required="required" class="required" id="subscribe-field-blog_subscription-2" placeholder="Dirección de email" type="email">
+					</p>
+
+					<p id="subscribe-submit">
+						<input name="action" value="subscribe" type="hidden">
+						<input name="source" value="http://nksistemas.com/instalar-y-configurar-un-servidor-ftp-en-windows-7-facil/" type="hidden">
+						<input name="sub-type" value="widget" type="hidden">
+						<input name="redirect_fragment" value="blog_subscription-2" type="hidden">
+												<input value="Suscribir" name="jetpack_subscriptions_widget" type="submit">
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// Creates placeholders for IE
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.getElementById( 'jetpack-subscribe-label' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-2'),
+					input = d.getElementById('subscribe-field-blog_subscription-2'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</aside><script>var block_td_uid_14_5625705ae45fd = new td_block();
+block_td_uid_14_5625705ae45fd.id = "td_uid_14_5625705ae45fd";
+block_td_uid_14_5625705ae45fd.atts = '{"category_id":"","category_ids":"","tag_slug":"","sort":"popular7","autors_id":"","hide_title":"","installed_post_types":"","limit":"6","offset":"","header_color":"#","header_text_color":"#","custom_title":"LO MAS VISTO DE LA SEMANA","custom_url":"","title_style":"","show_child_cat":"","sub_cat_ajax":"n","ajax_pagination":"load_more","ajax_pagination_infinite_stop":""}';
+block_td_uid_14_5625705ae45fd.td_cur_cat = "";
+block_td_uid_14_5625705ae45fd.td_column_number = "1";
+block_td_uid_14_5625705ae45fd.block_type = "4";
+block_td_uid_14_5625705ae45fd.post_count = "6";
+block_td_uid_14_5625705ae45fd.found_posts = "872";
+block_td_uid_14_5625705ae45fd.max_num_pages = "146";
+block_td_uid_14_5625705ae45fd.header_color = "#";
+block_td_uid_14_5625705ae45fd.ajax_pagination_infinite_stop = "";
+td_blocks.push(block_td_uid_14_5625705ae45fd);
+</script><div class="td_block_wrap td_block4"><h4 class="block-title"><span>LO MAS VISTO DE LA SEMANA</span></h4><style>.ui-sctd_uid_14_5625705ae45fd .cur-sub-cat { color:# !important}</style><div id="td_uid_14_5625705ae45fd" class="td_block_inner">
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/samsung-galaxy-s4-ya-tiene-un-clon-te-mostramos-sus-caracteristicas/" rel="bookmark" title="Samsung Galaxy S4 ya tiene un clon, te mostramos sus características"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/s4clon-100x65.jpg" alt="" title="Samsung Galaxy S4 ya tiene un clon, te mostramos sus características" height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/samsung-galaxy-s4-ya-tiene-un-clon-te-mostramos-sus-caracteristicas/" rel="bookmark" title="Samsung Galaxy S4 ya tiene un clon, te mostramos sus características">Samsung Galaxy S4 ya tiene un clon, te mostramos sus características</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2013-10-29T09:01:24+00:00">oct 29, 2013</time><meta itemprop="interactionCount" content="UserComments:206">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/solucion-a-error-de-playstore-se-requiere-una-autenticacion-tiene-que-acceder-a-tu-cuenta-de-google/" rel="bookmark" title="Solución a error de playstore: Se requiere una autenticación. Tiene que acceder a tu cuenta de google."><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/googleplay-100x65.png" alt="" title="Solución a error de playstore: Se requiere una autenticación. Tiene que acceder a tu cuenta de google." height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/solucion-a-error-de-playstore-se-requiere-una-autenticacion-tiene-que-acceder-a-tu-cuenta-de-google/" rel="bookmark" title="Solución a error de playstore: Se requiere una autenticación. Tiene que acceder a tu cuenta de google.">Solución a error de playstore: Se requiere una autenticación. Tiene que acceder a tu cuenta de google.</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2014-02-06T13:53:59+00:00">feb 6, 2014</time><meta itemprop="interactionCount" content="UserComments:134">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/codigos-secretos-para-samsung-galaxy-s4/" rel="bookmark" title="Códigos secretos para Samsung Galaxy S4"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/s4code-100x65.png" alt="" title="Códigos secretos para Samsung Galaxy S4" height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/codigos-secretos-para-samsung-galaxy-s4/" rel="bookmark" title="Códigos secretos para Samsung Galaxy S4">Códigos secretos para Samsung Galaxy S4</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2013-10-29T08:10:09+00:00">oct 29, 2013</time><meta itemprop="interactionCount" content="UserComments:818">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/hacer-reset-de-samsung-galaxy-s4-3-opciones/" rel="bookmark" title="Hacer reset de Samsung Galaxy S4, S3, S3 mini, 3 opciones"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/s4reset-100x65.jpg" alt="" title="Hacer reset de Samsung Galaxy S4, S3, S3 mini, 3 opciones" height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/hacer-reset-de-samsung-galaxy-s4-3-opciones/" rel="bookmark" title="Hacer reset de Samsung Galaxy S4, S3, S3 mini, 3 opciones">Hacer reset de Samsung Galaxy S4, S3, S3 mini, 3 opciones</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2013-10-28T08:30:10+00:00">oct 28, 2013</time><meta itemprop="interactionCount" content="UserComments:700">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/desactivar-vibracion-y-sonido-de-las-teclas-del-samsung-galaxy-s4/" rel="bookmark" title="Desactivar vibración y sonido de las teclas del Samsung Galaxy S4"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/vibra1-100x65.png" alt="" title="Desactivar vibración y sonido de las teclas del Samsung Galaxy S4" height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/desactivar-vibracion-y-sonido-de-las-teclas-del-samsung-galaxy-s4/" rel="bookmark" title="Desactivar vibración y sonido de las teclas del Samsung Galaxy S4">Desactivar vibración y sonido de las teclas del Samsung Galaxy S4</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2013-11-26T08:18:22+00:00">nov 26, 2013</time><meta itemprop="interactionCount" content="UserComments:63">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/localizar-tu-samsung-galaxy-s3-mini-y-hacer-borrado-remoto-hasta-de-la-sd-externa/" rel="bookmark" title="Localizar tu samsung galaxy S3 mini/S3/S4 y hacer borrado remoto hasta de la SD externa"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/s3mini-100x65.jpg" alt="" title="Localizar tu samsung galaxy S3 mini/S3/S4 y hacer borrado remoto hasta de la SD externa" height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/localizar-tu-samsung-galaxy-s3-mini-y-hacer-borrado-remoto-hasta-de-la-sd-externa/" rel="bookmark" title="Localizar tu samsung galaxy S3 mini/S3/S4 y hacer borrado remoto hasta de la SD externa">Localizar tu samsung galaxy S3 mini/S3/S4 y hacer borrado remoto hasta de la SD externa</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2013-08-07T08:12:51+00:00">ago 7, 2013</time><meta itemprop="interactionCount" content="UserComments:72">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        </div><div class="td-load-more-wrap"><a href="#" class="td_ajax_load_more" id="next-page-td_uid_14_5625705ae45fd" data-td_block_id="td_uid_14_5625705ae45fd">Cargar Más</a><div class="td-load-more-img-wrap"><div class="td-load-more-img"></div></div></div></div> <!-- ./block1 --><aside class="widget widget_text"><div class="block-title"><span>RECOMENDADO</span></div>			<div class="textwidget"><script async="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/adsbygoogle.js"></script>
+<!-- Recomendado por google -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="9266474110"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_4_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;" frameborder="0" height="280" width="336"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</aside>            </div>
+        
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="td-footer-wrap">
+        <div class="container">
+            <div class="row">
+                
+                            <div class="span12">
+                                <div class="td-grid-wrap">
+                                    <div class="container-fluid">
+                                        <div class="wpb_row row-fluid ">
+                                            <div class="span4 wpb_column column_container">
+                                                <div class="td_block_wrap td-social-wrap td-social-wrap-32"><h4 class="block-title"><span>SEGUINOS EN</span></h4><div class="td_mod_wrap"><span class="td-social-icon-wrap"><a rel="nofollow" href="https://www.facebook.com/pages/NKSistemas/631975290210927?ref=hl"><span class="td-social-s1-32 td-s-s-32-facebook"></span></a></span><span class="td-social-icon-wrap"><a rel="nofollow" href="https://plus.google.com/b/114568145901393210282/+Nksistemas/posts"><span class="td-social-s1-32 td-s-s-32-googleplus"></span></a></span><span class="td-social-icon-wrap"><a rel="nofollow" href="http://instagram.com/nksistemas/"><span class="td-social-s1-32 td-s-s-32-instagram"></span></a></span><span class="td-social-icon-wrap"><a rel="nofollow" href="http://es.pinterest.com/jnk1104/"><span class="td-social-s1-32 td-s-s-32-pinterest"></span></a></span><span class="td-social-icon-wrap"><a rel="nofollow" href="https://www.tumblr.com/blog/nksistemas"><span class="td-social-s1-32 td-s-s-32-tumblr"></span></a></span><span class="td-social-icon-wrap"><a rel="nofollow" href="https://twitter.com/nksistemas"><span class="td-social-s1-32 td-s-s-32-twitter"></span></a></span><span class="td-social-icon-wrap"><a rel="nofollow" href="https://vimeo.com/user27288894"><span class="td-social-s1-32 td-s-s-32-vimeo"></span></a></span><span class="td-social-icon-wrap"><a rel="nofollow" href="https://www.youtube.com/channel/UCSfoeUktR7OFycxzc_eiDwg"><span class="td-social-s1-32 td-s-s-32-youtube"></span></a></span></div></div><aside class="widget widget_text">			<div class="textwidget"><script async="" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/adsbygoogle.js"></script>
+<!-- Recomendado por google -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-4037047254099301" data-ad-slot="9266474110"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_5_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;" frameborder="0" height="280" width="336"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</aside>                                            </div>
+
+                                            <div class="span4 wpb_column column_container">
+                                                <script>var block_td_uid_16_5625705b1faa7 = new td_block();
+block_td_uid_16_5625705b1faa7.id = "td_uid_16_5625705b1faa7";
+block_td_uid_16_5625705b1faa7.atts = '{"category_id":"","category_ids":"","tag_slug":"","sort":"popular","autors_id":"","hide_title":"","installed_post_types":"","limit":"4","offset":"","header_color":"#","header_text_color":"#","custom_title":"LO MAS VISTO DE NK","custom_url":"","title_style":"","show_child_cat":"","sub_cat_ajax":"n","ajax_pagination":"load_more","ajax_pagination_infinite_stop":""}';
+block_td_uid_16_5625705b1faa7.td_cur_cat = "";
+block_td_uid_16_5625705b1faa7.td_column_number = "1";
+block_td_uid_16_5625705b1faa7.block_type = "4";
+block_td_uid_16_5625705b1faa7.post_count = "4";
+block_td_uid_16_5625705b1faa7.found_posts = "1187";
+block_td_uid_16_5625705b1faa7.max_num_pages = "297";
+block_td_uid_16_5625705b1faa7.header_color = "#";
+block_td_uid_16_5625705b1faa7.ajax_pagination_infinite_stop = "";
+td_blocks.push(block_td_uid_16_5625705b1faa7);
+</script><div class="td_block_wrap td_block4"><h4 class="block-title"><span>LO MAS VISTO DE NK</span></h4><style>.ui-sctd_uid_16_5625705b1faa7 .cur-sub-cat { color:# !important}</style><div id="td_uid_16_5625705b1faa7" class="td_block_inner">
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/codigos-secretos-para-samsung-galaxy-s4/" rel="bookmark" title="Códigos secretos para Samsung Galaxy S4"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/s4code-100x65.png" alt="" title="Códigos secretos para Samsung Galaxy S4" height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/codigos-secretos-para-samsung-galaxy-s4/" rel="bookmark" title="Códigos secretos para Samsung Galaxy S4">Códigos secretos para Samsung Galaxy S4</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2013-10-29T08:10:09+00:00">oct 29, 2013</time><meta itemprop="interactionCount" content="UserComments:818">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/solucion-a-error-de-playstore-se-requiere-una-autenticacion-tiene-que-acceder-a-tu-cuenta-de-google/" rel="bookmark" title="Solución a error de playstore: Se requiere una autenticación. Tiene que acceder a tu cuenta de google."><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/googleplay-100x65.png" alt="" title="Solución a error de playstore: Se requiere una autenticación. Tiene que acceder a tu cuenta de google." height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/solucion-a-error-de-playstore-se-requiere-una-autenticacion-tiene-que-acceder-a-tu-cuenta-de-google/" rel="bookmark" title="Solución a error de playstore: Se requiere una autenticación. Tiene que acceder a tu cuenta de google.">Solución a error de playstore: Se requiere una autenticación. Tiene que acceder a tu cuenta de google.</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2014-02-06T13:53:59+00:00">feb 6, 2014</time><meta itemprop="interactionCount" content="UserComments:134">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/samsung-galaxy-s4-ya-tiene-un-clon-te-mostramos-sus-caracteristicas/" rel="bookmark" title="Samsung Galaxy S4 ya tiene un clon, te mostramos sus características"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/s4clon-100x65.jpg" alt="" title="Samsung Galaxy S4 ya tiene un clon, te mostramos sus características" height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/samsung-galaxy-s4-ya-tiene-un-clon-te-mostramos-sus-caracteristicas/" rel="bookmark" title="Samsung Galaxy S4 ya tiene un clon, te mostramos sus características">Samsung Galaxy S4 ya tiene un clon, te mostramos sus características</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2013-10-29T09:01:24+00:00">oct 29, 2013</time><meta itemprop="interactionCount" content="UserComments:206">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/hacer-reset-de-samsung-galaxy-s4-3-opciones/" rel="bookmark" title="Hacer reset de Samsung Galaxy S4, S3, S3 mini, 3 opciones"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/s4reset-100x65.jpg" alt="" title="Hacer reset de Samsung Galaxy S4, S3, S3 mini, 3 opciones" height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/hacer-reset-de-samsung-galaxy-s4-3-opciones/" rel="bookmark" title="Hacer reset de Samsung Galaxy S4, S3, S3 mini, 3 opciones">Hacer reset de Samsung Galaxy S4, S3, S3 mini, 3 opciones</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2013-10-28T08:30:10+00:00">oct 28, 2013</time><meta itemprop="interactionCount" content="UserComments:700">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+        </div><div class="td-load-more-wrap"><a href="#" class="td_ajax_load_more" id="next-page-td_uid_16_5625705b1faa7" data-td_block_id="td_uid_16_5625705b1faa7">Cargar Más</a><div class="td-load-more-img-wrap"><div class="td-load-more-img"></div></div></div></div> <!-- ./block1 -->                                            </div>
+                                            <div class="span4 wpb_column column_container">
+                                                <aside class="widget widget_text"><div class="block-title"><span>NKSISTEMAS</span></div>			<div class="textwidget">Bienvenido
+ a NKSistemas, tu web de tecnología.
+Un lugar donde aprenderás de Linux, Windows, Android, Fortigate, VMware,
+ Citrix, Redes, CCNA, Seguridad y hacking, Programación y todo lo 
+relativo al mundo informático por medio de cursos, tutoriales y videos.</div>
+		</aside><aside class="widget widget_text"><div class="block-title"><span>Licencia de uso</span></div>			<div class="textwidget"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">NKSistemas</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://nksistemas.com/" property="cc:attributionName" rel="cc:attributionURL">Jorge L.</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Reconocimiento-NoComercial 4.0 Internacional License</a>.<br>Creado a partir de la obra en <a xmlns:dct="http://purl.org/dc/terms/" href="http://nksistemas.com/" rel="dct:source">http://nksistemas.com</a>.</div>
+		</aside>                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                    </div>
+        </div>
+    </div> <!-- /.td-footer-wrap  -->
+
+
+
+<div class="td-sub-footer-wrap">
+    <div class="container ">
+        <div class="row">
+            <div class="span12">
+                <div class="td-grid-wrap">
+                    <div class="container-fluid">
+                        <div class="row-fluid ">
+                            <div class="span4 td-sub-footer-copy">
+                                © NKSistemas 2010 - 2015                            </div>
+                            <div class="span8 td-sub-footer-menu">
+
+                                <div class="menu-principal-container"><ul id="menu-principal-1" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-menu-item td-normal-menu menu-item-8624"><a href="http://nksistemas.com/acerca-de/">Conocenos</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-8622"><a href="http://nksistemas.com/web-amigas/">Webs Amigas</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-12267"><a href="http://nksistemas.com/soluciones-web/">Soluciones Web</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-8623"><a href="http://nksistemas.com/contacto/">Contacto</a></li>
+</ul></div>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<!--/#inner-wrap-->
+</div>
+<!--/#outer-wrap-->
+
+<div class="td-sp td-scroll-up"></div>
+
+	<div style="display:none">
+	<div class="grofile-hash-map-4a77e15eb5eecb6558d4fff52b9c1f3a">
+	</div>
+	<div class="grofile-hash-map-b55273dc48eac9e76a1f33cb31103515">
+	</div>
+	<div class="grofile-hash-map-20026dfbc3f71a9a9106cabaa69303df">
+	</div>
+	<div class="grofile-hash-map-c459bf08b1c13a78e4d99be5affc53a7">
+	</div>
+	<div class="grofile-hash-map-123bec28a1b42eb7a95e3e8490d6841b">
+	</div>
+	<div class="grofile-hash-map-5abd1c035098492d2376d298fad31d73">
+	</div>
+	<div class="grofile-hash-map-fa10455969b03487f2fde9d9328c3297">
+	</div>
+	<div class="grofile-hash-map-fe8f043c8540cb29ba4810c9856660a5">
+	</div>
+	<div class="grofile-hash-map-ee5994031118ae73871ccecfb9e641f1">
+	</div>
+	</div>
+                <div class="td-more-articles-box">
+                    <span class="td-sp td-sp-close-more-articles-box td-close-more-articles-box"></span>
+                    <span class="td-more-articles-box-title">MAS HISTORIAS</span>
+                    <div class="td-content-more-articles-box">
+
+                    
+        <div class="td_mod3 td_mod_wrap " itemscope="" itemtype="http://schema.org/Article">
+        <div class="thumb-wrap"><a href="http://nksistemas.com/solucion-al-error-de-cobian-backup-el-motor-no-ha-sido-detectado/" rel="bookmark" title="Solución al error de Cobian backup – El motor no ha sido detectado"><img itemprop="image" class="entry-thumb" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/cobianmotor-100x65.jpg" alt="" title="Solución al error de Cobian backup – El motor no ha sido detectado" height="65" width="100"></a></div>        <div class="item-details">
+            <h3 itemprop="name" class="entry-title"><a itemprop="url" href="http://nksistemas.com/solucion-al-error-de-cobian-backup-el-motor-no-ha-sido-detectado/" rel="bookmark" title="Solución al error de Cobian backup – El motor no ha sido detectado">Solución al error de Cobian backup – El motor no ha sido detectado</a></h3>            <div class="meta-info">
+                                <time itemprop="dateCreated" class="entry-date updated" datetime="2013-01-23T09:01:31+00:00">ene 23, 2013</time><meta itemprop="interactionCount" content="UserComments:44">                            </div>
+        </div>
+        <meta itemprop="author" content="Jorge">        </div>
+
+                            </div>
+                </div>
+
+    <!--
+
+        Theme: Newspaper by tagDiv 2014
+        Version: 4.6.3 (rara)
+        Deploy mode: deploy
+        Speed booster: v3.2
+
+        uid: 5625705b2a3db
+    -->
+
+    <script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/form.js"></script>
+<link rel="stylesheet" id="google-font-rest-css" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="td-bootstrap-css" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/td-bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="td-theme-css" href="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/style.css" type="text/css" media="all">
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/jquery_003.js"></script><iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/postmessageRelay.htm" id="oauth2relay434651119" name="oauth2relay434651119"></iframe>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/nksistemas.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Enviando...","cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/scripts.js"></script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/jquery_004.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/nksistemas.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/polls-js.js"></script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/wpgroho.js"></script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/td_external.js"></script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/site.js"></script>
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/comment-reply.js"></script>
+
+<!-- JS generated by theme -->
+
+<script>
+    
+</script>
+
+<script type="text/javascript" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/e-201543.js" async="" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.7.2',blog:'66786793',post:'2255',tz:'0',srv:'nksistemas.com'} ]);
+	_stq.push([ 'clickTrackerInit', '66786793', '2255' ]);
+</script>
+
+            <script language="javascript">
+                td_ajax_count.td_get_views_counts_ajax("post","[2255]");
+            </script>
+            
+
+
+
+
+<div style="display: none;" id="cboxOverlay"></div><div style="display: none;" tabindex="-1" role="dialog" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><button id="cboxPrevious" type="button"></button><button id="cboxNext" type="button"></button><button id="cboxSlideshow"></button><div style="float: left;" id="cboxLoadingOverlay"></div><div style="float: left;" id="cboxLoadingGraphic"></div><button id="cboxClose" type="button"></button></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><img id="wpstats" src="Instalar%20y%20configurar%20un%20servidor%20FTP%20en%20windows%207%20f%C3%A1cil%20_%20NKSistemas_files/g.gif"></body></html>
+<!-- Dynamic page generated in 2.828 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-10-19 22:36:11 -->
+<!-- super cache -->
