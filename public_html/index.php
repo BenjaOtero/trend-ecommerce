@@ -14,6 +14,7 @@ switch ($action)
 {
     case 'index':
         $view->contentTemplate="../views/templates/index_front.php"; // seteo el template que se va a mostrar
+        $view->contentMenu="../controllers/catalogo.php";
     //    $_SESSION['btnActivo']="index";
         break;
     case 'refreshIndex':
