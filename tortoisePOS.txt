@@ -1,7 +1,0 @@
-http://uialberto.wordpress.com/2011/05/19/integrar-tortoisesvn-con-repositorio-de-google-code/
-
-oterobenjamin@gmail.com's googlecode.com 
-
-svn checkout https://ncsoftpos.googlecode.com/svn/trunk/ ncsoftpos --username oterobenjamin@gmail.com
-
-password: Yx3Dc2Fn9Df7 
