@@ -116,16 +116,7 @@ body{
     background-color: #ffffff;
 }
 #secEstatica{
-    display:-webkit-box;
-    display:-moz-box;
-    display:-ms-flexbox;
-    display:-webkit-flex;
-    display:flex;
     display: none;
-    flex-direction:row;
-    -moz-flex-direction:row;
-    width: 50%;
-    margin: 10px 10px 10px 0px;
 }
 #secEstatica ul{
     width: 100%;
@@ -446,4 +437,15 @@ margin-left:10px;
         width: 100%;
         margin: 0px;
     }	
+    #secEstatica{
+        display:-webkit-box;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display:-webkit-flex;
+        display:flex;
+        flex-direction:row;
+        -moz-flex-direction:row;
+        width: 100%;
+        margin: 0px;
+    }    
 }
