@@ -19,12 +19,13 @@ $(document).ready(function(){
         $.loader({className:"blue-with-image-2",content:''});
         $("#dvMenu li").each(function (){$(this).removeClass('active');});
         $(this).addClass('active');
-    //    var local=$(this).attr('data-local');  //obtengo el id que guardamos en data-id
+        var genero=$(this).attr('data-idGenero');  //obtengo el id que guardamos en data-idGenero
+        var item=$(this).attr('data-idItem');  //obtengo el id que guardamos en data-idItem
         //preparo los parametros
         params={};
-        params.action='catalogo';
-        params.actionCatalogo='loNuevo';
-   //     params.local=local;
+        params.action='itemsYarticulos';
+        params.item=item;
+        params.genero=genero;
         $('#dvContenido').load("index.php",params,function(responseTxt,statusTxt,xhr){
             $(document).waitForImages(function() {
                $('.columnas').equalCols();

@@ -31,11 +31,7 @@
         <p>ON LINE STORE</p>
     </div>   
     <div id="dvMenu">
-        <ul>
-          <li id="contacto">CONTACTO</li>
-          <li class="menu" data-local="13">LOOKBOOK</li>
-          <li id="index" class="active">INICIO</li>
-        </ul>
+        <?php include_once ($view->generosTemplate); // incluyo el template que corresponda ?>	
     </div>    
     <div id="dvContenido">	      
 	<?php include_once ($view->contentTemplate); // incluyo el template que corresponda ?>		

@@ -1,4 +1,10 @@
 <?php
+include_once ("../models/items_mdl.php");
+include_once ("../models/articulos_mdl.php");
+require_once ("../models/generos_mdl.php");
+$modelo_item = new ItemMDL();
+$modelo_articulo = new ArticuloMDL();
+$modelo_genero = new GeneroMDL();
 function limpiarString($string){
     $string=htmlspecialchars(mysql_escape_string(trim($string)));
     return $string;
@@ -14,18 +20,30 @@ switch ($action)
 {
     case 'index':
         $view->contentTemplate="../views/templates/index_front.php"; // seteo el template que se va a mostrar
-        $view->contentMenu="../controllers/catalogo.php";
-    //    $_SESSION['btnActivo']="index";
+        $view->generos=$modelo_genero->Listar();
+        $view->generosTemplate="../views/templates/generos_tpl.php"; // seteo el template que se va a mostrar
         break;
     case 'refreshIndex':
         $view->disableLayout=true;
         $view->contentTemplate="../views/templates/index_front.php";
       //  $_SESSION['btnActivo']="index";
         break;
+    case 'itemsYarticulos':
+        $id_item=$_REQUEST['item'];
+        $idGenero=$_REQUEST['genero'];
+        $view->disableLayout=true;
+        $view_items->items=$modelo_item->Listar();   // la vista esta en el contentTemplate
+        $view_items->itemsTemplate="../views/templates/items_tpl.php";
+        $registro = current($view_items->items);
+        $view_articulos->articulos=$modelo_articulo->ArticulosByItem($id_item);                        
+        $view_articulos->articulosTemplate="../views/templates/articulos_tpl.php";
+        $view->contentTemplate="../views/templates/catalogo_tpl.php";
+        $titulo = "Lo nuevo";
+        break;
     case 'catalogo':
         $view->disableLayout=true;
         $view->contentTemplate="../controllers/catalogo.php";
-        break;
+        break;    
     case 'refreshContacto':
         $view->disableLayout=true;
         $view->contentTemplate="../views/templates/contacto_tpl.php";
