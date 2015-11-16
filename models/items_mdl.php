@@ -25,9 +25,9 @@ class ItemMDL extends DbAbstractMDL{
     function ItemMDL(){ // declara el constructor, si trae el numero de categoria lo busca
     }
 
-    public function Listar(){
+    public function Listar($idGenero){
         $conex= $this->conectar();
-        $sql="call Web_Items_Listar();";
+        $sql="call Web_Items_Listar($idGenero);";
         $registros=$this->consulta($sql,$conex);
         $this->desconectar($conex);
         $rows=$this->fetchAll($registros);

@@ -12,14 +12,23 @@ class ArticuloMDL extends DbAbstractMDL{
         return $rows;
     }
 
-    public function ArticulosByItem($id_item){
+    public function ItemsArticulos($idItem, $idGenero){
         $conex= $this->conectar();
-        $sql="call Web_Articulos_by_Item($id_item);";
+        $sql="call Web_Items_y_Articulos($idItem, $idGenero);";
         $registros=$this->consulta($sql,$conex);
         $this->desconectar($conex);
         $rows=$this->fetchAll($registros);
         return $rows;
     }
+    
+    public function ArticulosByItem($idItem, $idGenero){
+        $conex= $this->conectar();
+        $sql="call Web_Articulos_by_Item($idItem, $idGenero);";
+        $registros=$this->consulta($sql,$conex);
+        $this->desconectar($conex);
+        $rows=$this->fetchAll($registros);
+        return $rows;
+    }    
     
     public function Articulo($id_articulo, &$ImagenART, &$ImagenBackART, &$talleART){
         $mysqli = $this->crearConexion();

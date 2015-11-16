@@ -26,24 +26,28 @@ switch ($action)
     case 'refreshIndex':
         $view->disableLayout=true;
         $view->contentTemplate="../views/templates/index_front.php";
-      //  $_SESSION['btnActivo']="index";
         break;
     case 'itemsYarticulos':
-        $id_item=$_REQUEST['item'];
+        $idItem=$_REQUEST['item'];
         $idGenero=$_REQUEST['genero'];
         $view->disableLayout=true;
-        $view_items->items=$modelo_item->Listar();   // la vista esta en el contentTemplate
+        $view_items->items=$modelo_item->Listar($idGenero);   // la vista esta en el contentTemplate
         $view_items->itemsTemplate="../views/templates/items_tpl.php";
         $registro = current($view_items->items);
-        $view_articulos->articulos=$modelo_articulo->ArticulosByItem($id_item);                        
+        $view_articulos->articulos=$modelo_articulo->ItemsArticulos($idItem, $idGenero);                        
         $view_articulos->articulosTemplate="../views/templates/articulos_tpl.php";
         $view->contentTemplate="../views/templates/catalogo_tpl.php";
         $titulo = "Lo nuevo";
         break;
-    case 'catalogo':
+    case 'byItem':
         $view->disableLayout=true;
-        $view->contentTemplate="../controllers/catalogo.php";
-        break;    
+        $id_item=$_REQUEST['idItem'];
+        $id_genero=$_REQUEST['genero'];
+        $titulo = $_REQUEST['titulo'];
+        $view_articulos->articulos=$modelo_articulo->ArticulosByItem($id_item, $id_genero);        
+        $registro = current($view_articulos->articulos);        
+        $view->contentTemplate="../views/templates/articulos_tpl.php"; // seteo el template que se va a mostrar
+        break;     
     case 'refreshContacto':
         $view->disableLayout=true;
         $view->contentTemplate="../views/templates/contacto_tpl.php";
@@ -53,12 +57,6 @@ switch ($action)
         $view->disableLayout=true;
         $view->contentTemplate="../controllers/catalogo.php";
         break;        
-    case 'refreshVuelos':
-        $view->disableLayout=true;
-        $view->contentTemplate="../views/templates/vuelos.tpl";
-        $_SESSION['btnActivo']="reservas";
-        $_SESSION['ancla']=$_REQUEST['ancla'];
-        break;
     default :
 } 
 if($view->disableLayout==true) 

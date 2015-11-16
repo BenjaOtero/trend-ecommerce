@@ -35,23 +35,15 @@ $(document).ready(function(){
      
     })
 
-    $('.catalogo').live('click',function(){
+    $('.item').live('click',function(){
         $.loader({className:"blue-with-image-2",content:''});
         var idItem=$(this).attr('data-idItem');
-      //  var local=$(this).attr('data-local');
+        var genero=$(this).attr('data-genero');
         var titulo=$(this).attr('data-desc');
         params={};
-        params.action='catalogo';
-        if(idItem==0)
-        {
-            params.actionCatalogo='loNuevoRefresh';
-        }
-        else
-        {
-            params.actionCatalogo='byItem';
-        }
+        params.action='byItem';
         params.idItem=idItem;
-    //    params.local=local;
+        params.genero=genero;
         params.titulo=titulo;
         $('#dvArticulos').load("index.php",params,function(){
             $(document).waitForImages(function() {
