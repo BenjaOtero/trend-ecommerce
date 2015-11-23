@@ -1,0 +1,46 @@
+@font-face {
+font-family: Neuropol X Rg;
+src: url('../app_fuentes/neuropol_x_rg.ttf') ;
+}
+body{
+  background-image: url(../app_images/background.jpg);
+  background-repeat: no-repeat;
+  background-color: #000000;
+}
+
+#header{
+    color: #FFFFFF;
+    background: url('../app_images/header.jpg');
+    margin-top: 15px;
+    height: 100%;
+}
+
+#header h1{
+  padding-top: 20px;
+  padding-left: 10%;
+  font-family: Neuropol X Rg;  
+  font-size: 5vw;
+  letter-spacing: 20px;
+  height: 80%;
+}
+#header p{
+  padding-left: 10%;
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    #header{
+        height: 80px;
+        margin-top: 10px;
+    }
+    #header h1{
+      padding-top: 20px;
+      padding-left: 20px;
+      margin-bottom: 0px;
+      letter-spacing: 10px;
+      font-size: 6vw;
+    }    
+    #header p{
+        font-size: 0.8em;
+    }    
+}

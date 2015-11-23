@@ -1,71 +1,51 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>KARMINNA</title>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;">	
-        <meta name=”MobileOptimized” content=”width”/>
-        <meta name=”HandheldFriendly” content=”true”/>        
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>KARMINNA</title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 	<link rel="stylesheet" href="app_css/flexslider.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="app_css/demo.css" type="text/css" media="screen" />        
-	<script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script>
+	<link rel="stylesheet" href="app_css/style.css" type="text/css" media="screen" />        
 	<script type="text/javascript" src="app_js/jquery.flexslider.js"></script>
 	<!-- Hook up the FlexSlider -->
 	<script type="text/javascript">
 		$(window).load(function() {
 			$('.flexslider').flexslider();
 		});
-	</script>
-</head>
-<body>
-<div id="container">
-    <div id="dvHeader">
-        <h2>KARMINNA</h2>
-        <p>ON LINE STORE</p>
-    </div>   
-    <div id="dvMenu">
-        <ul>
-          <li id="contacto">CONTACTO</li>
-          <li class="menu" data-local="13">LOOKBOOK</li>
-          <li id="index" class="active">INICIO</li>
-        </ul>
-    </div>    
-    <div id="dvContenido">	      
-        <div class="flexslider">
-            <ul class="slides">
-                    <li>
-                            <img src="app_images/img_01.jpg" />
-                    </li>
-                    <li>
-                            <img src="app_images/img_02.jpg" />
-                    </li>
-                    <li>
-                            <img src="app_images/img_03.jpg" />
-                    </li>
-                    <li>
-                            <img src="app_images/img_04.jpg" />
-                    </li>                    
-            </ul>
+	</script>    
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1" id="header">
+                <h1>KARMINNA</h1>
+                <p>ON LINE STORE</p>
+            </div>
         </div>
-        <div id="secEstatica">
-            <ul class="slides">
-                    <li>
-                            <img src="app_images/img_02.jpg" />
-                    </li>
-            </ul>                        
-        </div>				
     </div>
-      <div id="footer">
-        <div id="dvContenidoFooter">	   
-          <div id="direccion">
-              <p >Av. Colón 3502 local 3, ciudad de Córdoba. TE 0351 487 0111</p>
-              <p >Tucumán 481, ciudad de Jesús María. TE  03525 606 403</p>
-          </div>
-          <div id="copyright">
-              <p class="copyright">&copy;&nbsp;All rights reserved - Powered by ncsoftware</p>
-          </div>
-        </div>    
-      </div>    
-</div>
-</body>
+    <div class="container">
+        <div class="row" style="display: inline-flex;">
+            <div class="col-md-10 col-md-offset-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis est eget tristique vestibulum. Fusce et pulvinar erat, id viverra sem. Vivamus porttitor, sapien nec mattis fermentum, sem augue ornare erat, vitae interdum ante sapien id libero. Vestibulum luctus augue pretium purus posuere.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis est eget tristique vestibulum. Fusce et pulvinar erat, id viverra sem. Vivamus porttitor, sapien nec mattis fermentum, sem augue ornare erat, vitae interdum ante sapien id libero. Vestibulum luctus augue pretium purus posuere.
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
