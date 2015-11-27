@@ -1,2 +1,0 @@
--en nombre del sitio ftp poner 127.0.0.1
--en informacion de autenticacion y autorizacion tildar basica y todos los usuarios

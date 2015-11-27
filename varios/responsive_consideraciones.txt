@@ -1,0 +1,5 @@
+﻿-diseñar sitio en Fireworks
+-Maquetar la estructura con bootstrap 3 sin que importen los estilos visuales
+-maquetación visual de elementos comunes
+-maquetación visual de elementos no comunes (crear una hoja de estilo por página)
+-gestión del comportamiento responsive (probar en todas las medidas de dispositivos)
