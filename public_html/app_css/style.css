@@ -7,6 +7,7 @@ body {
   margin-top: 10px;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #000000;
+  background-repeat: no-repeat;
 }
 
 ul {
@@ -35,11 +36,14 @@ ul li {
   box-shadow: 0 1px 5px #999;*/
 }
 
-#divHeader {
+#div-header  {
   padding-top: 10px;
   background: transparent url("../app_images/header.jpg");
   margin-bottom: 5px;
   height: 80px;
+
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[../app_images/header.jpg]', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[../app_images/header.jpg]', sizingMethod='scale')";
 }
 
 #main-logo {
@@ -75,6 +79,10 @@ ul li {
   font-size: 1.2rem;
 }
 
+#mobile-main-menu li.menu-active {
+  background-image: url(../app_images/menu_xs_active.jpg);
+}
+
 #main-picture {
   margin-top: 5px;
   padding: 5px;
@@ -84,6 +92,10 @@ ul li {
 /* *************************************
 * *************** Footer ***************
 * ************************************ */
+footer{
+  margin-top: 15px;
+  background-image: url("../app_images/footer.jpg");  
+}
 
 #direccion {
   margin-top: 20px;
@@ -112,32 +124,64 @@ ul li {
 
 @media (min-width: 768px) { 
 
-  #divHeader {
+  body {
+    background-image: url("../app_images/background.jpg");
+    background-repeat: no-repeat;
+  }
+
+  #div-header {
+    margin-bottom: 0px;
     height: 140px
   }
 
+  #div-menu {
+    background-image: url(../app_images/menu.jpg);
+    background-repeat: repeat-x;
+    padding-top: 1px;
+    color: #999999;
+  }
+
+  #div-menu li{
+    display: inline;
+    float: right;
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 13px;
+  }
+  #div-menu ul{
+    padding-bottom: 15px;
+  }
+  #div-menu li:hover{
+    cursor: pointer;
+    color: #ffffff;
+  }
+  .active{
+    color: #ffffff;
+  }
+
   #main-logo {
-  text-align: left;
-  letter-spacing: 20px;
-  font-size: 60px;
-  font-size: 6rem;
-  font-weight: 200;
+    padding-left: 60px;
+    padding-top: 25px;
+    text-align: left;
+    letter-spacing: 20px;
+    font-size: 60px;
+    font-size: 6rem;
+    font-weight: 200;
   }
 
-  #main-logo > a {  
-    font-size: 20px;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
+  #main-logo > span {
+    font-size: 17px;
+    font-size: 1.7rem;
+
   }
 
-  #main-logo > a > span {
-    display: block;
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #DFFFBF;
+  #main-picture img {    
+    padding: 5px;
+  }  
+
+  #direccion p {
+    margin-bottom: 5px;
     font-size: 12px;
     font-size: 1.2rem;
-    letter-spacing: 0px;
-  }
+  }  
 }

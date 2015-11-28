@@ -1,23 +1,7 @@
-<div class="flexslider">
-    <ul class="slides">
-            <li>
-                    <img src="app_images/img_01.jpg" />
-            </li>
-            <li>
-                    <img src="app_images/img_02.jpg" />
-            </li>
-            <li>
-                    <img src="app_images/img_03.jpg" />
-            </li>
-            <li>
-                    <img src="app_images/img_04.jpg" />
-            </li>                    
-    </ul>
+<div class="container">
+    <div class="rows">
+        <div class="col-xs-12 col-md-10 col-md-offset-1" id="main-picture">
+            <img src="app_images/img_01.jpg" class="img-responsive" alt="Imagen responsive">
+        </div>
+    </div>
 </div>
-<div id="secEstatica">
-    <ul class="slides">
-            <li>
-                    <img src="app_images/img_02.jpg" />
-            </li>
-    </ul>                        
-</div>	
