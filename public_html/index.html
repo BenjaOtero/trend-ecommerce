@@ -18,6 +18,7 @@
     <![endif]-->
 	<link rel="stylesheet" href="app_css/flexslider.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="app_css/style.css" type="text/css" media="screen" />    
+        <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
     <!--[if IEMobile]> 
       <link rel="stylesheet" href="app_css/styleIE.css" type="text/css" media="screen" /> 
     <![endif]-->       
@@ -64,7 +65,16 @@
     </div>
 </header>
     <div id="principal">
-        <?php include_once ($view->contentTemplate); // incluyo el template que corresponda ?>
+        <div class="container">            
+            <div class="row">
+                <div class="col-xs-6">
+                    <img src="images/img_01.jpg" class="img-responsive imagen-left" alt="Imagen responsive">
+                </div>
+                <div class="col-xs-6">
+                    <img src="images/img_01.jpg" class="img-responsive imagen-right" alt="Imagen responsive">
+                </div>
+            </div> 
+        </div>
     </div>
     <footer>
         <div class="container">

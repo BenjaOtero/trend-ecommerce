@@ -1,0 +1,19 @@
+.imagen-right{
+  padding-top: 10px;  
+  padding-right: 15px;
+}
+
+.imagen-left{
+   padding-top: 10px;
+   padding-left: 15px;
+}
+
+/* *************************************
+* *********** Media queries ************
+* ************************************ */
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) { 
+
+}
