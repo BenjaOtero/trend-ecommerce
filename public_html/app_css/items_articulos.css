@@ -1,11 +1,27 @@
+.imagen-left{
+   padding-top: 10px;
+   padding-left: 15px;
+}
+
 .imagen-right{
   padding-top: 10px;  
   padding-right: 15px;
 }
 
-.imagen-left{
-   padding-top: 10px;
-   padding-left: 15px;
+.descripcion-articulo-left{
+    padding-left: 15px;
+    color: #fff;
+    font-size: 8px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.descripcion-articulo-right{
+    padding-right: 15px;
+    color: #fff;
+    font-size: 8px;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 /* *************************************
