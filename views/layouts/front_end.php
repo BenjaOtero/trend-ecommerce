@@ -18,45 +18,57 @@
     <![endif]-->
 	<link rel="stylesheet" href="app_css/flexslider.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="app_css/style.css" type="text/css" media="screen" />    
+        <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
     <!--[if IEMobile]> 
-      <link rel="stylesheet" href="app_css/styleIE.css" type="text/css" media="screen" /> 
-    <![endif]-->       
-	<script type="text/javascript" src="app_js/jquery.flexslider.js"></script>
-	<!-- Hook up the FlexSlider -->
-	<script type="text/javascript">
-		$(window).load(function() {
-			$('.flexslider').flexslider();
-		});
-	</script>    
+
+    <![endif]-->                      	
+
+         
   </head>
   <body>
+        <script type="text/javascript" src="app_js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="app_js/functions_f.js"></script>      
     <header id="main-header">
         <div class="container">
-            <div class="row">
+            <div class="row hidden-xs">
                 <div class="col-xs-12 col-md-10 col-md-offset-1" id="div-header">
-                    <h1 id="main-logo">KARMINNA<span>ON LINE STORE</span></h1>
+                    <h1 class="main-logo">KARMINNA<span>ON LINE STORE</span></h1>
                 </div>        
-            </div>
-            <?php include_once ($view->generosTemplate); // incluyo el template que corresponda ?>	      
-        </div>
+            </div>   
+            <div class="row visible-xs">
+                <div class="col-xs-12">
+                    <div style="overflow: hidden">
+                        <img src="app_images/header_xs.jpg" class="" alt="">
+                        <h1 class="main-logo">KARMINNA<span>ON LINE STORE</span></h1>
+                        <br />
+                    </div>                
+                </div>
+            </div>              
+        </div>    
+        <?php include_once ($view->generosTemplate); // incluyo el template que corresponda ?>
     </header>
-    <div id="principal">
+    <div id="dvContenido">
         <?php include_once ($view->contentTemplate); // incluyo el template que corresponda ?>
     </div>
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-10 col-md-offset-1" id="direccion">
+            <div class="row hidden-xs">
+                <div class="col-xs-12 col-md-10 col-md-offset-1 direccion">
                       <p>Av. Colón 3502 local 3, ciudad de Córdoba.<br/>TE 0351 487 0111</p>
                       <p>Tucumán 481, ciudad de Jesús María.<br/>TE  03525 606 403</p>
                       <p class="copyright">&copy;&nbsp;All rights reserved - Powered by Trend Sistemas</p>
                 </div>
             </div>
+            <div class="row visible-xs" style="overflow: hidden;">
+                <img src="app_images/footer_xs.jpg" class="" alt="">
+                <div class="col-xs-12 direccion">                    
+                      <p>Av. Colón 3502 local 3, ciudad de Córdoba.<br/>TE 0351 487 0111</p>
+                      <p>Tucumán 481, ciudad de Jesús María.<br/>TE  03525 606 403</p>
+                      <p class="copyright">&copy;&nbsp;All rights reserved - Powered by Trend Sistemas</p>            
+                </div>
+            </div>              
         </div>
     </footer>    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="app_js/jquery-1.7.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
   </body>
 </html>

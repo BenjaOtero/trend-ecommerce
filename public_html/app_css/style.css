@@ -88,15 +88,15 @@ ul li {
 * *************** Footer ***************
 * ************************************ */
 footer{
-  margin-top: 15px;
-  background-image: url("../app_images/footer.jpg");  
+  margin-top: 15px;  
 }
 
-#direccion {
-  margin-top: 20px;
+.direccion {
+  overflow: hidden;
+  margin-top: -90px;
 }
 
-#direccion p {
+.direccion p {
   margin-bottom: 5px;
   font-size: 11px;
   font-size: 1.1rem;
@@ -104,7 +104,7 @@ footer{
   color: #ffffff;
 }
 
-#direccion .copyright {
+.direccion .copyright {
   margin-top: 10px;
   color: #777;
   font-size: 9px;
@@ -118,69 +118,76 @@ footer{
 /* Small devices (tablets, 768px and up) */
 
 @media (min-width: 768px) { 
+    body {
+      background-image: url("../app_images/background.jpg");
+      background-repeat: no-repeat;
+    }
 
-  body {
-    background-image: url("../app_images/background.jpg");
-    background-repeat: no-repeat;
-  }
+    .menu {
 
-  #div-header {
-    margin-bottom: 0px;
-    height: 140px
-  }
+    }
+    #div-header {
+      margin-bottom: 0px;
+      height: 140px
+    }
 
-  .div-menu {
-    background-image: url(../app_images/menu.jpg);
-    background-repeat: repeat-x;
-    padding-top: 1px;
-    color: #999999;
-  }
+    .div-menu {
+      background-image: url(../app_images/menu.jpg);
+      background-repeat: repeat-x;
+      padding-top: 1px;
+      color: #999999;
+    }
 
-  .div-menu li{
-    display: inline;
-    float: right;
-    padding-right: 20px;
-    padding-top: 10px;
-    font-size: 13px;
-  }
-  .div-menu ul{
-    padding-bottom: 15px;
-  }
-  .div-menu li:hover{
-    cursor: pointer;
-    color: #ffffff;
-  }
-  .active{
-    color: #ffffff;
-  }
+    .div-menu li{
+      display: inline;
+      float: right;
+      padding-right: 20px;
+      padding-top: 10px;
+      font-size: 13px;
+    }
+    .div-menu ul{
+      padding-bottom: 15px;
+    }
+    .div-menu li:hover{
+      cursor: pointer;
+      color: #ffffff;
+    }
+    .active{
+      color: #ffffff;
+    }
 
-  .main-logo {
-    width: 100%;
-    margin: 0;
-    font-family: Neuropol X Rg; 
-    text-align: left;
-    color: #fff;       
-    padding-left: 60px;
-    padding-top: 25px;
-    text-align: left;
-    letter-spacing: 20px;
-    font-size: 60px;
-    font-size: 6rem;
-    font-weight: 200;   
-  }
+    .main-logo {
+      width: 100%;
+      margin: 0;
+      font-family: Neuropol X Rg; 
+      text-align: left;
+      color: #fff;       
+      padding-left: 60px;
+      padding-top: 25px;
+      text-align: left;
+      letter-spacing: 20px;
+      font-size: 60px;
+      font-size: 6rem;
+      font-weight: 200;   
+    }
 
-  .main-logo > span {
-    font-size: 17px;
-    font-size: 1.7rem;
-  }
+    .main-logo > span {
+      font-size: 17px;
+      font-size: 1.7rem;
+    }
 
-  #main-picture img {    
-    padding: 5px;
-  }  
-
-  #direccion p {
-    margin-bottom: 5px;
-    font-size: 12px;
-    font-size: 1.2rem;
-  }  
+    #main-picture img {    
+      padding: 5px;
+    }  
+    footer{
+      background-image: url("../app_images/footer.jpg");  
+    }
+    .direccion {
+      margin-top: 20px;
+    }  
+    .direccion p {
+      margin-bottom: 5px;
+      font-size: 12px;
+      font-size: 1.2rem;
+    }  
 }
