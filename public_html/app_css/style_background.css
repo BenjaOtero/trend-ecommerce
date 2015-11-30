@@ -46,25 +46,23 @@ ul li {
 -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[../app_images/header.jpg]', sizingMethod='scale')";
 }
 
-#main-logo {
-  width: 100%;
-  padding: 15px 0 0 20px;
-  margin: 0;
+.main-logo {
+  color: #ffffff; 
+  margin-top: -70px; 
   font-family: Neuropol X Rg; 
   text-align: center;
-  letter-spacing: 15px;
-  font-size: 20px;
-  font-size: 2rem;
+  letter-spacing: 12px;
+  font-size: 19px;
+  font-size: 1.9rem;
   font-weight: 400;
-  color: #fff;
 }
 
-#main-logo > span {
+.main-logo > span {
   display: block;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #DFFFBF;
   font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   letter-spacing: 0px;
 }
 
@@ -134,24 +132,24 @@ footer{
     height: 140px
   }
 
-  #div-menu {
+  .div-menu {
     background-image: url(../app_images/menu.jpg);
     background-repeat: repeat-x;
     padding-top: 1px;
     color: #999999;
   }
 
-  #div-menu li{
+  .div-menu li{
     display: inline;
     float: right;
     padding-right: 20px;
     padding-top: 10px;
     font-size: 13px;
   }
-  #div-menu ul{
+  .div-menu ul{
     padding-bottom: 15px;
   }
-  #div-menu li:hover{
+  .div-menu li:hover{
     cursor: pointer;
     color: #ffffff;
   }
@@ -159,20 +157,24 @@ footer{
     color: #ffffff;
   }
 
-  #main-logo {
+  .main-logo {
+    width: 100%;
+    margin: 0;
+    font-family: Neuropol X Rg; 
+    text-align: left;
+    color: #fff;       
     padding-left: 60px;
     padding-top: 25px;
     text-align: left;
     letter-spacing: 20px;
     font-size: 60px;
     font-size: 6rem;
-    font-weight: 200;
+    font-weight: 200;   
   }
 
-  #main-logo > span {
+  .main-logo > span {
     font-size: 17px;
     font-size: 1.7rem;
-
   }
 
   #main-picture img {    
