@@ -19,15 +19,39 @@
 	<link rel="stylesheet" href="app_css/flexslider.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="app_css/style.css" type="text/css" media="screen" />    
         <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
-    <!--[if IEMobile]> 
-
-    <![endif]-->                      	
+	<script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="app_js/functions_f.js"></script>        
+	<script type="text/javascript" src="app_js/jquery.flexslider.js"></script>      
+        <script type="text/javascript" src="app_js/jquery.waitforimages.js"></script>
+        <script type="text/javascript" src="app_js/jquery.loader.min.js"></script>
+        <script type="text/javascript" src="app_js/jquery.jqzoom-core.js"></script>
+        <script type="text/javascript" src="app_js/jquery.fancybox.js" charset="utf-8"></script>                      	
 
          
   </head>
-  <body>
-        <script type="text/javascript" src="app_js/jquery-1.7.min.js"></script>
-        <script type="text/javascript" src="app_js/functions_f.js"></script>      
+  <body> 
+      <!-- Loader Bootstrap -->
+    <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
+        role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <span class="glyphicon glyphicon-time">
+                        </span>Please Wait
+                     </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info
+                        progress-bar-striped active"
+                        style="width: 100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>      
     <header id="main-header">
         <div class="container">
             <div class="row hidden-xs">
@@ -70,5 +94,7 @@
         </div>
     </footer>    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
   </body>
 </html>

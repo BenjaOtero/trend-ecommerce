@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
                          /* Menú frontend */
-
+       
+    
     $('#index').live('click',function(){
         $.loader({className:"blue-with-image-2",content:''});
-        $("#dvMenu li").each(function (){$(this).removeClass('active');});
+        $(".div-menu li").each(function (){$(this).removeClass('active');});
         $(this).addClass('active');
         params={};
         params.action='refreshIndex';
@@ -14,10 +15,10 @@ $(document).ready(function(){
             $.loader('close');
         });
     });
-
+    
     $('.menu').live('click',function(){
-        $.loader({className:"blue-with-image-2",content:''});
-        $("#dvMenu li").each(function (){$(this).removeClass('active');});
+        $('#myPleaseWait').modal('show');
+        $(".div-menu li").each(function (){$(this).removeClass('active');});
         $(this).addClass('active');
         var genero=$(this).attr('data-idGenero');  //obtengo el id que guardamos en data-idGenero
         var item=$(this).attr('data-idItem');  //obtengo el id que guardamos en data-idItem
@@ -27,10 +28,7 @@ $(document).ready(function(){
         params.item=item;
         params.genero=genero;
         $('#dvContenido').load("index.php",params,function(responseTxt,statusTxt,xhr){
-            $(document).waitForImages(function() {
-               $('.columnas').equalCols();
-               $.loader('close');
-            });
+            $('#myPleaseWait').modal('hide');
         });
      
     })
@@ -129,7 +127,7 @@ $(document).ready(function(){
     
     $('#contacto').live('click',function(){
    //   $.loader({className:"blue-with-image-2",content:''});
-      $("#dvMenu li").each(function (){$(this).removeClass('active');})
+      $(".div-menu li").each(function (){$(this).removeClass('active');});
       $(this).addClass('active');
         params={};
         params.action='refreshContacto';
