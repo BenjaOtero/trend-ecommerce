@@ -24,6 +24,9 @@
     text-align: center;
 }
 
+.items-articulos{
+    background-color: #ffffff;
+}
 /* *************************************
 * *********** Media queries ************
 * ************************************ */
@@ -31,5 +34,8 @@
 /* Small devices (tablets, 768px and up) */
 
 @media (min-width: 768px) { 
-
+    
+    .items-articulos{
+        background-color: #ffffff;
+    }
 }

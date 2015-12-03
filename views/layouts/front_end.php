@@ -26,32 +26,34 @@
         <script type="text/javascript" src="app_js/jquery.loader.min.js"></script>
         <script type="text/javascript" src="app_js/jquery.jqzoom-core.js"></script>
         <script type="text/javascript" src="app_js/jquery.fancybox.js" charset="utf-8"></script>                      	
-
-         
   </head>
-  <body> 
+  <body>  
       <!-- Loader Bootstrap -->
-    <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
-        role="dialog" aria-hidden="true" data-backdrop="static">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">
-                        <span class="glyphicon glyphicon-time">
-                        </span>Please Wait
-                     </h4>
-                </div>
-                <div class="modal-body">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info
-                        progress-bar-striped active"
-                        style="width: 100%">
+        <div class="container">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">      
+                <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
+                    role="dialog" aria-hidden="true" data-backdrop="static">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">
+                                    <span class="glyphicon glyphicon-time">
+                                    </span>Please Wait
+                                 </h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info
+                                    progress-bar-striped active"
+                                    style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>      
+                </div>      
+            </div>           
+        </div>         
     <header id="main-header">
         <div class="container">
             <div class="row hidden-xs">
@@ -71,7 +73,7 @@
         </div>    
         <?php include_once ($view->generosTemplate); // incluyo el template que corresponda ?>
     </header>
-    <div id="dvContenido">
+    <div id="dvContenido">      
         <?php include_once ($view->contentTemplate); // incluyo el template que corresponda ?>
     </div>
     <footer>
