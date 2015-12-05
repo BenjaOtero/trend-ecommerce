@@ -4,15 +4,11 @@ $(document).ready(function(){
        
     
     $('#index').live('click',function(){
-        $.loader({className:"blue-with-image-2",content:''});
         $(".div-menu li").each(function (){$(this).removeClass('active');});
         $(this).addClass('active');
         params={};
         params.action='refreshIndex';
         $('#dvContenido').load("index.php", params, function(){
-         //   $('#slider').nivoSlider();
-            $('.flexslider').flexslider();
-            $.loader('close');
         });
     });
     
@@ -34,7 +30,6 @@ $(document).ready(function(){
     })
 
     $('.item').live('click',function(){
-        $.loader({className:"blue-with-image-2",content:''});
         var idItem=$(this).attr('data-idItem');
         var genero=$(this).attr('data-genero');
         var titulo=$(this).attr('data-desc');
@@ -46,13 +41,11 @@ $(document).ready(function(){
         $('#dvArticulos').load("index.php",params,function(){
             $(document).waitForImages(function() {
                $('.columnas').equalCols();
-               $.loader('close');
             });
         });
     });
 
     $('.articulo').live('click',function(){
-        $.loader({className:"blue-with-image-2",content:''});
         var local=$(this).attr('data-loc');
         var articulo=$(this).attr('data-art');
         params={};
@@ -71,7 +64,6 @@ $(document).ready(function(){
         //  $('.columnas').equalCols();
             $(document).waitForImages(function() {
                $('.columnas').equalCols();
-               $.loader('close');
             });
         });
     });
@@ -126,13 +118,11 @@ $(document).ready(function(){
     })
     
     $('#contacto').live('click',function(){
-   //   $.loader({className:"blue-with-image-2",content:''});
       $(".div-menu li").each(function (){$(this).removeClass('active');});
       $(this).addClass('active');
         params={};
         params.action='refreshContacto';
         $('#dvContenido').load("index.php",params,function(){
-            $.loader('close');
       })
     })    
     

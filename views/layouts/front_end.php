@@ -21,11 +21,7 @@
         <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
 	<script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="app_js/functions_f.js"></script>        
-	<script type="text/javascript" src="app_js/jquery.flexslider.js"></script>      
-        <script type="text/javascript" src="app_js/jquery.waitforimages.js"></script>
-        <script type="text/javascript" src="app_js/jquery.loader.min.js"></script>
-        <script type="text/javascript" src="app_js/jquery.jqzoom-core.js"></script>
-        <script type="text/javascript" src="app_js/jquery.fancybox.js" charset="utf-8"></script>                      	
+        <script type="text/javascript" src="app_js/jquery.jqzoom-core.js"></script>                    	
   </head>
   <body>  
       <!-- Loader Bootstrap -->

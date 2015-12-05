@@ -1,4 +1,4 @@
-﻿$(document).ready(function(){
+$(document).ready(function(){
 
     $('#intranet').live('click',function(){
         $('#popupbox').load("../views/templates/login.tpl",function(){
