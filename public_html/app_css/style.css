@@ -84,6 +84,18 @@ ul li {
   background-color: #ffffff;
 }
 
+.div-menu-items-xs {
+  margin: 1px 0px; 
+  overflow: hidden
+}
+
+.div-menu-items-xs p {
+  color: #fff; 
+  margin-top: -26px; 
+  margin-left: 50px;
+  font-size: 0.9rem;
+}
+
 /* *************************************
 * *************** Footer ***************
 * ************************************ */

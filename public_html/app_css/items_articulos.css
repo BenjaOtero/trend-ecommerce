@@ -1,5 +1,4 @@
 .descripcion-articulo{
-    padding-left: 15px;
     color: #fff;
     font-size: 8px;
     font-size: 0.8rem;
@@ -25,10 +24,6 @@
     .articulos{
        background-color: #ffffff;
    }   
-    .items-articulos{
-        background-color: #ffffff;
-    }
-
     .descripcion-articulo{
         color: #222;
     }    
