@@ -5,14 +5,7 @@
     text-align: center;
 }
 
-.items-articulos{
-    background-color: #ffffff;
-}
 
-.articulos{
-    margin-top: 10px;
-    padding-top: 10px;
-}
 /* *************************************
 * *********** Media queries ************
 * ************************************ */
@@ -21,9 +14,34 @@
 
 @media (min-width: 768px) { 
     
-    .articulos{
-       background-color: #ffffff;
-   }   
+    #fila-articulos{
+        margin-top: 10px;
+        margin-left: 0px;
+        padding: 10px;
+        background-color: #ffffff;
+    }
+    
+    #columna-articulos{
+        padding: 0px;
+    }
+    
+    #div-items{    
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #ffffff;
+    }    
+ 
+    #div-items-sub{    
+        padding: 10px;
+        border: 1px solid #999999;
+    }    
+    
+    #div-articulos{
+        padding: 10px;
+        background-color: #ffffff;
+        border: 1px solid #999999;
+    }
+     
     .descripcion-articulo{
         color: #222;
     }    

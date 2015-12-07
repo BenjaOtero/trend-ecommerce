@@ -96,6 +96,9 @@ ul li {
   font-size: 0.9rem;
 }
 
+#div-contenido{
+    margin-top: 10px;
+}
 /* *************************************
 * *************** Footer ***************
 * ************************************ */
@@ -188,6 +191,10 @@ footer{
       font-size: 1.7rem;
     }
 
+    #div-contenido{
+        margin-top: 0px;
+    }    
+    
     #main-picture img {    
       padding: 5px;
     }  

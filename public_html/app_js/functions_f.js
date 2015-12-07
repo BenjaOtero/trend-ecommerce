@@ -8,7 +8,7 @@ $(document).ready(function(){
         $(this).addClass('active');
         params={};
         params.action='refreshIndex';
-        $('#dvContenido').load("index.php", params, function(){
+        $('#div-contenido').load("index.php", params, function(){
         });
     });
     
@@ -23,7 +23,7 @@ $(document).ready(function(){
         params.action='itemsYarticulos';
         params.item=item;
         params.genero=genero;
-        $('#dvContenido').load("index.php",params,function(responseTxt,statusTxt,xhr){
+        $('#div-contenido').load("index.php",params,function(responseTxt,statusTxt,xhr){
             $('#myPleaseWait').modal('hide');
         });
      
