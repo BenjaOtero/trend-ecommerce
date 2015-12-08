@@ -36,6 +36,20 @@
         border: 1px solid #999999;
     }    
     
+    #div-items-sub li{  
+        padding-left: 15px;
+        color: #8E0673;
+        font-size: 12px;
+        font-size: 1.2rem;
+        background: transparent url("../app_images/bullet.gif");
+        background-repeat: no-repeat;
+    }    
+    
+    #div-items-sub li:hover{  
+        cursor: pointer;
+        color: #006CD8;   
+    }    
+    
     #div-articulos{
         padding: 10px;
         background-color: #ffffff;

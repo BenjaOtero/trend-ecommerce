@@ -18,4 +18,9 @@
             </div>                     
         </div>          
     </div> 
+    <div class="row visible-xs">
+        <div class="col-xs-12">                      
+            <?php include_once ($view_items->itemsXsTemplate);?>
+        </div>                                
+    </div>      
 </div>

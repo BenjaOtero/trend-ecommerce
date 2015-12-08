@@ -33,6 +33,7 @@ switch ($action)
         $view->disableLayout=true;
         $view_items->items=$modelo_item->Listar($idGenero);   // la vista esta en el contentTemplate
         $view_items->itemsTemplate="../views/templates/items_tpl.php";
+        $view_items->itemsXsTemplate="../views/templates/items_xs_tpl.php";
         $registro = current($view_items->items);
         $view_articulos->articulos=$modelo_articulo->ItemsArticulos($idItem, $idGenero);                        
         $view_articulos->articulosTemplate="../views/templates/articulos_tpl.php";
