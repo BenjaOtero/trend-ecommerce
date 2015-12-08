@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" property="stylesheet" />
 <div class="container">
-    <div class="row">        
+    <div class="row row-eq-height">        
         <div class="col-sm-2 col-md-2 col-md-offset-1 hidden-xs" id="div-items">
             <div id="div-items-sub">
                 <?php include_once ($view_items->itemsTemplate);?>

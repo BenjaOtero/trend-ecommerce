@@ -24,9 +24,8 @@ $(document).ready(function(){
         params.item=item;
         params.genero=genero;
         $('#div-contenido').load("index.php",params,function(responseTxt,statusTxt,xhr){
-            $('#myPleaseWait').modal('hide');
+            $('#myPleaseWait').modal('hide');            
         });
-     
     })
 
     $('.item').live('click',function(){

@@ -5,6 +5,12 @@
     text-align: center;
 }
 
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
 
 /* *************************************
 * *********** Media queries ************
@@ -33,10 +39,9 @@
  
     #div-items-sub{    
         padding: 10px;
-        border: 1px solid #999999;
     }    
     
-    #div-items-sub li{  
+    #div-items li{  
         padding-left: 15px;
         color: #8E0673;
         font-size: 12px;
@@ -53,7 +58,6 @@
     #div-articulos{
         padding: 10px;
         background-color: #ffffff;
-        border: 1px solid #999999;
     }
      
     .descripcion-articulo{
