@@ -8,7 +8,7 @@
     <title>KARMINNA</title>
 
     <!-- Bootstrap -->
-    <link href="./bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,39 +16,37 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<link rel="stylesheet" href="app_css/flexslider.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="app_css/style.css" type="text/css" media="screen" />    
         <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
 	<script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="app_js/functions_f.js"></script>        
         <script type="text/javascript" src="app_js/jquery.jqzoom-core.js"></script>                    	
   </head>
   <body>  
       <!-- Loader Bootstrap -->
-        <div class="container">
-            <div class="col-xs-12 col-md-10 col-md-offset-1">      
-                <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
-                    role="dialog" aria-hidden="true" data-backdrop="static">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">
-                                    <span class="glyphicon glyphicon-time">
-                                    </span>Please Wait
-                                 </h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info
-                                    progress-bar-striped active"
-                                    style="width: 100%">
-                                    </div>
+        <div class="container">    
+            <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
+                role="dialog" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">
+                                <span class="glyphicon glyphicon-time">
+                                </span>Please Wait
+                             </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-info
+                                progress-bar-striped active"
+                                style="width: 100%">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>      
-            </div>           
+                </div>
+            </div>               
         </div>         
     <header id="main-header">
         <div class="container">
@@ -92,7 +90,7 @@
         </div>
     </footer>    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
+    <!-- Latest compiled and minified JavaScript -->  
+    <script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.min_1.js"></script>
   </body>
 </html>
