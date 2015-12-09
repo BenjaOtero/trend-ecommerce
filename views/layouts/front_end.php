@@ -89,8 +89,5 @@
             </div>              
         </div>
     </footer>    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-    <!-- Latest compiled and minified JavaScript -->  
-    <script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.min_1.js"></script>
   </body>
 </html>

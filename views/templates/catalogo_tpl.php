@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" property="stylesheet" />
 <div class="container">    
     <div class="row"> 
-        <div class="col-sm-10 col-md-10 col-md-offset-1">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
             <div class="row" id="div-items-articulos">        
                 <div class="col-sm-2 col-md-2 hidden-xs" id="div-items">
                     <?php include_once ($view_items->itemsTemplate);?>
