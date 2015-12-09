@@ -27,6 +27,14 @@ $(document).ready(function(){
             $('#myPleaseWait').modal('hide');            
         });
     })
+    
+    // Menu movil
+    
+        $('#mobile-menu-button').live('click',function(){
+            var $mobileMenu = $('#mobile-main-menu');	
+            $mobileMenu.slideToggle('fast');        
+        });            		
+   
 
     $('.item').live('click',function(){
         var idItem=$(this).attr('data-idItem');

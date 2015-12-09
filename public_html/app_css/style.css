@@ -36,7 +36,7 @@ ul li {
   box-shadow: 0 1px 5px #999;*/
 }
 
-#div-header  {
+#div-header {
   padding-top: 10px;
   background: transparent url("../app_images/header.jpg");
   margin-bottom: 5px;
@@ -44,6 +44,10 @@ ul li {
 
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[../app_images/header.jpg]', sizingMethod='scale');
 -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[../app_images/header.jpg]', sizingMethod='scale')";
+}
+
+#div-header-xs{
+    margin-bottom: 10px;
 }
 
 .main-logo {
@@ -71,6 +75,10 @@ ul li {
   overflow: hidden
 }
 
+.div-menu-xs:hover {
+        cursor: pointer;
+}
+
 .div-menu-xs p {
   color: #fff; 
   margin-top: -30px; 
@@ -96,9 +104,6 @@ ul li {
   font-size: 0.9rem;
 }
 
-#div-contenido{
-    margin-top: 10px;
-}
 /* *************************************
 * *************** Footer ***************
 * ************************************ */

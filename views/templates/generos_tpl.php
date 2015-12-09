@@ -16,7 +16,7 @@
         <div class="col-xs-12">  
             <?php foreach ($view->generos as $genero):  // uso la otra sintaxis de php para templates ?>
             <div class="div-menu-xs menu" data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
-                <img src="app_images/menu_xs_02.jpg" class="" alt="">            
+                <img src="app_images/menu_xs.jpg" class="" alt="">            
                 <p>
                     <?php echo $genero['DescripcionGEN'];?>
                 </p>

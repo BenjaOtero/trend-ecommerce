@@ -5,11 +5,33 @@
     text-align: center;
 }
 
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
+#titulo{
+    color: #fff;
+    text-align: center;
+}
+
+/* *************************************
+* ************* Menu items *************
+* ************************************ */
+
+.div-menu-items-xs {
+  margin: 1px 0px; 
+  overflow: hidden
+}
+
+.div-menu-items-xs p {
+  color: #fff; 
+  margin-top: -26px; 
+  margin-left: 50px;
+  font-size: 0.9rem;
+}
+
+.div-menu-items-xs:hover {
+  margin: 1px 0px; 
+}
+
+#mobile-main-menu{
+    display: none;
 }
 
 /* *************************************
@@ -62,7 +84,12 @@
         padding: 10px;
         background-color: #ffffff;
     }
-     
+    
+
+    #titulo{
+        color: #666666;
+    }     
+    
     .descripcion-articulo{
         color: #222;
     }    

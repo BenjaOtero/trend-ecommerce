@@ -24,46 +24,44 @@
         <script type="text/javascript" src="app_js/jquery.jqzoom-core.js"></script>                    	
   </head>
   <body>  
-      <!-- Loader Bootstrap -->
-        <div class="container">    
-            <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
-                role="dialog" aria-hidden="true" data-backdrop="static">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">
-                                <span class="glyphicon glyphicon-time">
-                                </span>Please Wait
-                             </h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-info
-                                progress-bar-striped active"
-                                style="width: 100%">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>               
-        </div>         
+    <!-- Loader Bootstrap -->
+      <div class="container">    
+          <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
+              role="dialog" aria-hidden="true" data-backdrop="static">
+              <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h4 class="modal-title">
+                              <span class="glyphicon glyphicon-time">
+                              </span>Please Wait
+                           </h4>
+                      </div>
+                      <div class="modal-body">
+                          <div class="progress">
+                              <div class="progress-bar progress-bar-info
+                              progress-bar-striped active"
+                              style="width: 100%">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>               
+      </div>         
     <header id="main-header">
-        <div class="container">
+        <div id="div-header-xs" class="visible-xs">
+            <div style="overflow: hidden">
+                <img src="app_images/header_xs.jpg" class="" alt="">
+                <h1 class="main-logo">KARMINNA<span>ON LINE STORE</span></h1>
+                <br />
+            </div>                
+        </div>          
+        <div class="container">            
             <div class="row hidden-xs">
                 <div class="col-xs-12 col-md-10 col-md-offset-1" id="div-header">
                     <h1 class="main-logo">KARMINNA<span>ON LINE STORE</span></h1>
                 </div>        
-            </div>   
-            <div class="row visible-xs">
-                <div class="col-xs-12">
-                    <div style="overflow: hidden">
-                        <img src="app_images/header_xs.jpg" class="" alt="">
-                        <h1 class="main-logo">KARMINNA<span>ON LINE STORE</span></h1>
-                        <br />
-                    </div>                
-                </div>
-            </div>              
+            </div>               
         </div>    
         <?php include_once ($view->generosTemplate); // incluyo el template que corresponda ?>
     </header>

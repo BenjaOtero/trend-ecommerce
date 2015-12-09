@@ -8,12 +8,10 @@
                 </div>               
                 <div class="col-xs-12 col-sm-10 col-md-10">
                     <div id="fila-articulos" class="row">    
-                       <div class="col-xs-12 col-md-12" id="columna-articulos">  
-                           <div id="div-articulos">                                
+                       <div class="col-xs-12 col-md-12" id="columna-articulos">                               
                                <div class="row">
                                    <?php include_once ($view_articulos->articulosTemplate);?> 
-                               </div>                                  
-                           </div>                                         
+                               </div>                                                                          
                        </div> 
                     </div>                     
                 </div>          
@@ -21,7 +19,8 @@
             
         </div>         
     </div>    
-    <div class="row visible-xs">
+    <div class="row visible-xs" style="overflow: hidden;">
+        <img src="app_images/drop_down_items_xs.jpg" class="" alt="" id="mobile-menu-button">        
         <div class="col-xs-12">                      
             <?php include_once ($view_items->itemsXsTemplate);?>
         </div>                                
