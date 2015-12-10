@@ -28,7 +28,7 @@ $(document).ready(function(){
         });
     })
     
-    // Menu movil
+    // Desplegar/plegar menu movil
     
         $('#mobile-menu-button').live('click',function(){
             var $mobileMenu = $('#mobile-main-menu');	
@@ -45,10 +45,8 @@ $(document).ready(function(){
         params.idItem=idItem;
         params.genero=genero;
         params.titulo=titulo;
-        $('#dvArticulos').load("index.php",params,function(){
-            $(document).waitForImages(function() {
-               $('.columnas').equalCols();
-            });
+        $('#columna-articulos').load("index.php",params,function(){
+
         });
     });
 

@@ -59,8 +59,8 @@
     }    
  
     #div-items{    
-        margin-top: 10px;
-        padding-top: 50px;
+        margin-top: 20px;
+        padding-top: 40px;
         background: transparent url("../app_images/background_items_articulos.jpg");
         background-repeat: no-repeat;
     }    
@@ -70,7 +70,7 @@
         color: #666666;
         font-size: 12px;
         font-size: 1.2rem;
-        //background: transparent url("../app_images/bullet.gif");
+        background: transparent url("../app_images/bullet.gif");
         background-repeat: no-repeat;
 
     }    
@@ -78,13 +78,7 @@
     #div-items li:hover{  
         cursor: pointer;
         color: #006CD8;   
-    }    
-    
-    #div-articulos{
-        padding: 10px;
-        background-color: #ffffff;
-    }
-    
+    }            
 
     #titulo{
         color: #666666;
