@@ -45,7 +45,7 @@ switch ($action)
         $id_item=$_REQUEST['idItem'];
         $id_genero=$_REQUEST['genero'];
         $titulo = $_REQUEST['titulo'];
-        $view_articulos->articulos=$modelo_articulo->ArticulosByItem($id_item, $id_genero);        
+        $view_articulos->articulos=$modelo_articulo->ItemsArticulos($id_item, $id_genero);        
         $registro = current($view_articulos->articulos);        
         $view->contentTemplate="../views/templates/articulos_tpl.php"; // seteo el template que se va a mostrar
         break; 

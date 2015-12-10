@@ -26,7 +26,7 @@ $(document).ready(function(){
         $('#div-contenido').load("index.php",params,function(responseTxt,statusTxt,xhr){
             $('#myPleaseWait').modal('hide');            
         });
-    })
+    });
     
     // Desplegar/plegar menu movil
     
