@@ -8,10 +8,8 @@
                 </div>               
                 <div class="col-xs-12 col-sm-10 col-md-10">
                     <div id="fila-articulos" class="row">    
-                       <div class="col-xs-12 col-md-12" id="columna-articulos">                               
-                               <div class="row">
-                                   <?php include_once ($view_articulos->articulosTemplate);?> 
-                               </div>                                                                          
+                       <div class="col-xs-12 col-md-12" id="columna-articulos">                                                              
+                            <?php include_once ($view_articulos->articulosTemplate);?>                                                                    
                        </div> 
                     </div>                     
                 </div>          

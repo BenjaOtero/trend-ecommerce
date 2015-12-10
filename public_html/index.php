@@ -48,7 +48,17 @@ switch ($action)
         $view_articulos->articulos=$modelo_articulo->ArticulosByItem($id_item, $id_genero);        
         $registro = current($view_articulos->articulos);        
         $view->contentTemplate="../views/templates/articulos_tpl.php"; // seteo el template que se va a mostrar
-        break;     
+        break; 
+    case 'articulo':
+        $view->disableLayout=true;
+    //    $id_local=$_REQUEST['local'];
+        $id_articulo=$_REQUEST['articulo']; 
+        $talleART =array();
+        $ImagenART =array();
+        $ImagenBackART =array();
+        $view_articulos->articulos=$modelo_articulo->Articulo($id_articulo, $ImagenART, $ImagenBackART, $talleART);
+        $view->contentTemplate="../views/templates/articulo_tpl.php"; // seteo el template que se va a mostrar
+        break;    
     case 'refreshContacto':
         $view->disableLayout=true;
         $view->contentTemplate="../views/templates/contacto_tpl.php";

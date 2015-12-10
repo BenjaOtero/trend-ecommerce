@@ -59,10 +59,19 @@
     }    
  
     #div-items{    
-        margin-top: 20px;
+        margin-top: 50px;
         padding-top: 40px;
         background: transparent url("../app_images/background_items_articulos.jpg");
         background-repeat: no-repeat;
+        background-position: center top;
+    }    
+    
+    #div-items ul{  
+        padding-left: 10px;
+        padding-bottom: 20px;
+        background: transparent url("../app_images/background_items_articulos_2.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;        
     }    
     
     #div-items li{  

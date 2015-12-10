@@ -37,6 +37,7 @@ $(document).ready(function(){
    
 
     $('.item').live('click',function(){
+        $('#myPleaseWait').modal('show');
         var idItem=$(this).attr('data-idItem');
         var genero=$(this).attr('data-genero');
         var titulo=$(this).attr('data-desc');
@@ -46,7 +47,7 @@ $(document).ready(function(){
         params.genero=genero;
         params.titulo=titulo;
         $('#columna-articulos').load("index.php",params,function(){
-
+            $('#myPleaseWait').modal('hide');
         });
     });
 
@@ -54,22 +55,16 @@ $(document).ready(function(){
         var local=$(this).attr('data-loc');
         var articulo=$(this).attr('data-art');
         params={};
-        params.action='catalogo';
-        params.actionCatalogo='articulo';
+        params.action='articulo';
         params.local=local;
         params.articulo=articulo;
-        $('#dvArticulos').load("index.php",params,function(){
+        $('#columna-articulos').load("index.php",params,function(){
           $('.jqzoom').jqzoom({
             zoomType: 'standard',
             lens:true,
             preloadImages: false,
             alwaysOn:false
           });
-          $('#dvArticulos').removeAttr('style');
-        //  $('.columnas').equalCols();
-            $(document).waitForImages(function() {
-               $('.columnas').equalCols();
-            });
         });
     });
     
