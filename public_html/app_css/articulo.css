@@ -1,0 +1,13 @@
+#lupita{
+ list-style-type:none;
+ margin:0 auto;
+}
+
+#lupita li{
+ background-image: url(../app_images/lupa.gif);
+ background-repeat: no-repeat;    
+ padding: 0 20px;
+ font-size: x-small;
+ color: #666666;
+ display: inline;
+}

@@ -15,9 +15,11 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <![endif]-->	   
 	<link rel="stylesheet" href="app_css/style.css" type="text/css" media="screen" />    
         <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
+        <link rel="stylesheet" href="app_css/jquery.jqzoom.css" type="text/css" media="screen" /> 
+     <!--   <link rel="stylesheet" href="app_css/demo.css" type="text/css" media="screen" /> -->
 	<script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="app_js/functions_f.js"></script>        
