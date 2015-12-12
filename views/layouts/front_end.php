@@ -20,10 +20,11 @@
         <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
         <link rel="stylesheet" href="app_css/jquery.jqzoom.css" type="text/css" media="screen" /> 
      <!--   <link rel="stylesheet" href="app_css/demo.css" type="text/css" media="screen" /> -->
-	<script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script> -->
+	<script type="text/javascript" src="app_js/jquery-1.10.2.js"></script> 
+	
 	<script type="text/javascript" src="app_js/functions_f.js"></script>        
-        <script type="text/javascript" src="app_js/jquery.jqzoom-core.js"></script>                    	
+            	
   </head>
   <body>  
     <!-- Loader Bootstrap -->
@@ -61,7 +62,7 @@
         <div class="container">            
             <div class="row hidden-xs">
                 <div class="col-xs-12 col-md-10 col-md-offset-1" id="div-header">
-                    <h1 class="main-logo">KARMINNA<span>ON LINE STORE</span></h1>
+                    <h1 class="main-logo">KARMINNA<span class="ocote">ON LINE STORE</span></h1>
                 </div>        
             </div>               
         </div>    
