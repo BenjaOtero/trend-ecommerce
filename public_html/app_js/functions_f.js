@@ -61,6 +61,11 @@ $(document).ready(function(){
           });
         });
     }); 
+    
+    $(document).on('click', '.mini', function() {                
+        var imagen=$(this).attr('data-mini');
+        $('#img-articulo').attr('src',imagen);
+    });     
    
        
 });

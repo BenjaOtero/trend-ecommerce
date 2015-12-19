@@ -1,37 +1,91 @@
 #lupita{
- list-style-type:none;
- margin:0 auto;
-  text-align: center;
+    margin:0 auto;
+    text-align: center;
 }
 
 #lupita li{
- background-image: url(../app_images/lupa.gif);
- background-repeat: no-repeat;    
- padding: 0 20px;
- font-size: x-small;
- color: #666666;
- display: inline;
+    background-image: url(../app_images/lupa.gif);
+    background-repeat: no-repeat;    
+    padding: 0 20px;
+    font-size: x-small;
+    color: #666666;
+    display: inline;
+}
+
+#miniaturas{
+    margin-top: 10px;
+    text-align: center;
+}
+#miniaturas li{
+    display: inline;
+}
+#compra h4{
+    text-align: center;
+}
+/*------ colores -------*/
+#colors >p{
+  padding: 10px 0 5px 10px;
+  color: #666666;
+  font-size: 13px;
+}
+#colors ul{
+  padding: 0 10px 0px 10px;
+  list-style: none outside none;
+  overflow: auto;
+}
+#colors ul li{
+  float: left;
+  margin-right: 4px;  
+}
+#colors label{
+  border: 1px solid #000000;
+  display: block;
+  margin: 3px;
+  overflow: hidden;
+  padding: 0px;
+  width: 25px;
+  height: 25px;
+}
+#colors label:hover{
+  outline: 2px solid #444444;
+  cursor: pointer;
+}
+#colors .color {
+    display: block;
+    float: left;
+    height: 20px;
+    margin: 0;
+    overflow: hidden;
+    padding: 2.5px 0;
+    position: relative;
+    text-align: center;
+    width: 25px;
+}
+.selected-color{
+    outline: 2px solid #444444;
 }
 
 .zoom {
-        display:inline-block;
-        position: relative;
+    display:inline-block;
+    position: relative;
 }
 
 /* magnifying glass icon */
 .zoom:after {
-        content:'';
-        display:block; 
-        width:33px; 
-        height:33px; 
-        position:absolute; 
-        top:0;
-        right:0;
-        background:url(icon.png);
+    content:'';
+    display:block; 
+    width:33px; 
+    height:33px; 
+    position:absolute; 
+    top:0;
+    right:0;
+    background:url(icon.png);
 }
 
 .zoom img {
-        display: block;
+    display: block;
 }
 
-.zoom img::selection { background-color: transparent; }
+.zoom img::selection { 
+    background-color: transparent; 
+}
