@@ -37,7 +37,7 @@ $registro = current($view_articulos->articulos);
                     <ul>
                     <?php foreach($ImagenART as $imagen): ?>   
                         <!--para agregar y borrar clases para determinar el color activo uso el archivo jquery.jqzoom-core.js linea 185*/-->
-                        <li class='mini' data-mini="<?php echo "images/".$registro[0]."_bck_large.jpg";?>">    
+                        <li class='mini' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>">    
                             <label>
                                 <span>                                                                                                                
                                     <img src="<?php echo "images/".$imagen[0]."_col.jpg"; ?>" height='25' width='25' 
