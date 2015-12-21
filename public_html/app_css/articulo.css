@@ -20,7 +20,7 @@
     display: inline;
 }
 #compra h4{
-    text-align: center;
+    padding: 10px;
 }
 /*------ colores -------*/
 #colors >p{
@@ -43,13 +43,23 @@
   margin: 3px;
   overflow: hidden;
   padding: 0px;
-  width: 25px;
-  height: 25px;
+  width: 37px;
+  height: 37px;
 }
 #colors label:hover{
   outline: 2px solid #444444;
   cursor: pointer;
 }
+
+.img-color {
+    padding: 1px;
+    width: 35px;
+    height: 35px;
+}
+.selected-color{
+    outline: 2px solid #444444;
+}
+
 #colors .color {
     display: block;
     float: left;
@@ -85,6 +95,12 @@
   float: left;
   margin-right: 4px;
 }
+
+#talles span{
+  width: 30px;
+  height: 25px;
+}
+
 .activas{
   border: 1px solid #000000;
   display: block;

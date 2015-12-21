@@ -39,9 +39,9 @@ $registro = current($view_articulos->articulos);
                         <!--para agregar y borrar clases para determinar el color activo uso el archivo jquery.jqzoom-core.js linea 185*/-->
                         <li>    
                             <label>
-                                <span class='mini' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>">                                                                                                                
-                                    <img src="<?php echo "images/".$imagen[0]."_col.jpg"; ?>" height='25' width='25' 
-                                         data-articulo="<?php echo $imagen[0]; ?>">                             
+                                <span class='mini' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>" 
+                                      data-articulo="<?php echo $imagen[0]; ?>">                                                                                                                
+                                    <img class="img-color" src="<?php echo "images/".$imagen[0]."_col.jpg"; ?>" alt="">                             
                                 </span>
                             </label>
                         </li>
@@ -71,7 +71,7 @@ $registro = current($view_articulos->articulos);
                                 {
                                     echo "<li>
                                             <label class='activas'>
-                                            <span class='picker talle' title='' style='width: 30px;' >".$talle[0]."</span>                                    
+                                            <span class='picker talle' title=''>".$talle[0]."</span>                                    
                                             </label>
                                           </li>";
                                 }
@@ -79,7 +79,7 @@ $registro = current($view_articulos->articulos);
                                 {
                                     echo "<li>
                                             <label class='inactivas'>
-                                            <span class='picker sin-talle' title='' style='width: 30px;' >".$talle[0]."</span>                                    
+                                            <span class='picker sin-talle' title='talle no disponible' style='width: 30px;' >".$talle[0]."</span>                                    
                                             </label>
                                           </li>";
                                 }                                    
