@@ -65,6 +65,75 @@
     outline: 2px solid #444444;
 }
 
+/*-----talles-------*/
+#talles div{
+  overflow: auto;
+  margin-top: 5px;
+  padding: 10px;;
+}
+#talles >p{
+  padding: 10px 0 5px 10px;
+  color: #666666;
+  font-size: 13px;
+}
+#talles ul{
+  padding: 0 10px 10px 10px;
+  list-style: none outside none;
+  overflow: auto;
+}
+#talles ul li{
+  float: left;
+  margin-right: 4px;
+}
+.activas{
+  border: 1px solid #000000;
+  display: block;
+  margin: 2px;
+  overflow: hidden;
+  padding: 1px;
+}
+.inactivas{
+  border: 1px solid #999999;
+  display: block;
+  margin: 2px;
+  overflow: hidden;
+  padding: 1px;
+}
+.talle-inactivos{
+    display: none;
+}
+.activas:hover{
+  outline: 2px solid #444444;
+  cursor: pointer;
+}
+.picker {
+    display: block;
+    float: left;
+    height: 20px;
+    margin: 0;
+    overflow: hidden;
+    padding: 2.5px 0;
+    position: relative;
+    text-align: center;
+    width: 30px;
+}
+.talle {
+    background-color: #666666;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.sin-talle {
+    background-color: #E1E1E1;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.selected .talle {
+    background-color: #0637B3;
+    color: #FFFFFF;
+}
+
 .zoom {
     display:inline-block;
     position: relative;

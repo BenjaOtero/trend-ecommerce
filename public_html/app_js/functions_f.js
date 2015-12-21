@@ -65,7 +65,23 @@ $(document).ready(function(){
     $(document).on('click', '.mini', function() {                
         var imagen=$(this).attr('data-mini');
         $('#img-articulo').attr('src',imagen);
-    });     
+        $("#colors label").each(function (){$(this).removeClass();});
+        $(this).parent().addClass("selected-color");        
+    });  
+    
+    $(document).on('click', '.color', function() {             
+        $("#colors label").each(function (){$(this).removeClass();})
+        $(this).parent().addClass("selected-color");
+        
+        $("#talles ul").each(function (){
+            if(!$(this).hasClass("talle-inactivos"))
+            {
+                $(this).addClass("talle-inactivos");
+            }                            
+        });
+     /*   var articulo = $(this).attr('data-articulo');
+        $("#" + articulo).removeClass("talle-inactivos");   */      
+    });    
    
        
 });

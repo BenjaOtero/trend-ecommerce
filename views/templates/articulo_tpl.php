@@ -37,9 +37,9 @@ $registro = current($view_articulos->articulos);
                     <ul>
                     <?php foreach($ImagenART as $imagen): ?>   
                         <!--para agregar y borrar clases para determinar el color activo uso el archivo jquery.jqzoom-core.js linea 185*/-->
-                        <li class='mini' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>">    
+                        <li>    
                             <label>
-                                <span>                                                                                                                
+                                <span class='mini' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>">                                                                                                                
                                     <img src="<?php echo "images/".$imagen[0]."_col.jpg"; ?>" height='25' width='25' 
                                          data-articulo="<?php echo $imagen[0]; ?>">                             
                                 </span>
@@ -49,6 +49,55 @@ $registro = current($view_articulos->articulos);
                     </ul>
                 </div>
             </div>
+            
+            
+            <div id='talles'>
+                <p>Talles:</p>
+                    <?php foreach($ImagenART as $imagen):
+                        if($foto===$imagen[0])
+                        {
+                            echo "<ul id='".$imagen[0]."'>";     
+                        }
+                        else
+                        {
+                           echo "<ul class='talle-inactivos' id='".$imagen[0]."'>";     
+                        }
+                        foreach($talleART as $talle)  
+                        {
+                            if($talle[0] != null)
+                            {
+                                $articulo = $imagen[0].$talle[0];                                
+                                if (in_array($articulo, array_column($view_articulos->articulos, 0), true)) 
+                                {
+                                    echo "<li>
+                                            <label class='activas'>
+                                            <span class='picker talle' title='' style='width: 30px;' >".$talle[0]."</span>                                    
+                                            </label>
+                                          </li>";
+                                }
+                                else
+                                {
+                                    echo "<li>
+                                            <label class='inactivas'>
+                                            <span class='picker sin-talle' title='' style='width: 30px;' >".$talle[0]."</span>                                    
+                                            </label>
+                                          </li>";
+                                }                                    
+                            }
+                            else
+                            {
+                                    echo "<li>
+                                            <p>
+                                                Art&iacuteculo talle &uacutenico.                                  
+                                            </p>
+                                          </li>"; 
+                            }
+                        }
+                        echo "</ul>";  
+                endforeach; ?> 
+            </div>                
+            
+            
         </div>
     </div>        
 </div>   

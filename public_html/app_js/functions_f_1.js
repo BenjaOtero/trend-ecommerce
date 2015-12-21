@@ -99,12 +99,12 @@ $(document).ready(function(){
         $("#colors label").each(function (){$(this).removeClass();})
         $(this).parent().addClass("selected-color");
         
-      /*  $("#talles ul").each(function (){
+        $("#talles ul").each(function (){
             if(!$(this).hasClass("talle-inactivos"))
             {
                 $(this).addClass("talle-inactivos");
             }                            
-        });*/
+        });
      /*   var articulo = $(this).attr('data-articulo');
         $("#" + articulo).removeClass("talle-inactivos");   */      
     })
