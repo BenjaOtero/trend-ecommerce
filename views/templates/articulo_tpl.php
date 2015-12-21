@@ -17,7 +17,8 @@ $registro = current($view_articulos->articulos);
             </ul>
         <ul id='miniaturas'>
             <?php foreach($ImagenART as $imagen): ?>
-                <li class='mini' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>">                        
+                <li class='mini' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>"
+                                 data-articulo="<?php echo $imagen[0]; ?>">                        
                     <img src="<?php echo "images/".$imagen[0]."_xsmall.jpg";?>">                         
                 </li> 
             <?php endforeach; ?>                 
@@ -32,15 +33,14 @@ $registro = current($view_articulos->articulos);
         <div id='compra'>
             <h4><?php echo $registro[1];?></h4>             
             <div id='color-talle'>
-                <div id='colors' class='clearfix'>
+                <div id='colors'>
                     <p>Click en un color para ver talles disponibles:</p>
                     <ul>
                     <?php foreach($ImagenART as $imagen): ?>   
                         <!--para agregar y borrar clases para determinar el color activo uso el archivo jquery.jqzoom-core.js linea 185*/-->
                         <li>    
-                            <label>
-                                <span <?php echo "id='".$imagen[0]."_span'"; ?>
-                                        class='color' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>" 
+                            <label <?php echo "id='".$imagen[0]."_label'"; ?>>
+                                <span class='color' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>" 
                                       data-articulo="<?php echo $imagen[0]; ?>">                                                                                                                
                                     <img class="img-color" src="<?php echo "images/".$imagen[0]."_col.jpg"; ?>" alt="">                             
                                 </span>
