@@ -39,7 +39,8 @@ $registro = current($view_articulos->articulos);
                         <!--para agregar y borrar clases para determinar el color activo uso el archivo jquery.jqzoom-core.js linea 185*/-->
                         <li>    
                             <label>
-                                <span class='mini' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>" 
+                                <span <?php echo "id='".$imagen[0]."_span'"; ?>
+                                        class='color' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>" 
                                       data-articulo="<?php echo $imagen[0]; ?>">                                                                                                                
                                     <img class="img-color" src="<?php echo "images/".$imagen[0]."_col.jpg"; ?>" alt="">                             
                                 </span>
@@ -101,8 +102,3 @@ $registro = current($view_articulos->articulos);
         </div>
     </div>        
 </div>   
-<script>
-    $(document).ready(function(){
-            $('#ex1').zoom();
-    });
-</script>

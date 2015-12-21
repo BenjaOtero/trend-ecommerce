@@ -66,6 +66,14 @@ $(document).ready(function(){
         var imagen=$(this).attr('data-mini');
         $('#img-articulo').attr('src',imagen);
         $("#colors label").each(function (){$(this).removeClass();});
+          
+     
+    });  
+    
+    $(document).on('click', '.color', function() {             
+        var imagen=$(this).attr('data-mini');
+        $('#img-articulo').attr('src',imagen);
+        $("#colors label").each(function (){$(this).removeClass();});
         $(this).parent().addClass("selected-color");            
         $("#talles ul").each(function (){
             if(!$(this).hasClass("talle-inactivos"))
@@ -74,16 +82,7 @@ $(document).ready(function(){
             }                            
         }); 
         var articulo = $(this).attr('data-articulo');
-        $("#" + articulo).removeClass("talle-inactivos");        
-    });  
-    
-    $(document).on('click', '.color', function() {             
-        $("#colors label").each(function (){$(this).removeClass();})
-        $(this).parent().addClass("selected-color");
-        
-
-     /*   var articulo = $(this).attr('data-articulo');
-        $("#" + articulo).removeClass("talle-inactivos");   */      
+        $("#" + articulo).removeClass("talle-inactivos");       
     });    
    
        
