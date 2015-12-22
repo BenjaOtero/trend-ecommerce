@@ -23,36 +23,12 @@
      <!--   <link rel="stylesheet" href="app_css/demo.css" type="text/css" media="screen" /> -->
 	<script type="text/javascript" src="app_js/jquery-1.10.2.min.js"></script> 
 	<!-- <script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script> -->
-	<script type="text/javascript" src="./bootstrap-3.3.5-dist/bootstrap.js"></script> 
+	<script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.js"></script> 
         <script src='app_js/jquery.zoom.js'></script>
 	<script type="text/javascript" src="app_js/functions_f.js"></script>        
             	
   </head>
-  <body>  
-    <!-- Loader Bootstrap -->
-      <div class="container">    
-          <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
-              role="dialog" aria-hidden="true" data-backdrop="static">
-              <div class="modal-dialog modal-sm">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h4 class="modal-title">
-                              <span class="glyphicon glyphicon-time">
-                              </span>Please Wait
-                           </h4>
-                      </div>
-                      <div class="modal-body">
-                          <div class="progress">
-                              <div class="progress-bar progress-bar-info
-                              progress-bar-striped active"
-                              style="width: 100%">
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>               
-      </div>         
+  <body>         
     <header id="main-header">
         <div id="div-header-xs" class="visible-xs">
             <div style="overflow: hidden">

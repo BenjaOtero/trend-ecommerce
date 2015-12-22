@@ -10,7 +10,7 @@ $(document).ready(function(){
     });    
       
     $('.menu').click(function(){        
-       // $('#myPleaseWait').modal('show');
+        $('#myPleaseWait').modal('show');
         $(".div-menu li").each(function (){$(this).removeClass('active');});
         $(this).addClass('active');
         var genero=$(this).attr('data-idGenero');  //obtengo el id que guardamos en data-idGenero
