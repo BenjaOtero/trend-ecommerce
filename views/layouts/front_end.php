@@ -28,7 +28,25 @@
 	<script type="text/javascript" src="app_js/functions_f.js"></script>        
             	
   </head>
-  <body>         
+  <body>  
+    <div id="fondo-loader"></div> 
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <span class="glyphicon glyphicon-time">
+                    </span>Please Wait
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div>
+                        <p><img src="app_images/barraProgreso.gif" /></p>			  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>      
     <header id="main-header">
         <div id="div-header-xs" class="visible-xs">
             <div style="overflow: hidden">

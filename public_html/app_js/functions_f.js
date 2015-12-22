@@ -9,8 +9,9 @@ $(document).ready(function(){
         });
     });    
       
-    $('.menu').click(function(){        
-        $('#myPleaseWait').modal('show');
+    $(document).on('click', '.menu', function() {  
+        $('#fondo-loader').css("display", "block");
+        $('.modal-dialog').css("display", "block");
         $(".div-menu li").each(function (){$(this).removeClass('active');});
         $(this).addClass('active');
         var genero=$(this).attr('data-idGenero');  //obtengo el id que guardamos en data-idGenero
@@ -21,7 +22,8 @@ $(document).ready(function(){
         params.item=item;
         params.genero=genero;
         $('#div-contenido').load("index.php",params,function(){
-            $('#myPleaseWait').modal('hide');            
+            $('#fondo-loader').css("display", "none");
+            $('.modal-dialog').css("display", "none");
         });
     });  
     
@@ -31,7 +33,8 @@ $(document).ready(function(){
     });
     
     $(document).on('click', '.item', function() {        
-      //  $('#myPleaseWait').modal('show');
+        $('#fondo-loader').css("display", "block");
+        $('.modal-dialog').css("display", "block");
         var idItem=$(this).attr('data-idItem');
         var genero=$(this).attr('data-genero');
         var titulo=$(this).attr('data-desc');
@@ -41,11 +44,14 @@ $(document).ready(function(){
         params.genero=genero;
         params.titulo=titulo;
         $('#columna-articulos').load("index.php",params,function(){
-            $('#myPleaseWait').modal('hide');
+            $('#fondo-loader').css("display", "none");
+            $('.modal-dialog').css("display", "none");
         });
     });    
       
-    $(document).on('click', '.articulo', function() {                
+    $(document).on('click', '.articulo', function() {   
+        $('#fondo-loader').css("display", "block");
+        $('.modal-dialog').css("display", "block");        
         var local=$(this).attr('data-loc');
         var articulo=$(this).attr('data-art');
         params={};
@@ -53,12 +59,8 @@ $(document).ready(function(){
         params.local=local;
         params.articulo=articulo;
         $('#columna-articulos').load("index.php",params,function(){
-          $('.jqzoom').jqzoom({
-            zoomType: 'standard',
-            lens:true,
-            preloadImages: false,
-            alwaysOn:false
-          });
+            $('#fondo-loader').css("display", "none");
+            $('.modal-dialog').css("display", "none");
         });
     }); 
     

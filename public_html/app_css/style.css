@@ -24,6 +24,7 @@ ul li {
 * *************** Loader ***************
 * ************************************ */
 #fondo-loader {
+    display: none;
     width:100%;
     height:100%;
     overflow: auto;
@@ -33,14 +34,23 @@ ul li {
     filter:alpha(opacity=40); /* For IE8 and earlier */
     top:0;
     left:0;
-    z-index: -1;
+    z-index: 599;
 }
+.modal-dialog {
+    display: none;
+    padding-top: 10px;
+    top: 100px;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+    z-index: 600;
+
+}
+
 .modal-sm {
     width: 200px;
 }
-.modal-sm {
-    width: 200px;
-}
+
 .modal-content {
     position: relative;
     background-color: #FFF;
