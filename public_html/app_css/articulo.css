@@ -1,32 +1,31 @@
-#lupita{
-    margin:0 auto;
-    text-align: center;
-}
-
-#lupita li{
-    background-image: url(../app_images/lupa.gif);
-    background-repeat: no-repeat;    
-    padding: 0 20px;
-    font-size: x-small;
-    color: #666666;
-    display: inline;
+#img-articulo{
+    margin-top: 15px;
 }
 
 #miniaturas{
     margin-top: 10px;
     text-align: center;
 }
+
 #miniaturas li{
     display: inline;
 }
+
 #compra h4{
+    color: #E1E1E1;
+    text-align: center;
     padding: 10px;
 }
 /*------ colores -------*/
+#colors {
+  border: 1px solid #4D4D4D;
+} 
+
 #colors >p{
   padding: 10px 0 5px 10px;
   color: #666666;
   font-size: 13px;
+  font-size: 1.3rem;
 }
 #colors ul{
   padding: 0 10px 0px 10px;
@@ -38,7 +37,7 @@
   margin-right: 4px;  
 }
 #colors label{
-  border: 1px solid #000000;
+  border: 1px solid #fff;
   display: block;
   margin: 3px;
   overflow: hidden;
@@ -47,7 +46,7 @@
   height: 37px;
 }
 #colors label:hover{
-  outline: 2px solid #444444;
+  outline: 2px solid #fff;
   cursor: pointer;
 }
 
@@ -57,18 +56,15 @@
     height: 35px;
 }
 .selected-color{
-    outline: 2px solid #444444;
-}
-
-.selected-color{
-    outline: 2px solid #444444;
+    outline: 2px solid #fff;
 }
 
 /*-----talles-------*/
-#talles div{
+#talles {
   overflow: auto;
-  margin-top: 5px;
-  padding: 10px;;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #4D4D4D;
 }
 #talles >p{
   padding: 10px 0 5px 10px;
@@ -91,7 +87,7 @@
 }
 
 .activas{
-  border: 1px solid #000000;
+  border: 2px solid #444444;
   display: block;
   margin: 2px;
   overflow: hidden;
@@ -107,20 +103,10 @@
 .talle-inactivos{
     display: none;
 }
-.activas:hover{
-  outline: 2px solid #444444;
-  cursor: pointer;
-}
+
 .picker {
-    display: block;
     float: left;
-    height: 20px;
-    margin: 0;
-    overflow: hidden;
     padding: 2.5px 0;
-    position: relative;
-    text-align: center;
-    width: 30px;
 }
 .talle {
     background-color: #666666;
@@ -139,27 +125,56 @@
     color: #FFFFFF;
 }
 
-.zoom {
-    display:inline-block;
-    position: relative;
-}
+/* Small devices (tablets, 768px and up) */
 
-/* magnifying glass icon */
-.zoom:after {
-    content:'';
-    display:block; 
-    width:33px; 
-    height:33px; 
-    position:absolute; 
-    top:0;
-    right:0;
-    background:url(icon.png);
-}
+@media (min-width: 768px) { 
+    
+    #img-articulo{
+        margin-top: 0px;
+    }    
+    
+    #compra h4{
+        color: #666666;
+        text-align: left;
+    }    
+    
+    #lupita{
+        margin:0 auto;
+        text-align: center;
+    }
 
-.zoom img {
-    display: block;
-}
-
-.zoom img::selection { 
-    background-color: transparent; 
+    #lupita li{
+        background-image: url(../app_images/lupa.gif);
+        background-repeat: no-repeat;    
+        padding: 0 20px;
+        font-size: x-small;
+        color: #666666;
+        display: inline;
+    }   
+    
+    #colors {
+      border: none;
+    } 
+    
+    #colors label{
+      border: 1px solid #000000;
+    }  
+    
+    #colors label:hover{
+      outline: 2px solid #444444;
+      cursor: pointer;
+    }    
+    
+    .selected-color{
+        outline: 2px solid #444444;
+    } 
+    
+    #talles {
+      padding: 0px;
+      border: none;
+    }    
+    
+    .activas:hover{
+      outline: 2px solid #444444;
+    }    
 }

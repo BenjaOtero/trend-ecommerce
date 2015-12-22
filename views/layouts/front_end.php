@@ -18,6 +18,7 @@
     <![endif]-->	   
 	<link rel="stylesheet" href="app_css/style.css" type="text/css" media="screen" />    
         <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
+        <link rel="stylesheet" href="app_css/articulo.css" type="text/css" media="screen"  />
         <link rel="stylesheet" href="app_css/jquery.jqzoom.css" type="text/css" media="screen" /> 
      <!--   <link rel="stylesheet" href="app_css/demo.css" type="text/css" media="screen" /> -->
 	<script type="text/javascript" src="app_js/jquery-1.10.2.min.js"></script> 

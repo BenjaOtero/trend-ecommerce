@@ -3,18 +3,18 @@ include_once ("../controllers/componentes/array_column.php");
 $foto=substr($id_articulo,0,8);
 $registro = current($view_articulos->articulos);
 ?>
-<link rel="stylesheet" href="app_css/articulo.css" type="text/css" media="screen" property="stylesheet" />
 <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-1 col-md-offset-1 col-lg-offset-">
         <div>  
-                <img id="img-articulo" src="<?php echo "images/".$foto."_large.jpg";?>" 
-                     data-img="<?php echo "images/".$foto."_large.jpg";?>" class="img-responsive">             
+            <img id="img-articulo" src="<?php echo "images/".$foto."_large.jpg";?>" 
+                 data-img="<?php echo "images/".$foto."_large.jpg";?>" class="img-responsive">             
         </div>
-        <div class="clearfix"></div>
+        <div class="hidden-xs">
             <ul id='lupita'>
                 <li>Zoom sobre imagen</li>
                 <li id='ampliar' data-imagen='".$foto."' >Click para ampliar</li>
             </ul>
+        </div>
         <ul id='miniaturas'>
             <?php foreach($ImagenART as $imagen): ?>
                 <li class='mini' data-mini="<?php echo "images/".$imagen[0]."_large.jpg";?>"
