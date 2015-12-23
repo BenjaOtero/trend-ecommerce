@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" property="stylesheet" />
-<script type="text/javascript" src="app_js/jquery-1.10.2.js"></script> 
 <div class="container">    
     <div class="row"> 
         <div class="col-sm-12 col-md-10 col-md-offset-1">
