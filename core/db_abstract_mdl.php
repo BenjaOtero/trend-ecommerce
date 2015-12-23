@@ -2,16 +2,16 @@
 abstract class DbAbstractMDL  // se declara una clase para hacer la conexion con la base de datos
 {
     static function conectar() {
-    /*  $server="localhost";
+      $server="localhost";
         $user="ncsoftwa_re";
         $pass="8953#AFjn";
         $cone=mysql_connect($server,$user,$pass) or die("Error en la conexion al servidor");
-        mysql_select_db("ncsoftwa_re",$cone) or die("Error en la conexion con la base de datos");*/
-        $server="localhost";
+        mysql_select_db("ncsoftwa_re",$cone) or die("Error en la conexion con la base de datos");
+     /*   $server="localhost";
         $user="root";
         $pass="";
         $cone=mysql_connect($server,$user,$pass) or die("Error en la conexion al servidor");
-        mysql_select_db("ncsoftwa_re",$cone) or die("Error en la conexion con la base de datos");
+        mysql_select_db("ncsoftwa_re",$cone) or die("Error en la conexion con la base de datos");*/
         return $cone;
     }
 
