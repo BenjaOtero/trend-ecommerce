@@ -19,12 +19,8 @@
 	<link rel="stylesheet" href="app_css/style.css" type="text/css" media="screen" />    
         <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
         <link rel="stylesheet" href="app_css/articulo.css" type="text/css" media="screen"  />
-        <link rel="stylesheet" href="app_css/jquery.jqzoom.css" type="text/css" media="screen" /> 
-     <!--   <link rel="stylesheet" href="app_css/demo.css" type="text/css" media="screen" /> -->
 	<script type="text/javascript" src="app_js/jquery-1.10.2.min.js"></script> 
-	<!-- <script type="text/javascript" src="app_js/jquery-1.7.1.min.js"></script> -->
 	<script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.js"></script> 
-        <script src='app_js/jquery.zoom.js'></script>
 	<script type="text/javascript" src="app_js/functions_f.js"></script>        
             	
   </head>
