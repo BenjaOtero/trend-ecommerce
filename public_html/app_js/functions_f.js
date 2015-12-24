@@ -9,7 +9,7 @@ $(document).ready(function(){
         });
     });    
       
-    $(document).on('click', '.menu', function() {  
+    $(document).on('click', '.menu-own', function() {  
         $('#fondo-loader').css("display", "block");
         $('.modal-dialog').css("display", "block");
         $(".div-menu li").each(function (){$(this).removeClass('active');});

@@ -32,7 +32,7 @@ class ArticuloMDL extends DbAbstractMDL{
     
     public function Articulo($id_articulo, &$ImagenART, &$ImagenBackART, &$talleART){
         $mysqli = $this->crearConexion();
-        $mysqli->multi_query("call Web_Articulo('$id_articulo');");
+        $mysqli->multi_query("call Web_Articulo('$id_articulo')");
         $result = $mysqli->store_result();
         while ($row = $result->fetch_row()) {
             $dataset1[]=$row;

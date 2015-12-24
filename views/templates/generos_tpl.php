@@ -1,10 +1,11 @@
+<?php header("Content-Type: text/html;charset=utf-8");?>
 <div class="container">
     <div class="row hidden-xs">
         <div class="col-xs-12 col-md-10 col-md-offset-1 div-menu">
             <ul>
               <li >CONTACTO</li>
               <?php foreach ($view->generos as $genero):  // uso la otra sintaxis de php para templates ?>
-              <li class="menu" data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
+              <li class="menu-own" data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
                 <?php echo $genero['DescripcionGEN'];?>
               </li>
               <?php endforeach; ?>
@@ -15,7 +16,7 @@
     <div class="row visible-xs">
         <div class="col-xs-12">  
             <?php foreach ($view->generos as $genero):  // uso la otra sintaxis de php para templates ?>
-            <div class="div-menu-xs menu" data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
+            <div class="div-menu-xs menu-own" data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
                 <img src="app_images/menu_xs.jpg" class="" alt="">            
                 <p>
                     <?php echo $genero['DescripcionGEN'];?>
