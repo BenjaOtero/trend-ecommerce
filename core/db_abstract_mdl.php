@@ -62,5 +62,3 @@ abstract class DbAbstractMDL  // se declara una clase para hacer la conexion con
     }
 
 }
-
-?>

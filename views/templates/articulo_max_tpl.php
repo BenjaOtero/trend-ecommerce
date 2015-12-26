@@ -16,22 +16,18 @@ h4{color: #777777; margin-left: 10px; margin-bottom: 5px; text-align: center;}
 </style>
 <div class="left-column-2">  
     <ul>  
-        <?php 
-            foreach($ImagenART as $imagen)
-            {
-                echo "<li>
-                        <img class= 'tumbhMax' src='images/".$imagen[0]."_small.jpg' height='120' width='90' 
-                            data-imagen=".$imagen[0]." />
-                     </li>";
-            } 
-            foreach($ImagenBackART as $imagen)
-            {
-                echo "<li>
-                        <img class= 'tumbhMax' src='images/".$imagen[0]."_bck_medium.jpg' height='120' width='90' 
-                            data-imagen=".$imagen[0]."_bck />
-                     </li>";
-            }          
-        ?>
+        <?php foreach($ImagenART as $imagen): ?>
+            <li class="mini" data-imagen="<?php echo $imagen['0'];?>">
+                <img class= 'tumbhMax' src="<?php echo "images/".$imagen['0']."_small.jpg" ;?>" 
+                     height='120' width='90' />
+            </li>
+        <?php endforeach; ?>
+        <?php foreach($ImagenBackART as $imagen): ?> 
+            <li class="mini" data-imagen="<?php echo $imagen['0'];?>">
+                <img class= 'tumbhMax' src="<?php echo "images/".$imagen['0']."_bck_medium.jpg" ;?>" 
+                     height='120' width='90' />
+            </li>
+        <?php endforeach; ?>
     </ul>     
 </div>
 <div class="left-column-8">
