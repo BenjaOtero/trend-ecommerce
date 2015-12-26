@@ -58,7 +58,7 @@
                     <h1 class="main-logo">KARMINNA<span class="ocote">ON LINE STORE</span></h1>
                 </div>        
             </div>               
-        </div>  
+        </div>    
         <?php include_once ($view->generosTemplate); // incluyo el template que corresponda ?>
     </header>
     <div id="div-contenido">      
