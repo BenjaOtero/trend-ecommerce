@@ -57,7 +57,7 @@ class ArticuloMDL extends DbAbstractMDL{
     
     public function ArticuloMaximizar($id_articulo, &$ImagenART, &$ImagenBackART, &$DescripcionWebART){
         $mysqli = $this->crearConexion();
-        $mysqli->multi_query("call Web_Articulo_Maximizar($id_articulo);");
+        $mysqli->multi_query("call Web_Articulo_Maximizar('$id_articulo')");
         $result1 = $mysqli->store_result();
         while ($row = $result1->fetch_row()) {
             $ImagenART[]=$row;

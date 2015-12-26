@@ -7,7 +7,8 @@ $registro = current($view_articulos->articulos);
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-1 col-md-offset-1 col-lg-offset-">
         <div>  
             <img id="img-articulo" src="<?php echo "images/".$foto."_large.jpg";?>" 
-                 data-img="<?php echo "images/".$foto."_large.jpg";?>" class="img-responsive">             
+                 data-img="<?php echo "images/".$foto."_large.jpg";?>" 
+                 data-articulo="<?php echo $foto;?>" class="img-responsive">             
         </div>
         <div class="hidden-xs">
             <ul id='lupita'>

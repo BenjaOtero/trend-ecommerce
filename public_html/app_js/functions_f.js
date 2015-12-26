@@ -71,7 +71,7 @@ $(document).ready(function(){
     
     $(document).on('click', '#ampliar', function() { 
       //  var local=$(this).attr('data-loc');
-        var imagen=$(this).attr('data-imagen');
+        var imagen=$('#img-articulo').attr('data-articulo');
         var params = '?action=maximizarArticulo&actionCatalogo=maximizarArticulo&imagen=' + imagen; 
         var alto = $( window ).height();
         window.open ('index.php' + params,'','height=' + alto + 'px,width=790px,top=10,left=10,scrollbars=1');
@@ -111,7 +111,11 @@ $(document).ready(function(){
     
     $(document).on('click', '.color', function() {             
         var imagen=$(this).attr('data-mini');
+        var separados = imagen.split('/');        
+        var separados2 = separados[1].split('_');
+        var articulo = separados2[0];
         $('#img-articulo').attr('src',imagen);
+        $('#img-articulo').attr('data-articulo',articulo);
         $("#colors label").each(function (){$(this).removeClass();});
         $(this).parent().addClass("selected-color");            
         $("#talles ul").each(function (){
