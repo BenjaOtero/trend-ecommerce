@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="app_css/items_articulos.css" type="text/css" media="screen" /> 
         <link rel="stylesheet" href="app_css/articulo.css" type="text/css" media="screen"  />
 	<script type="text/javascript" src="app_js/jquery-1.10.2.min.js"></script> 
+	<script type="text/javascript" src="app_js/jquery.preload.min.js"></script> 
 	<script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.js"></script> 
 	<script type="text/javascript" src="app_js/functions_f.js"></script>        
             	

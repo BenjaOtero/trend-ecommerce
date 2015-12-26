@@ -65,12 +65,23 @@ switch ($action)
       //  $_SESSION['btnActivo']="contacto";
         break;
     case 'maximizarArticulo':
-        $view->disableLayout=true;
-        $view->contentTemplate="../controllers/catalogo.php";
-        break;        
+        $view->disableLayout=true;    
+        $id_articulo=$_REQUEST['imagen']; 
+        $_SESSION['id_articulo']=$_REQUEST['imagen']; 
+        $ImagenART =array();
+        $ImagenBackART =array();
+        $DescripcionWebART ='';
+        $view_articulos->articulos=$modelo_articulo->ArticuloMaximizar($_SESSION['id_articulo'], 
+                $ImagenART, $ImagenBackART, $DescripcionWebART);        
+        $view->contentTemplate="../views/templates/articulo_max_tpl.php"; // seteo el template que se va a mostrar
+        break;
     default :
 } 
-if($view->disableLayout==true) 
-    {include_once ($view->contentTemplate);}
-else
-    {include_once ('../views/layouts/front_end.php');} // el layout incluye el template adentro
+    
+if($action==='maximizarArticulo')
+    {include_once ('../views/layouts/articulo_maximizar.php');} // el layout incluye el template adentro
+else    
+    if($view->disableLayout==true) 
+        {include_once ($view->contentTemplate);}
+    else
+        {include_once ('../views/layouts/front_end.php');} // el layout incluye el template adentro 

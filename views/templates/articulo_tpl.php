@@ -11,8 +11,8 @@ $registro = current($view_articulos->articulos);
         </div>
         <div class="hidden-xs">
             <ul id='lupita'>
-                <li>Zoom sobre imagen</li>
-                <li id='ampliar' data-imagen='".$foto."' >Click para ampliar</li>
+                <li class="hidden-xs">Zoom sobre imagen</li>
+                <li id='ampliar' data-imagen="<?php echo $foto;?>" >Click para ampliar</li>
             </ul>
         </div>
         <ul id='miniaturas'>

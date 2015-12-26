@@ -4,7 +4,7 @@
         <p>LO NUEVO</p>
     </div> 
     <?php foreach ($view_items->items as $item):  // uso la otra sintaxis de php para templates ?>
-      <div class="div-menu-items-xs item"  data-idItem="<?php echo $item['IdItemITE'];?>" 
+      <div class="div-menu-items-xs items"  data-idItem="<?php echo $item['IdItemITE'];?>" 
                      data-desc="<?php echo ucfirst(strtolower($item['DescripcionWebITE']));?>"
                      data-genero="<?php echo ucfirst(strtolower($item['IdGeneroART']));?>">
           <img src="app_images/menu_items_xs.jpg" class="" alt="">
