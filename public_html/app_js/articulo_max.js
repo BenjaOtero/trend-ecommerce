@@ -7,7 +7,14 @@ $(document).ready(function(){
     
     $(document).on('click', '.mini', function() {                
         var imagen=$(this).attr('data-imagen');
-        var ruta= "images/" + imagen + "_large.jpg";
+        var ruta=$(this).children().attr('src');
+	var n = ruta.search("bck");
+        if(n!=-1){
+            var ruta= "images/" + imagen + "_bck_large.jpg";
+        }
+        else{
+            var ruta= "images/" + imagen + "_large.jpg";
+        }        
         $('#imgMax').attr('src',ruta);          
     });     
     

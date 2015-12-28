@@ -17,12 +17,13 @@ abstract class DbAbstractMDL  // se declara una clase para hacer la conexion con
 
     function crearConexion(){
         //Datos para la conexión con el servidor
+      //  $servidor   = 'dns26.cyberneticos.com';
         $servidor   = 'localhost';
         $nombreBD   = 'ncsoftwa_re';
         $usuario    = 'root';
-     //   $usuario    = 'ncsoftwa_re';
+      //  $usuario    = 'ncsoftwa_re';
         $contrasena = '';
-    //    $contrasena = '8953#AFjn';
+      //  $contrasena = '8953#AFjn';
         //Creando la conexión, nuevo objeto mysqli
         $conexion = new mysqli($servidor,$usuario,$contrasena,$nombreBD);
         //Si sucede algún error la función muere e imprimir el error

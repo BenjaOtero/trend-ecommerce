@@ -152,6 +152,10 @@
         display: inline;
     }   
     
+    #lupita li:hover{
+        cursor: pointer;
+    }   
+    
     #colors {
       border: none;
     } 

@@ -70,9 +70,9 @@ $(document).ready(function(){
     }); 
     
     $(document).on('click', '#ampliar', function() { 
-      //  var local=$(this).attr('data-loc');
-        var imagen=$('#img-articulo').attr('data-articulo');
-        var params = '?action=maximizarArticulo&actionCatalogo=maximizarArticulo&imagen=' + imagen; 
+        var articulo=$('#img-articulo').attr('data-articulo');
+        var imagen=$('#img-articulo').attr('src');        
+        var params = '?action=maximizarArticulo&imagen=' + imagen + '&articulo=' + articulo; 
         var alto = $( window ).height();
         window.open ('index.php' + params,'','height=' + alto + 'px,width=790px,top=10,left=10,scrollbars=1');
         return false;
@@ -82,6 +82,7 @@ $(document).ready(function(){
         var imagen=$(this).attr('data-mini');
         var articulo=$(this).attr('data-articulo');
         $('#img-articulo').attr('src',imagen);
+        $('#img-articulo').attr('data-articulo',articulo);
         $("#colors label").each(function (){$(this).removeClass();});
         $("#" + articulo + "_label").addClass("selected-color");  
         $("#talles ul").each(function (){
@@ -111,9 +112,7 @@ $(document).ready(function(){
     
     $(document).on('click', '.color', function() {             
         var imagen=$(this).attr('data-mini');
-        var separados = imagen.split('/');        
-        var separados2 = separados[1].split('_');
-        var articulo = separados2[0];
+        var articulo = $(this).attr('data-articulo');
         $('#img-articulo').attr('src',imagen);
         $('#img-articulo').attr('data-articulo',articulo);
         $("#colors label").each(function (){$(this).removeClass();});
@@ -134,7 +133,6 @@ $(document).ready(function(){
     });     
     
     $(document).on('mouseleave', '.color', function() {             
-        var imagen=$(this).attr('data-mini');
         $("#colors label").each(function (){
             if($(this).hasClass("selected-color"))
             {

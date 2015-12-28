@@ -66,12 +66,12 @@ switch ($action)
         break;
     case 'maximizarArticulo':
         $view->disableLayout=true;    
-        $id_articulo=$_REQUEST['imagen']; 
-        $_SESSION['id_articulo']=$_REQUEST['imagen']; 
+        $id_articulo=$_REQUEST['articulo']; 
+        $_SESSION['imagen']=$_REQUEST['imagen']; 
         $ImagenART =array();
         $ImagenBackART =array();
         $DescripcionWebART ='';
-        $view_articulos->articulos=$modelo_articulo->ArticuloMaximizar($_SESSION['id_articulo'], 
+        $view_articulos->articulos=$modelo_articulo->ArticuloMaximizar($id_articulo, 
                 $ImagenART, $ImagenBackART, $DescripcionWebART);        
         $view->contentTemplate="../views/templates/articulo_max_tpl.php"; // seteo el template que se va a mostrar
         break;

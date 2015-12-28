@@ -34,7 +34,7 @@ h4{color: #777777; margin-left: 10px; margin-bottom: 5px; text-align: center;}
     <h4>    
         <?php echo $DescripcionWebART[0];?>        
     </h4>      
-    <img id='imgMax'  src="<?php echo "images/".$_SESSION['id_articulo']."_large.jpg" ;?>" 
+    <img id='imgMax'  src="<?php echo $_SESSION['imagen'] ;?>" 
          height='800' width='600'/>     
 </div>
 
