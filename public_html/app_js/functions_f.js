@@ -46,7 +46,10 @@ $(document).ready(function(){
         $('#columna-articulos').load("index.php",params,function(){
             $('#fondo-loader').css("display", "none");
             $('.modal-dialog').css("display", "none");
-        });
+            //Contraigo el menú items en moviles
+            var $mobileMenu = $('#mobile-main-menu');	
+            $mobileMenu.slideToggle('fast');                
+        });      
     });    
       
     $(document).on('click', '.articulo', function() {   
