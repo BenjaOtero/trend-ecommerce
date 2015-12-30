@@ -16,9 +16,6 @@
 
 
 
-
-
--los contenidos deba adecuarse a los distintos dispositivos
 -posibilidad de guardar página del articulo en favoritos en cualquier dispositivo
 -SEO en todos los dispositivos
 -tener en cuenta todos los segmentos (edades, posiciones sociales, pesos)
