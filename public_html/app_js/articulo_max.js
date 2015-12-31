@@ -9,7 +9,7 @@ $(document).ready(function(){
         var imagen=$(this).attr('data-imagen');
         var ruta=$(this).children().attr('src');
 	var n = ruta.search("bck");
-        if(n!=-1){
+        if(n!==-1){
             var ruta= "images/" + imagen + "_bck_large.jpg";
         }
         else{

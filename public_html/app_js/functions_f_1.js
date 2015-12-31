@@ -124,7 +124,7 @@ $(document).ready(function(){
     })    
     
     $('#enviar').live('click',function(){
-    	if (document.frmContacto.txtNombre.value.length==0)
+    	if (document.frmContacto.txtNombre.value.length===0)
     		{
     		   alert("Tiene que escribir un nombre");
     		   document.frmContacto.txtNombre.focus();
@@ -137,10 +137,10 @@ $(document).ready(function(){
         else
             {
             alert("La dirección de email es incorrecta.");
-            document.frmContacto.txtMail.focus()
+            document.frmContacto.txtMail.focus();
             return false;
             }
-    	if (document.frmContacto.txtArea.value.length==0)
+    	if (document.frmContacto.txtArea.value.length===0)
     		{
     		   alert("Tiene que escribir un comentario");
     		   document.frmContacto.txtArea.focus();
@@ -159,9 +159,9 @@ $(document).ready(function(){
         $('#popupmail').load("mail.php",params,function(){
             $('#popupmail').show();
             $('#blockmail').show();
-        })
+        });
        // return false;
-    })    
+    });   
     
     /*---------------------------------------------------------------------------------------------------------*/
 
