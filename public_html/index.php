@@ -59,10 +59,13 @@ switch ($action)
         $view_articulos->articulos=$modelo_articulo->Articulo($id_articulo, $ImagenART, $ImagenBackART, $talleART);
         $view->contentTemplate="../views/templates/articulo_tpl.php"; // seteo el template que se va a mostrar
         break;    
-    case 'refreshContacto':
+    case 'contacto':
         $view->disableLayout=true;
         $view->contentTemplate="../views/templates/contacto_tpl.php";
-      //  $_SESSION['btnActivo']="contacto";
+        break;
+    case 'enviarMail':
+        $view->disableLayout=true;
+        $view->contentTemplate="../views/templates/mail_tpl.php";
         break;
     case 'maximizarArticulo':
         $view->disableLayout=true;    

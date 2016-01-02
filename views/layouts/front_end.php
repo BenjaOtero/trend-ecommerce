@@ -61,6 +61,8 @@
         </div>    
         <?php include_once ($view->generosTemplate); // incluyo el template que corresponda ?>
     </header>
+    <div id="contacto">      
+    </div>
     <div id="div-contenido">      
         <?php include_once ($view->contentTemplate); // incluyo el template que corresponda ?>
     </div>

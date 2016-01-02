@@ -27,6 +27,65 @@ $(document).ready(function(){
         });
     });  
     
+    $(document).on('click', '#li-contacto', function() {  
+        $('#fondo-loader').css("display", "block");
+        $('.modal-dialog').css("display", "block");
+        //preparo los parametros
+        params={};
+        params.action='contacto';
+        $('#contacto').load("index.php",params,function(){
+            $('.modal-dialog').css("display", "none");
+            document.frmContacto.txtNombre.focus();
+        });
+    }); 
+    
+    $(document).on('click', '#enviar', function() {          
+    	if (document.frmContacto.txtNombre.value.length===0)
+        {
+           alert("Tiene que escribir un nombre");
+           document.frmContacto.txtNombre.focus();
+           return false;
+        }
+        valor = document.frmContacto.txtMail.value;
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(valor))
+            {
+            }
+        else
+        {
+        alert("La dirección de email es incorrecta.");
+        document.frmContacto.txtMail.focus();
+        return false;
+        }
+    	if (document.frmContacto.txtArea.value.length===0)
+        {
+           alert("Tiene que escribir un comentario");
+           document.frmContacto.txtArea.focus();
+           return false;
+        }
+        $('body').css("cursor", "wait");
+        var txtNombre = $("#txtNombre" ).val();
+        var txtMail = $("#txtMail" ).val();
+        var txtArea = $("#txtArea" ).val();
+        var txtTe = $("#txtTe" ).val();
+        $("#txtNombre").prop('disabled', true);
+        $("#txtArea").prop('disabled', true);
+        params={};
+        params.txtNombre=txtNombre;
+        params.txtMail=txtMail;
+        params.txtArea=txtArea;
+        params.txtTe=txtTe;
+        $('#popupmail').load("mail.php",params,function(){
+            $('#popupmail').show();
+            $('body').css("cursor", "default");
+        });
+       // return false;
+    });     
+    
+    $(document).on('click', '#cerrar-dialogo', function() {  
+        $("#dialogo").remove();
+        $('#fondo-loader').css("display", "none");
+    });  
+            
     $(document).on('click', '#mobile-menu-button', function() {
       var $mobileMenu = $('#mobile-main-menu');	
       $mobileMenu.slideToggle('fast');    
@@ -46,10 +105,7 @@ $(document).ready(function(){
         $('#columna-articulos').load("index.php",params,function(){
             $('#fondo-loader').css("display", "none");
             $('.modal-dialog').css("display", "none");
-            //Contraigo el menú items en moviles
-            var $mobileMenu = $('#mobile-main-menu');	
-            $mobileMenu.slideToggle('fast');                
-        });      
+        });
     });    
       
     $(document).on('click', '.articulo', function() {   
@@ -144,6 +200,5 @@ $(document).ready(function(){
             }  
         });         
     });     
-   
-       
+          
 });

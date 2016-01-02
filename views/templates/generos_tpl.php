@@ -2,7 +2,7 @@
     <div class="row hidden-xs">
         <div class="col-xs-12 col-md-10 col-md-offset-1 div-menu">
             <ul>
-              <li >CONTACTO</li>
+              <li id="li-contacto">CONTACTO</li>
               <?php foreach ($view->generos as $genero):  // uso la otra sintaxis de php para templates ?>
               <li class="menu-own" data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
                 <?php echo $genero['DescripcionGEN'];?>

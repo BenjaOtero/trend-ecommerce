@@ -165,6 +165,95 @@ ul li {
 }
 
 /* *************************************
+* *************** Contacto *************
+* ************************************ */
+#popupmail {
+  display: none;
+  top: 200px;
+  left: 50%;
+  margin-left: -150px;
+  padding-top: 0px;
+  background-color: #1E1E1E;
+  border: 5px solid #444444;
+  position: fixed;
+  width: 300px;
+  z-index: 200;
+}
+#dialogo {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -220px;    
+    width: 440px;
+    border: 1px solid #AAA;
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;	
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    z-index: 601;
+}
+
+#dialogo-titulo {
+    margin: 6px;
+    padding: 0px 5px 5px 10px;
+    height: 30px;
+    border: 1px solid #AAA;
+    background-color: #CCC;
+    border-radius: 4px;
+}
+
+#dialogo-titulo p {
+    display: inline;
+    font-size: 20px;
+}
+
+#cerrar-dialogo {
+    margin-top: 4px;
+    display: inline;
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: transparent url("../app_images/cerrar.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;	
+}
+
+#cerrar-dialogo:hover {
+    cursor: pointer;
+    outline: 1px solid #939393;
+}
+
+#dialogo-contenido {
+    margin: 6px;
+    vertical-align:middle;
+    border: 1px solid #AAA;
+}
+
+#frmContacto {
+    padding: 15px 15px 5px 15px;
+}
+
+#frmContacto p {
+    display: inline;
+}
+
+#frmContacto input {
+    display: inline;
+    width: 250px;
+}
+
+#frmContacto textarea {
+    width: 320px;
+    height: 150px;
+}
+
+/* *************************************
 * *************** Footer ***************
 * ************************************ */
 footer{
