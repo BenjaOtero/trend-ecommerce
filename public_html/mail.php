@@ -22,5 +22,6 @@ echo "<center><b><p style='color: #fff'>Su mensaje se envío correctamente</p></
         document.frmContacto.txtTe.value = "";
         document.frmContacto.txtArea.value = "";
         $('#popupmail').hide();
+        $('#blockmail').hide();
     }
 </script>

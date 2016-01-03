@@ -63,12 +63,22 @@ $(document).ready(function(){
            return false;
         }
         $('body').css("cursor", "wait");
+        $("#txtNombre").hover(function(){
+            $("#txtNombre").css("cursor","wait");
+        });
+        $("#txtMail").hover(function(){
+            $("#txtMail").css("cursor","wait");
+        });
+        $("#txtArea").hover(function(){
+            $("#txtArea").css("cursor","wait");
+        });
+        $("#txtTe").hover(function(){
+            $("#txtTe").css("cursor","wait");
+        });        
         var txtNombre = $("#txtNombre" ).val();
         var txtMail = $("#txtMail" ).val();
         var txtArea = $("#txtArea" ).val();
         var txtTe = $("#txtTe" ).val();
-        $("#txtNombre").prop('disabled', true);
-        $("#txtArea").prop('disabled', true);
         params={};
         params.txtNombre=txtNombre;
         params.txtMail=txtMail;
@@ -77,6 +87,18 @@ $(document).ready(function(){
         $('#popupmail').load("mail.php",params,function(){
             $('#popupmail').show();
             $('body').css("cursor", "default");
+            $("#txtNombre").hover(function(){
+                $("#txtNombre").css("cursor","default");
+            });
+            $("#txtMail").hover(function(){
+                $("#txtMail").css("cursor","default");
+            });
+            $("#txtArea").hover(function(){
+                $("#txtArea").css("cursor","default");
+            });
+            $("#txtTe").hover(function(){
+                $("#txtTe").css("cursor","default");
+            });             
         });
        // return false;
     });     
