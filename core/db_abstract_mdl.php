@@ -23,8 +23,8 @@ abstract class DbAbstractMDL  // se declara una clase para hacer la conexion con
          $servidor   = 'localhost';
         $nombreBD   = 'ncsoftwa_re';
      //   $nombreBD   = 'ncsoftwa_pruebas';
-      //   $usuario    = 'root';
-       $usuario    = 'ncsoftwa_re';
+       $usuario    = 'root';
+    //   $usuario    = 'ncsoftwa_re';
         $contrasena = '';
      //   $contrasena = '8953#AFjn';
         //Creando la conexión, nuevo objeto mysqli
