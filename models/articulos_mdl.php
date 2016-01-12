@@ -4,6 +4,16 @@ require_once("../core/db_abstract_mdl.php");
 class ArticuloMDL extends DbAbstractMDL{
 
     public function LoNuevo(){
+        $mysqli = $this->crearConexion();
+        $mysqli->query("call Web_Lo_Nuevo();");        
+        $result = $mysqli->store_result();
+        while ($row = $result->fetch_row()) {
+            $rows[]=$row;
+        }          
+        return $rows;
+    }
+    
+    public function LoNuevoCopia(){
         $conex= $this->conectar();
         $sql="call Web_Lo_Nuevo();";
         $registros=$this->consulta($sql,$conex);
@@ -13,6 +23,16 @@ class ArticuloMDL extends DbAbstractMDL{
     }
 
     public function ItemsArticulos($idItem, $idGenero){
+        $mysqli = $this->crearConexion();
+        $mysqli->multi_query("call Web_Items_y_Articulos('$idItem', '$idGenero');");        
+        $result = $mysqli->store_result();
+        while ($row=mysql_fetch_array($result)){
+            $rows[]=$row;
+        }          
+        return $rows;
+    }
+
+    public function ItemsArticulosCopia($idItem, $idGenero){
         $conex= $this->conectar();
         $sql="call Web_Items_y_Articulos($idItem, $idGenero);";
         $registros=$this->consulta($sql,$conex);
