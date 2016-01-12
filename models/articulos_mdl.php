@@ -2,53 +2,15 @@
 require_once("../core/db_abstract_mdl.php");
 
 class ArticuloMDL extends DbAbstractMDL{
-
-    public function LoNuevo(){
-        $mysqli = $this->crearConexion();
-        $mysqli->query("call Web_Lo_Nuevo();");        
-        $result = $mysqli->store_result();
-        while ($row = $result->fetch_row()) {
-            $rows[]=$row;
-        }          
-        return $rows;
-    }
     
-    public function LoNuevoCopia(){
-        $conex= $this->conectar();
-        $sql="call Web_Lo_Nuevo();";
-        $registros=$this->consulta($sql,$conex);
-        $this->desconectar($conex);
-        $rows=$this->fetchAll($registros);
-        return $rows;
-    }
-
     public function ItemsArticulos($idItem, $idGenero){
         $mysqli = $this->crearConexion();
-        $mysqli->multi_query("call Web_Items_y_Articulos('$idItem', '$idGenero');");        
-        $result = $mysqli->store_result();
-        while ($row=mysql_fetch_array($result)){
+        $result = mysqli_query($mysqli,"CALL Web_Items_y_Articulos('$idItem', '$idGenero');");
+        while($row = $result->fetch_assoc()){
             $rows[]=$row;
-        }          
+        }                
         return $rows;
-    }
-
-    public function ItemsArticulosCopia($idItem, $idGenero){
-        $conex= $this->conectar();
-        $sql="call Web_Items_y_Articulos($idItem, $idGenero);";
-        $registros=$this->consulta($sql,$conex);
-        $this->desconectar($conex);
-        $rows=$this->fetchAll($registros);
-        return $rows;
-    }
-    
-    public function ArticulosByItem($idItem, $idGenero){
-        $conex= $this->conectar();
-        $sql="call Web_Articulos_by_Item($idItem, $idGenero);";
-        $registros=$this->consulta($sql,$conex);
-        $this->desconectar($conex);
-        $rows=$this->fetchAll($registros);
-        return $rows;
-    }    
+    }         
     
     public function Articulo($id_articulo, &$ImagenART, &$ImagenBackART, &$talleART){
         $mysqli = $this->crearConexion();
@@ -92,5 +54,6 @@ class ArticuloMDL extends DbAbstractMDL{
         while ($row = $result3->fetch_row()) {
             $DescripcionWebART=$row;
         } 
-    }      
+    } 
+    
 }

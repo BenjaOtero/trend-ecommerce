@@ -14,6 +14,7 @@ if(isset($_REQUEST['action'])):
     $action=$_REQUEST['action'];
 endif;
 $view= new stdClass(); // creo una clase standard para contener la vista
+$view_articulos = new stdClass();
 $view->disableLayout=false;// marca si usa o no el layout , si no lo usa imprime directamente el template
 
 switch ($action)
@@ -31,7 +32,8 @@ switch ($action)
         $idItem=$_REQUEST['item'];
         $idGenero=$_REQUEST['genero'];
         $view->disableLayout=true;
-        $view_items->items=$modelo_item->Listar($idGenero);   // la vista esta en el contentTemplate
+        $view_items = new stdClass();
+        $view_items->items=$modelo_item->Listar($idGenero);  
         $view_items->itemsTemplate="../views/templates/items_tpl.php";
         $view_items->itemsXsTemplate="../views/templates/items_xs_tpl.php";
         $registro = current($view_items->items);
@@ -55,7 +57,7 @@ switch ($action)
         $id_articulo=$_REQUEST['articulo']; 
         $talleART =array();
         $ImagenART =array();
-        $ImagenBackART =array();
+        $ImagenBackART =array();        
         $view_articulos->articulos=$modelo_articulo->Articulo($id_articulo, $ImagenART, $ImagenBackART, $talleART);
         $view->contentTemplate="../views/templates/articulo_tpl.php"; // seteo el template que se va a mostrar
         break;    
@@ -73,7 +75,7 @@ switch ($action)
         $_SESSION['imagen']=$_REQUEST['imagen']; 
         $ImagenART =array();
         $ImagenBackART =array();
-        $DescripcionWebART ='';
+        $DescripcionWebART ='';        
         $view_articulos->articulos=$modelo_articulo->ArticuloMaximizar($id_articulo, 
                 $ImagenART, $ImagenBackART, $DescripcionWebART);        
         $view->contentTemplate="../views/templates/articulo_max_tpl.php"; // seteo el template que se va a mostrar
