@@ -7,10 +7,10 @@ abstract class DbAbstractMDL {
          $servidor   = 'localhost';
         $nombreBD   = 'ncsoftwa_re';
      //   $nombreBD   = 'ncsoftwa_pruebas';
-       $usuario    = 'root';
-    //   $usuario    = 'ncsoftwa_re';
-        $contrasena = '';
-     //   $contrasena = '8953#AFjn';
+      // $usuario    = 'root';
+       $usuario    = 'ncsoftwa_re';
+      //  $contrasena = '';
+        $contrasena = '8953#AFjn';
         //Creando la conexión, nuevo objeto mysqli
         $conexion = new mysqli($servidor,$usuario,$contrasena,$nombreBD);
         $conexion->set_charset("utf8");
