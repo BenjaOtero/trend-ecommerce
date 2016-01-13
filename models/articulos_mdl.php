@@ -3,9 +3,9 @@ require_once("../core/db_abstract_mdl.php");
 
 class ArticuloMDL extends DbAbstractMDL{
     
-    public function ItemsArticulos($idItem, $idGenero){
+    public function Articulos($idItem, $idGenero){
         $mysqli = $this->crearConexion();
-        $result = mysqli_query($mysqli,"CALL Web_Items_y_Articulos('$idItem', '$idGenero');");
+        $result = mysqli_query($mysqli,"CALL Web_Articulos('$idItem', '$idGenero');");
         while($row = $result->fetch_assoc()){
             $rows[]=$row;
         }                

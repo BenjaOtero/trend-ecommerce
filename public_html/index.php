@@ -3,12 +3,14 @@ include_once ("../models/items_mdl.php");
 include_once ("../models/articulos_mdl.php");
 require_once ("../models/generos_mdl.php");
 $modelo_item = new ItemMDL();
-$modelo_articulo = new ArticuloMDL();
+$modelo_articulo = new \ArticuloMDL();
 $modelo_genero = new GeneroMDL();
+
 function limpiarString($string){
     $string=htmlspecialchars(mysql_escape_string(trim($string)));
     return $string;
   }
+  
 $action='index';
 if(isset($_REQUEST['action'])):
     $action=$_REQUEST['action'];
@@ -37,7 +39,7 @@ switch ($action)
         $view_items->itemsTemplate="../views/templates/items_tpl.php";
         $view_items->itemsXsTemplate="../views/templates/items_xs_tpl.php";
         $registro = current($view_items->items);
-        $view_articulos->articulos=$modelo_articulo->ItemsArticulos($idItem, $idGenero);                        
+        $view_articulos->articulos=$modelo_articulo->Articulos($idItem, $idGenero);                        
         $view_articulos->articulosTemplate="../views/templates/articulos_tpl.php";
         $view->contentTemplate="../views/templates/catalogo_tpl.php";
         $titulo = "Lo nuevo";
@@ -47,7 +49,7 @@ switch ($action)
         $id_item=$_REQUEST['idItem'];
         $id_genero=$_REQUEST['genero'];
         $titulo = $_REQUEST['titulo'];
-        $view_articulos->articulos=$modelo_articulo->ItemsArticulos($id_item, $id_genero);        
+        $view_articulos->articulos=$modelo_articulo->Articulos($id_item, $id_genero);        
         $registro = current($view_articulos->articulos);        
         $view->contentTemplate="../views/templates/articulos_tpl.php"; // seteo el template que se va a mostrar
         break; 
