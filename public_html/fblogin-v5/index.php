@@ -38,10 +38,7 @@ if (isset($accessToken)) {
 		// setting default access token to be used in script
 		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 	}
-	// redirect the user back to the same page if it has "code" GET variable
-	if (isset($_GET['code'])) {
-		header('Location: ./');
-	}
+
 	// getting basic info about user
 	try {
 		$profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
@@ -60,11 +57,14 @@ if (isset($accessToken)) {
 	}
 	
 	// printing $profile array on the screen which holds the basic info about user
-	print_r($profile);
+	//print_r($profile);        
   	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
+	// redirect the user back to the same page if it has "code" GET variable
+
+		header('Location: prueba.php'); 
 } else {
 	// replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
-	$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/login.php', $permissions);
+	$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/', $permissions);
 	echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 }
 
