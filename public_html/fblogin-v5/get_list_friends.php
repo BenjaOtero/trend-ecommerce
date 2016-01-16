@@ -77,7 +77,7 @@ if (isset($accessToken)) {
 		foreach ($allFriends as $key) {
 			echo $key['name'] . "<br>";
 		}
-		echo count($allfriends);
+		echo count($allFriends);
 	} else {
 		$allFriends = $friends->asArray();
 		$totalFriends = count($allFriends);
@@ -88,6 +88,6 @@ if (isset($accessToken)) {
   	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 } else {
 	$helper = $fb->getRedirectLoginHelper();
-	$loginUrl = $helper->getLoginUrl('http://karminna.com/fblogin-v5/', $permissions);
+	$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/get_list_friends.php', $permissions);
 	echo "<script>window.top.location.href='".$loginUrl."'</script>";
 }
