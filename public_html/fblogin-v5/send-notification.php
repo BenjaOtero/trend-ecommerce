@@ -38,10 +38,7 @@ if (isset($accessToken)) {
 		// setting default access token to be used in script
 		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 	}
-	// redirect the user back to the same page if it has "code" GET variable
-	if (isset($_GET['code'])) {
-		header('Location: ./');
-	}
+	
 	// getting basic info about user
 	try {
 		$profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
@@ -49,21 +46,20 @@ if (isset($accessToken)) {
 	} catch(Facebook\Exceptions\FacebookResponseException $e) {
 		// When Graph returns an error
 		echo 'Graph returned an error: ' . $e->getMessage();
-		session_destroy();
-		// redirecting user back to app login page
-		header("Location: ./");
+		unset($_SESSION['facebook_access_token']);
+		echo "<script>window.top.location.href='https://apps.facebook.com/APP_NAMESPACE/'</script>";
 		exit;
 	} catch(Facebook\Exceptions\FacebookSDKException $e) {
 		// When validation fails or other local issues
 		echo 'Facebook SDK returned an error: ' . $e->getMessage();
 		exit;
 	}
-	// printing $profile array on the screen which holds the basic info about user
-	print_r($profile);
-  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
+
+	// sending notification to user
+	$sendNotif = $fb->post('/' . $profile['id'] . '/notifications', array('href' => '?true=43', 'template' => 'click here for more information!'), $accessToken);
 } else {
 	// replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
-	$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/login.php', $permissions);
+	$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/send-notification.php', $permissions);
 	echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 }
 
