@@ -68,6 +68,7 @@ if (isset($accessToken)) {
         
         $linkData = [
           'message' => 'User provided message (último)',
+          'link' => 'http://karminna.com/index.php?action=loNuevoOutside&genero=2&item=0'                        
           ];        
 
         try {
