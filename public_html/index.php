@@ -30,10 +30,24 @@ switch ($action)
         $view->disableLayout=true;
         $view->contentTemplate="../views/templates/index_front.php";
         break;
+    case 'loNuevoOutside':
+        $view->generos=$modelo_genero->Listar();
+        $view->generosTemplate="../views/templates/generos_tpl.php"; // seteo el template que se va a mostrar     
+        $idItem=$_REQUEST['item'];
+        $idGenero=$_REQUEST['genero'];
+        $view_items = new stdClass();
+        $view_items->items=$modelo_item->Listar($idGenero);  
+        $view_items->itemsTemplate="../views/templates/items_tpl.php";
+        $view_items->itemsXsTemplate="../views/templates/items_xs_tpl.php";
+        $registro = current($view_items->items);
+        $view_articulos->articulos=$modelo_articulo->Articulos($idItem, $idGenero);                        
+        $view_articulos->articulosTemplate="../views/templates/articulos_tpl.php";
+        $view->contentTemplate="../views/templates/catalogo_tpl.php";
+        $titulo = "Lo nuevo";        
+        break;
     case 'itemsYarticulos':
         $idItem=$_REQUEST['item'];
         $idGenero=$_REQUEST['genero'];
-        $view->disableLayout=true;
         $view_items = new stdClass();
         $view_items->items=$modelo_item->Listar($idGenero);  
         $view_items->itemsTemplate="../views/templates/items_tpl.php";
@@ -87,6 +101,11 @@ switch ($action)
     
 if($action==='maximizarArticulo')
     {include_once ('../views/layouts/articulo_maximizar.php');} // el layout incluye el template adentro
+else if($action==='loNuevoOutside'){
+    {include_once ('../views/layouts/front_end.php');} // el layout incluye el template adentro      
+    {include_once ($view->contentTemplate);}   
+}
+    
 else    
     if($view->disableLayout==true) 
         {include_once ($view->contentTemplate);}
