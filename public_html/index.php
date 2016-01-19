@@ -46,6 +46,7 @@ switch ($action)
         $titulo = "Lo nuevo";        
         break;
     case 'itemsYarticulos':
+        $view->disableLayout=true;
         $idItem=$_REQUEST['item'];
         $idGenero=$_REQUEST['genero'];
         $view_items = new stdClass();
@@ -98,16 +99,18 @@ switch ($action)
         break;
     default :
 } 
-    
-if($action==='maximizarArticulo')
+    if($action==='maximizarArticulo'){
     {include_once ('../views/layouts/articulo_maximizar.php');} // el layout incluye el template adentro
+}   
 else if($action==='loNuevoOutside'){
-    {include_once ('../views/layouts/front_end.php');} // el layout incluye el template adentro      
-    {include_once ($view->contentTemplate);}   
-}
-    
-else    
+    include_once ('../views/layouts/front_end.php'); // el layout incluye el template adentro      
+    include_once ($view->contentTemplate);   
+}  
+else {
     if($view->disableLayout==true) 
         {include_once ($view->contentTemplate);}
     else
-        {include_once ('../views/layouts/front_end.php');} // el layout incluye el template adentro 
+        {include_once ('../views/layouts/front_end.php');} // el layout incluye el template adentro     
+}   
+
+

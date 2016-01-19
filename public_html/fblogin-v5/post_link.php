@@ -27,6 +27,12 @@ try {
 if (isset($accessToken)) {
 	if (isset($_SESSION['facebook_access_token'])) {
 		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
+                
+            // Logged in!
+            $oAuth2Client = $fb->getOAuth2Client();
+            $longLivedAccessToken = $oAuth2Client->getLongLivedAccessToken($accessToken);
+            $_SESSION['facebook_access_token'] = (string) $longLivedAccessToken;  
+            
 	} else {
 		// getting short-lived access token
 		$_SESSION['facebook_access_token'] = (string) $accessToken;
@@ -73,7 +79,7 @@ if (isset($accessToken)) {
 
         try {
           // Returns a `Facebook\FacebookResponse` object
-          $response = $fb->post('/me/feed', $linkData, $accessToken);
+          $response = $fb->post("/880469382051500/feed", $linkData, $longLivedAccessToken);
         } catch(Facebook\Exceptions\FacebookResponseException $e) {
           echo 'Graph returned an error: ' . $e->getMessage();
           exit;
