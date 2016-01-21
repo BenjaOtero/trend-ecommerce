@@ -45,10 +45,16 @@ if (isset($accessToken)) {
 	// getting basic info about user
 	try {
 		$profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
-		$pages_request = $fb->get('/me/accounts?fields=name,access_token');
+		$pages_request = $fb->get('/me/accounts?fields=name,access_token,perms');
                                 
 		$profile = $profile_request->getGraphNode()->asArray();
 		$pages = $pages_request->getGraphEdge()->asArray();
+                foreach ($pages as $page) {
+                  $pageAccessToken = $page['access_token'];
+                  // Store $pageAccessToken and/or
+                  // send requests to Graph on behalf of the page
+                }                
+                
 	} catch(Facebook\Exceptions\FacebookResponseException $e) {
 		// When Graph returns an error
 		echo 'Graph returned an error: ' . $e->getMessage();
@@ -66,7 +72,7 @@ if (isset($accessToken)) {
         echo "<br>";
         echo "<br>";
         echo "<br>";
-        var_dump($pages);
+        var_dump($pageAccessToken);
   	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 } else {
 	// replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
