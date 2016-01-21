@@ -80,6 +80,12 @@ if (isset($accessToken)) {
         try {
           // Returns a `Facebook\FacebookResponse` object
           $response = $fb->post("/880469382051500/feed", $linkData, $longLivedAccessToken);
+          
+		$pages_request = $fb->get('/me/accounts?fields=name,access_token');                                
+		$pages = $pages_request->getGraphEdge()->asArray();  
+               // $token_page = $pages['access_token'];
+          
+          $response = $fb->post("/1673807476233899/feed", $linkData, 'CAACjPjFrMeEBAFbpyLkI7dRr7OURyCjZAN9SmRCZABDo5Y2ZBi7Q3Pr6u0Mu6iwidPrNidF6JMrrS4pcOpcwtfOv0VOB7AyoISaZA8bZAqDUAqFU8CZB8K7wAiQwEQzc1tZAIzUCr8ZCrlvPI0D4CpFS8ZBVu8WOHirr5M1zqUYxyPy3LVuPKh2co');
         } catch(Facebook\Exceptions\FacebookResponseException $e) {
           echo 'Graph returned an error: ' . $e->getMessage();
           exit;
@@ -91,6 +97,8 @@ if (isset($accessToken)) {
         $graphNode = $response->getGraphNode();
 
         echo 'Posted with id: ' . $graphNode['id'];
+        echo "<br>";
+        var_dump($pages);
 } else {
 	// replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
 	$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/post_link.php', $permissions);
