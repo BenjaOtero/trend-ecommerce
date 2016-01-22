@@ -13,7 +13,7 @@ try {
 	if (isset($_SESSION['facebook_access_token'])) {
 		$accessToken = $_SESSION['facebook_access_token'];
 	} else {
-  		$accessToken = $helper->getAccessToken('1673807476233899');
+  		$accessToken = $helper->getAccessToken();
 	}
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
  	// When Graph returns an error
@@ -86,7 +86,7 @@ if (isset($accessToken)) {
 		$pages = $pages_request->getGraphEdge()->asArray();  
                // $token_page = $pages['access_token'];
           
-          $response2 = $fb->post("/1673807476233899/feed", $linkData, $accessToken);
+      //    $response2 = $fb->post("/1673807476233899/feed", $linkData, $accessToken);
         } catch(Facebook\Exceptions\FacebookResponseException $e) {
           echo 'Graph returned an error: ' . $e->getMessage();
           exit;
@@ -103,7 +103,7 @@ if (isset($accessToken)) {
 
 } else {
 	// replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
-	$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/post_link.php', $permissions);
+	$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/post_page.php', $permissions);
 	echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 }
 

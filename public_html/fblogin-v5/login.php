@@ -38,10 +38,7 @@ if (isset($accessToken)) {
 		// setting default access token to be used in script
 		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 	}
-	// redirect the user back to the same page if it has "code" GET variable
-	if (isset($_GET['code'])) {
-		header('Location: ./');
-	}
+
 	// getting basic info about user
 	try {
 		$profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
@@ -53,8 +50,11 @@ if (isset($accessToken)) {
                   $pageAccessToken = $page['access_token'];
                   // Store $pageAccessToken and/or
                   // send requests to Graph on behalf of the page
-                }                
-                
+                }  
+                $linkData = [
+                  'message' => 'User provided message (último)'                     
+                  ];                 
+                $response2 = $fb->post("/1673807476233899/feed", $linkData, $pageAccessToken[0]);
 	} catch(Facebook\Exceptions\FacebookResponseException $e) {
 		// When Graph returns an error
 		echo 'Graph returned an error: ' . $e->getMessage();
@@ -71,6 +71,7 @@ if (isset($accessToken)) {
 	var_dump($profile);
         echo "<br>";
         echo "<br>";
+        echo "access token: ".$pageAccessToken[0];
         echo "<br>";
         var_dump($pageAccessToken);
   	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
