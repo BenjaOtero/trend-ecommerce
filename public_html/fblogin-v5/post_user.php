@@ -2,8 +2,8 @@
 session_start();
 require_once __DIR__ . '/src/Facebook/autoload.php';
 $fb = new Facebook\Facebook([
-  'app_id' => '179487512408545',
-  'app_secret' => '8a1045e3c2f1e7a3936749fd84236308',
+  'app_id' => '184276038596359',
+  'app_secret' => '4e91c5099b09034802b8b2ab8ef1a662',
   'default_graph_version' => 'v2.4',
   ]);
 $helper = $fb->getRedirectLoginHelper();
@@ -27,7 +27,7 @@ if (isset($accessToken)) {
 		$_SESSION['facebook_access_token'] = (string) $longLivedAccessToken;
 		// setting default access token to be used in script
 		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
-	}
+	}        
         $profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
         $profile = $profile_request->getGraphNode()->asArray();
         $linkData = [
