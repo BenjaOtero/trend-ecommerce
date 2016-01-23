@@ -2,12 +2,17 @@
 session_start();
 require_once __DIR__ . '/src/Facebook/autoload.php';
 $fb = new Facebook\Facebook([
-  'app_id' => '183717835318846',
-  'app_secret' => '079ae84f3f3ee09a2a11895261b17dbf',
+  'app_id' => '184596515230978',
+  'app_secret' => '21de49c9776c6f3f3607900aa77bd08c',
   'default_graph_version' => 'v2.4',
   ]);
 $helper = $fb->getRedirectLoginHelper();
-$permissions = ['email']; // optional
+$permissions = array( 
+		"manage_pages",
+		"publish_actions"
+		);  
+
+
 	
 if (isset($_SESSION['facebook_access_token'])) {
         $accessToken = $_SESSION['facebook_access_token'];
