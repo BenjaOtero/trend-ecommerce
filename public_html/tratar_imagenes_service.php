@@ -5,13 +5,13 @@ $namespace = "http://localhost/Ecommerce/trunk/public_html/nusoap/lib";
 // create a new soap server
 $server = new soap_server();
 // configure our WSDL
-$server->configureWSDL("SimpleService");
+$server->configureWSDL("TratarImagenesService");
 // set our namespace
 $server->wsdl->schemaTargetNamespace = $namespace;
 // register our WebMethod
 $server->register(
                 // method name:
-                'ProcessSimpleType', 		 
+                'TratarImagenes', 		 
                 // parameter list:
                 array('name'=>'xsd:string'), 
                 // return value(s):
@@ -36,7 +36,7 @@ $POST_DATA = isset($GLOBALS['HTTP_RAW_POST_DATA'])
 $server->service($POST_DATA);                
 exit();
 
-function ProcessSimpleType($articulo) {
+function TratarImagenes($articulo) {
         if(file_exists("images/".$articulo."_large.jpg"))
         {            
             $img_original=imagecreatefromjpeg("images/".$articulo."_large.jpg");
