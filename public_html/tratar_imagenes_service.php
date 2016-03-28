@@ -102,8 +102,8 @@ function TratarImagenes($articulo) {
                     $ancho_final = ceil($y_ratio * $ancho);
                     $alto_final = $max_alto;
             } 
-            $tmp=imagecreatetruecolor($ancho_final,$alto_final);
-            imagecopyresampled($tmp,$img_original,0,0,0,0,$ancho_final, $alto_final,$ancho,$alto);
+            $tmp=imagecreatetruecolor(185,250);
+            imagecopyresampled($tmp,$img_original,0,0,0,0,185, 250,$ancho,$alto);
             $calidad=85;
             $nombre = $articulo."_small.jpg";
             imagejpeg($tmp,"images/".$nombre,$calidad);     
