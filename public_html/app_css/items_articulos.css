@@ -1,3 +1,6 @@
+.articulo:hover{
+    cursor: pointer;
+}
 .descripcion-articulo{
     color: #fff;
     font-size: 8px;
