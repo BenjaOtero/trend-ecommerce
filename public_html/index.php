@@ -86,7 +86,7 @@ switch ($action)
         break;    
     case 'contacto':
         $view->disableLayout=true;
-        $view->contentTemplate="../views/templates/contacto_tpl.php";
+        $view->contentTemplate="../views/templates/cupon_tpl.php";
         break;
     case 'enviarMail':
         $view->disableLayout=true;

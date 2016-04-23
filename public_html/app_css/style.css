@@ -252,6 +252,89 @@ ul li {
     width: 320px;
     height: 150px;
 }
+/* *************************************
+* ********** Cupon descuento ***********
+* ************************************ */
+#popupmail {
+  display: none;
+  top: 200px;
+  left: 50%;
+  margin-left: -150px;
+  padding-top: 0px;
+  background-color: #1E1E1E;
+  border: 5px solid #444444;
+  position: fixed;
+  width: 300px;
+  z-index: 200;
+}
+#dialogo-cupon {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -220px;    
+    width: 600px;
+    background-color: #fff;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    z-index: 601;
+}
+
+#dialogo-titulo-cupon {
+    height: 50px;
+    background-color: #FF0000;
+}
+
+#dialogo-titulo-cupon p {
+    display: inline;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+#cerrar-dialogo {
+    margin-top: 4px;
+    display: inline;
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: transparent url("../app_images/cerrar.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;	
+}
+
+#cerrar-dialogo:hover {
+    cursor: pointer;
+    outline: 1px solid #939393;
+}
+
+#dialogo-contenido {
+    margin: 6px;
+    vertical-align:middle;
+    border: 1px solid #AAA;
+}
+
+#frmContacto {
+    padding: 15px 15px 5px 15px;
+}
+
+#frmContacto p {
+    display: inline;
+}
+
+#frmContacto input {
+    display: inline;
+    width: 250px;
+}
+
+#frmContacto textarea {
+    width: 320px;
+    height: 150px;
+}
 
 /* *************************************
 * *************** Footer ***************
