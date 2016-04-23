@@ -119,5 +119,26 @@
         list($anio,$mes,$dia)=explode("-",$fecha);
         return $dia."/".$mes."/".$anio." ".$hora;
     }
+    
+    public static function contador($ip)
+    {
+        include_once ("../models/contador_mdl.php");
+        $modelo_contador = new ContadorMDL();
+        $registro = $modelo_contador->Listar($ip);
+        if($registro != NULL)
+        {
+           $diferencia = $registro[0]['diferencia'];
+           $tiempoTrascurrido=(int)substr($diferencia,0,2); 
+            if($tiempoTrascurrido>0)
+            {
+                $modelo_contador->Insertar($ip); 
+            }
+        }
+        else
+        {
+            $modelo_contador->Insertar($ip);                
+        }
+    }
+    
 }
 ?>

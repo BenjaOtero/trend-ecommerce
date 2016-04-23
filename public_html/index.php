@@ -1,9 +1,11 @@
 <?php
+include_once ("../controllers/componentes/utilitarios.php");
 include_once ("../models/items_mdl.php");
 include_once ("../models/articulos_mdl.php");
 require_once ("../models/generos_mdl.php");
+$utilitarios = new Utilitarios();
 $modelo_item = new ItemMDL();
-$modelo_articulo = new \ArticuloMDL();
+$modelo_articulo = new ArticuloMDL();
 $modelo_genero = new GeneroMDL();
 
 function limpiarString($string){
@@ -22,6 +24,8 @@ $view->disableLayout=false;// marca si usa o no el layout , si no lo usa imprime
 switch ($action)
 {
     case 'index':
+        $ip = $_SERVER["REMOTE_ADDR"];
+        $utilitarios->contador($ip);
         $view->contentTemplate="../views/templates/index_front.php"; // seteo el template que se va a mostrar
         $view->generos=$modelo_genero->Listar();
         $view->generosTemplate="../views/templates/generos_tpl.php"; // seteo el template que se va a mostrar
@@ -46,6 +50,8 @@ switch ($action)
         $titulo = "Lo nuevo";        
         break;
     case 'itemsYarticulos':
+        $ip = $_SERVER["REMOTE_ADDR"];
+        $utilitarios->contador($ip);        
         $view->disableLayout=true;
         $idItem=$_REQUEST['item'];
         $idGenero=$_REQUEST['genero'];
