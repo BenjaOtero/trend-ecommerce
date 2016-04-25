@@ -1,37 +1,16 @@
-<div id="dialogo-cupon">
-    <div id="popupmail"></div>
-    <div id="dialogo-titulo-cupon">
-        <p>CUPON DE DESCUENTO</p>
-        <div id="cerrar-dialogo"  title="Cerrar"></div>
-    </div> 
-    <div id="dialogo-contenido" align="center">
-        <form id="frmContacto" name="frmContacto" action="" method="post">
-            <table>
-                <tr>
-                    <td><p>Nombre<font>&nbsp;*</font></p></td>
-                    <td><input id="txtNombre" class="textbox" type="text" /></td>
-                </tr>
-               <tr>
-                    <td><p>E-mail<font>&nbsp;*</font></p></td>
-                    <td><input id="txtMail" class="textbox" type="text" /></td>
-                </tr>
-                <tr>
-                    <td><p>Telefono</p></td>
-                    <td><input id="txtTe" class="textbox" type="text" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><p>Comentarios<font>&nbsp;*</font></p></td>
-                </tr>     
-                <tr>
-                    <td colspan="2"><textarea id="txtArea"></textarea></td>
-                </tr>  
-                <tr>
-                    <td colspan="2" align="center"><input id="enviar" type="button" value="Enviar"/></textarea></td>
-                </tr>  
-            </table>
-            <br />
-            <p id="requerido">&nbsp;Datos obligatorios.<font>*</font></p>
-        </form>              
-    </div>        
+<div id="dialogo-cupon" align="center">
+        <img src="app_images/cupon.jpg">
+        <p>EN TODA TU COMPRA</p>
+        <div id="facebook-login" align="center">
+            <p>Logueate con facebook y obtené tu cupón</p>      
+            <img src="app_images/facebook_login.jpg">            
+        </div>     
+        <div id="privacidad">
+            <p>Válido desde el 00/00/0000 hasta el 00/00/0000</p>
+            <p>El cupón tiene un uso por persona y es intransferible</p>
+            <p><a href="#">Acepto los términos de uso</a></p>
+            <a href="#">Políticas de privacidad</a>
+        </div>
+    
 </div>                        
             

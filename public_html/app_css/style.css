@@ -1,8 +1,7 @@
 @font-face {
 font-family: Neuropol X Rg;
-src: url('../app_fuentes/neuropol_x_rg.ttf') ;
+src: url('../app_fuentes/neuropol_x_rg.ttf');
 }
-
 body {
   margin-top: 10px;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -255,24 +254,14 @@ ul li {
 /* *************************************
 * ********** Cupon descuento ***********
 * ************************************ */
-#popupmail {
-  display: none;
-  top: 200px;
-  left: 50%;
-  margin-left: -150px;
-  padding-top: 0px;
-  background-color: #1E1E1E;
-  border: 5px solid #444444;
-  position: fixed;
-  width: 300px;
-  z-index: 200;
-}
 #dialogo-cupon {
+    border: 10px solid #AB0B89;
     position: fixed;
     top: 100px;
     left: 50%;
-    margin-left: -220px;    
-    width: 600px;
+    margin-left: -220px;  
+    padding: 1px;
+    width: 400px;
     background-color: #fff;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -280,60 +269,49 @@ ul li {
     z-index: 601;
 }
 
-#dialogo-titulo-cupon {
-    height: 50px;
-    background-color: #FF0000;
+#dialogo-cupon > p {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #800965;
 }
 
-#dialogo-titulo-cupon p {
-    display: inline;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
-    text-align: center;
+#facebook-login p {
+	font-size: 16px;
+	color: #000000;
+	margin-top: 10px;
 }
 
-#cerrar-dialogo {
-    margin-top: 4px;
-    display: inline;
-    float: right;
-    width: 20px;
-    height: 20px;
-    background: transparent url("../app_images/cerrar.gif");
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;	
+#facebook-login {
+    margin-top: 30px;
+}
+
+
+#privacidad {
+	margin-top: 30px;
+	border-top: 1px solid #AAA;
+	color: #777;
+	font-size: 9px;
+	font-size: 0.9rem;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+#privacidad p{
+	margin: 0 0 2px;
+    @font-face {
+    font-family: Neuropol X Rg;
+    src: url('../app_fuentes/neuropol_x_rg.ttf');
+    font-family: Pragmatica ExtraBold 36320;
+    src: url('../app_fuentes/Pragmatica-ExtraBold_36320.ttf');
+    }        
 }
 
 #cerrar-dialogo:hover {
     cursor: pointer;
     outline: 1px solid #939393;
-}
-
-#dialogo-contenido {
-    margin: 6px;
-    vertical-align:middle;
-    border: 1px solid #AAA;
-}
-
-#frmContacto {
-    padding: 15px 15px 5px 15px;
-}
-
-#frmContacto p {
-    display: inline;
-}
-
-#frmContacto input {
-    display: inline;
-    width: 250px;
-}
-
-#frmContacto textarea {
-    width: 320px;
-    height: 150px;
 }
 
 /* *************************************
