@@ -2,6 +2,10 @@
 font-family: Neuropol X Rg;
 src: url('../app_fuentes/neuropol_x_rg.ttf');
 }
+@font-face {
+font-family: Pragmatica ExtraBold 36320;
+src: url('../app_fuentes/Pragmatica-ExtraBold_36320.ttf');
+}
 body {
   margin-top: 10px;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
