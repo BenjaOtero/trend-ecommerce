@@ -14,30 +14,25 @@ if (isset($_SESSION['facebook_access_token'])) {
 } else {
         $accessToken = $helper->getAccessToken();
 }
-if (isset($accessToken)) {
-	if (isset($_SESSION['facebook_access_token'])) {
-		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);            
-	} else {
-		// getting short-lived access token
-		$_SESSION['facebook_access_token'] = (string) $accessToken;
-	  	// OAuth 2.0 client handler
-		$oAuth2Client = $fb->getOAuth2Client();
-		// Exchanges a short-lived access token for a long-lived one
-		$longLivedAccessToken = $oAuth2Client->getLongLivedAccessToken($_SESSION['facebook_access_token']);
-		$_SESSION['facebook_access_token'] = (string) $longLivedAccessToken;
-		// setting default access token to be used in script
-		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
-	}        
-        $profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
-        $profile = $profile_request->getGraphNode()->asArray();
-        echo "hola<br>";
-        $nombre = $profile['first_name'];
-        $apellido = $profile['last_name'];
-        $correo = $profile['email'];
-     
-} else {	
-	$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/cupones.php', $permissions);
-	echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
-}
+if (isset($_SESSION['facebook_access_token'])) {
+        $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);            
+} else {
+        // getting short-lived access token
+        $_SESSION['facebook_access_token'] = (string) $accessToken;
+        // OAuth 2.0 client handler
+        $oAuth2Client = $fb->getOAuth2Client();
+        // Exchanges a short-lived access token for a long-lived one
+        $longLivedAccessToken = $oAuth2Client->getLongLivedAccessToken($_SESSION['facebook_access_token']);
+        $_SESSION['facebook_access_token'] = (string) $longLivedAccessToken;
+        // setting default access token to be used in script
+        $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
+}        
+$profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
+$profile = $profile_request->getGraphNode()->asArray();
+echo "hola<br>";
+$nombre = $profile['first_name'];
+$apellido = $profile['last_name'];
+$correo = $profile['email'];
+echo $nombre." ".$apellido;
   
 
