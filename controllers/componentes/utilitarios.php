@@ -140,5 +140,20 @@
         }
     }
     
+    public static function CuponConfig()
+    {
+        include_once ("../models/cupones_mdl.php");
+        $modelo_cupon = new CuponMDL();
+        $registro = $modelo_cupon->ListarConfig();
+        if($registro[0]['fecha']>)
+        {
+
+        }
+        else
+        {
+         
+        }
+    }
+    
 }
 ?>
