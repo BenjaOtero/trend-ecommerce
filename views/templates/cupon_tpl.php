@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once './fblogin-v5/src/Facebook/autoload.php';
 $fb = new Facebook\Facebook([
   'app_id' => '1068588159868715',
@@ -15,7 +14,6 @@ if (isset($_SESSION['facebook_access_token'])) {
         $accessToken = $helper->getAccessToken();
 }	
 $loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/cupones.php', $permissions);
-echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 ?>
 <div id="dialogo-cupon" align="center">
         <img src="app_images/cupon.jpg">

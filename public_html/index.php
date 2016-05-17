@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once ("../controllers/componentes/utilitarios.php");
 include_once ("../models/cupones_mdl.php");
 include_once ("../models/items_mdl.php");
@@ -21,16 +22,25 @@ if(isset($_REQUEST['action'])):
 endif;
 $view= new stdClass(); // creo una clase standard para contener la vista
 $view_articulos = new stdClass();
+$view_cupones = new stdClass();
 $view->disableLayout=false;// marca si usa o no el layout , si no lo usa imprime directamente el template
 
 switch ($action)
 {
     case 'index':
         $ip = $_SERVER["REMOTE_ADDR"];
+        if($utilitarios->CuponConfig()==false)
+        {
+            $view_cupones->cuponesTemplate="../views/templates/cupon_empty_tpl.php"; 
+        }
+        else 
+        {
+            $view_cupones->cuponesTemplate="../views/templates/cupon_tpl.php"; 
+        }
         $utilitarios->contador($ip);
         $view->contentTemplate="../views/templates/index_front.php"; // seteo el template que se va a mostrar
         $view->generos=$modelo_genero->Listar();
-        $view->generosTemplate="../views/templates/generos_tpl.php"; // seteo el template que se va a mostrar
+        $view->generosTemplate="../views/templates/generos_tpl.php"; // seteo el template que se va a mostrar        
         break;
     case 'refreshIndex':
         $view->disableLayout=true;
@@ -88,7 +98,7 @@ switch ($action)
         break;    
     case 'contacto':
         $view->disableLayout=true;
-        $view->contentTemplate="../views/templates/cupon_tpl.php";
+        $view->contentTemplate="../views/templates/contacto_tpl.php";
         break;
     case 'enviarMail':
         $view->disableLayout=true;

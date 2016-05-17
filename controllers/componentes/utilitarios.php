@@ -136,7 +136,7 @@
         }
         else
         {
-            $modelo_contador->Insertar($ip);                
+            $modelo_contador->Insertar($ip);  
         }
     }
     
@@ -145,14 +145,21 @@
         include_once ("../models/cupones_mdl.php");
         $modelo_cupon = new CuponMDL();
         $registro = $modelo_cupon->ListarConfig();
-        if($registro[0]['fecha']>)
+        if($registro === NULL)
         {
-
+            return false;
         }
         else
         {
-         
-        }
+           if($registro[0]['FechaVencimiento']> date("Y-m-d"))
+           {
+               return $registro[0]['Porcentaje'];
+           }
+           else
+           {
+
+           }
+        }        
     }
     
 }
