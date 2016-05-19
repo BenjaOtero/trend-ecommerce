@@ -12,8 +12,11 @@ if (isset($_SESSION['facebook_access_token'])) {
         $accessToken = $_SESSION['facebook_access_token'];
 } else {
         $accessToken = $helper->getAccessToken();
-}	
-$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/index.php?cupon=cupon', $permissions);
+}
+$dominio = $_SERVER['HTTP_HOST'];
+$uri = $_SERVER['REQUEST_URI']; //La URI que se empleó para acceder a la página. Por ejemplo: '/index.html'. 
+
+$loginUrl = $helper->getLoginUrl('http://localhost/trend/trunk/private_html/index.php?action=cupon&dominio='.$dominio.'&uri='.$uri);
 ?>
 <div id="dialogo-cupon" align="center">
     
