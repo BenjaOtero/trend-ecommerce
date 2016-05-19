@@ -13,23 +13,38 @@ if (isset($_SESSION['facebook_access_token'])) {
 } else {
         $accessToken = $helper->getAccessToken();
 }	
-$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/fblogin-v5/cupones.php', $permissions);
+$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/index.php?cupon=cupon', $permissions);
 ?>
 <div id="dialogo-cupon" align="center">
-        <img src="app_images/cupon.jpg">
+    
+        <div class="row">
+                <div class="col-xs-6 col-sm-4 col-lg-6 col-lg-offset-1" style="padding-right: 0px;">   
+                    <div id="numero" align="right">
+                         <?php echo $porcentaje;?>
+                    </div>
+                </div> 
+                <div class="col-xs-6 col-sm-4 col-lg-4">   
+                    <div class="row">
+                        <div id="porcentaje" align="left"><p>%</p></div>
+                        <div id="off" align="left"><p>OFF</p></div>
+                    </div>
+                </div>         
+        </div>    
         <p>EN TODA TU COMPRA</p>
         <div id="facebook-login" align="center">
             <p>Logueate con facebook y obtené tu cupón</p>   
-            <a href="<?php echo $loginUrl ?>" target='_blank'>
+            <a href="<?php echo $loginUrl ?>">
                 <img src="app_images/facebook_login.jpg">
             </a>                        
         </div>     
         <div id="privacidad">
-            <p>Válido desde el 00/00/0000 hasta el 00/00/0000</p>
+            <p><?php echo "Válido hasta el  ".$vencimientoCupon;?></p>
             <p>El cupón tiene un uso por persona y es intransferible</p>
             <p><a href="#">Acepto los términos de uso</a></p>
-            <a href="#">Políticas de privacidad</a>
-        </div>
-    
+            <a href="#" style="display: inline;">Políticas de privacidad</a>
+            <p id="cerrar-cupon">Cerrar</p>
+        </div>    
 </div>                        
-            
+<script type="text/javascript">
+    $("#dialogo-cupon").css(<?php echo "'border','10px solid ".$color."'";?>); 
+</script>            

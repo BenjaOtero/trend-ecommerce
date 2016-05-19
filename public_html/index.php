@@ -29,22 +29,31 @@ switch ($action)
 {
     case 'index':
         $ip = $_SERVER["REMOTE_ADDR"];
-        if($utilitarios->CuponConfig()==false)
+        $existePromo = $utilitarios->CuponConfig();
+        if($existePromo==false)
         {
             $view_cupones->cuponesTemplate="../views/templates/cupon_empty_tpl.php"; 
         }
         else 
         {
-            $view_cupones->cuponesTemplate="../views/templates/cupon_tpl.php"; 
+            $view_cupones->cuponesTemplate="../views/templates/cupon_tpl.php";
+            $porcentaje = $existePromo[0]['Porcentaje'];
+            $vencimientoCupon = $existePromo[0]['FechaVencimiento'];
+            $vencimientoCupon = $utilitarios->devolverFormatoFecha($vencimientoCupon);            
+            $color = $existePromo[0]['Color'];
+        }
+        if(isset($_REQUEST['cupon']))
+        {
+            $view_cupones->cuponesTemplate="../views/templates/cupon_ok_tpl.php"; 
         }
         $utilitarios->contador($ip);
         $view->contentTemplate="../views/templates/index_front.php"; // seteo el template que se va a mostrar
         $view->generos=$modelo_genero->Listar();
         $view->generosTemplate="../views/templates/generos_tpl.php"; // seteo el template que se va a mostrar        
         break;
-    case 'refreshIndex':
+    case 'refreshIndex':      
         $view->disableLayout=true;
-        $view->contentTemplate="../views/templates/index_front.php";
+        $view->contentTemplate="../views/templates/index_front.php";        
         break;
     case 'loNuevoOutside':
         $view->generos=$modelo_genero->Listar();
@@ -115,6 +124,10 @@ switch ($action)
                 $ImagenART, $ImagenBackART, $DescripcionWebART);        
         $view->contentTemplate="../views/templates/articulo_max_tpl.php"; // seteo el template que se va a mostrar
         break;
+    case 'cupon':
+        $view->disableLayout=true;
+        $view_cupones->cuponesTemplate="../views/templates/cupon_ok_tpl.php"; 
+        break;    
     default :
 } 
     if($action==='maximizarArticulo'){

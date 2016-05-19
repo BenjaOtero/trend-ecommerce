@@ -3,7 +3,7 @@ font-family: Neuropol X Rg;
 src: url('../app_fuentes/neuropol_x_rg.ttf');
 }
 @font-face {
-font-family: Pragmatica ExtraBold 36320;
+font-family: Pragmatica ExtraBold;
 src: url('../app_fuentes/Pragmatica-ExtraBold_36320.ttf');
 }
 body {
@@ -259,7 +259,6 @@ ul li {
 * ********** Cupon descuento ***********
 * ************************************ */
 #dialogo-cupon {
-    border: 10px solid #AB0B89;
     position: fixed;
     top: 100px;
     left: 50%;
@@ -274,10 +273,34 @@ ul li {
 }
 
 #dialogo-cupon > p {
-    margin-top: 10px;
     font-size: 17px;
     font-weight: bold;
     color: #800965;
+}
+
+#numero{
+    height: 130px;
+    font-family: Pragmatica ExtraBold;
+    font-size: 100px;
+    color: #AB0B89;
+}
+
+#porcentaje{
+    font-family: Pragmatica ExtraBold;
+    font-size: 80px;
+    color: #AB0B89;
+    height: 80px;
+}
+
+#off{
+    font-family: Pragmatica ExtraBold;
+    font-size: 40px;
+    color: #AB0B89;
+}
+
+#off > p{
+    margin-bottom: 0px;
+    height: 45px;
 }
 
 #facebook-login p {
@@ -304,19 +327,19 @@ ul li {
 }
 
 #privacidad p{
-	margin: 0 0 2px;
-    @font-face {
-    font-family: Neuropol X Rg;
-    src: url('../app_fuentes/neuropol_x_rg.ttf');
-    font-family: Pragmatica ExtraBold 36320;
-    src: url('../app_fuentes/Pragmatica-ExtraBold_36320.ttf');
-    }        
+	margin: 0 10px 2px 0;     
 }
 
-#cerrar-dialogo:hover {
-    cursor: pointer;
-    outline: 1px solid #939393;
+#cerrar-cupon {
+    display: inline; 
+    float: right; 
+    margin-right: 10px;
 }
+
+#cerrar-cupon:hover {
+    cursor: pointer;
+}
+
 
 /* *************************************
 * *************** Footer ***************

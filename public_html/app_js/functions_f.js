@@ -107,6 +107,10 @@ $(document).ready(function(){
         $("#dialogo").remove();
         $('#fondo-loader').css("display", "none");
     });  
+                
+    $(document).on('click', '#cerrar-cupon', function() {  
+        $("#dialogo-cupon").remove();
+    });  
             
     $(document).on('click', '#mobile-menu-button', function() {
       var $mobileMenu = $('#mobile-main-menu');	
@@ -175,7 +179,7 @@ $(document).ready(function(){
         $("#" + articulo).removeClass("talle-inactivos");             
     }); 
     
-        $(document).on('mouseover', '.mini', function() {             
+    $(document).on('mouseover', '.mini', function() {             
         var imagen=$(this).attr('data-mini');
         $('#img-articulo').attr('src',imagen);      
     });     

@@ -142,6 +142,7 @@
     
     public static function CuponConfig()
     {
+        $fecha = date("Y-m-d");
         include_once ("../models/cupones_mdl.php");
         $modelo_cupon = new CuponMDL();
         $registro = $modelo_cupon->ListarConfig();
@@ -151,13 +152,13 @@
         }
         else
         {
-           if($registro[0]['FechaVencimiento']> date("Y-m-d"))
+           if($registro[0]['FechaVencimiento']>= date("Y-m-d"))
            {
-               return $registro[0]['Porcentaje'];
+               return $registro;
            }
            else
            {
-
+               return false;
            }
         }        
     }
