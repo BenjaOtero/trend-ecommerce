@@ -140,7 +140,7 @@
         }
     }
     
-    public static function CuponConfig()
+    public static function CuponConfig()            
     {
         $fecha = date("Y-m-d");
         include_once ("../models/cupones_mdl.php");
@@ -163,5 +163,40 @@
         }        
     }
     
+    public static function AgregarCupon($nombre, $apellido, $correo,$vencimiento)
+    {
+        include_once ("../models/clientes_mdl.php");
+        include_once ("../models/cupones_mdl.php");
+        $modelo_cliente = new ClienteMDL();        
+        $modelo_cupon = new CuponMDL();  
+        $cliente = $modelo_cliente->GetCliente($correo);
+        if($cliente === NULL)
+        {
+            $id = rand(1, 2000000000);
+            $modelo_cliente->InsertCliente($id,$nombre, $apellido, $correo);
+            $modelo_cupon->InsertCupon($id, $correo, $vencimiento);
+            //agregar cupon
+            //$agregarCupon = TRUE;
+            $array = [
+                "AgregarCupon" => TRUE,
+                "CuponNuevo" => $id,
+                "CuponExistente" => "0",
+            ];            
+        }
+        else
+        {
+            //buscar cupon (correo, fechaVenc
+            //si no existe 
+            //agregar
+            //$agregarCupon = TRUE;
+            //else $agregarCupon = FALSE;
+            $array = [
+                "AgregarCupon" => TRUE,
+                "CuponNuevo" => 0,
+                "CuponExistente" => "0",
+            ];             
+        }         
+        return $array;
+    }       
 }
 ?>

@@ -10,6 +10,11 @@ class CuponMDL extends DbAbstractMDL{
             $rows[]=$row;
         }                
         return $rows;
-    }    
+    } 
+    
+    public function InsertCupon($id,$correo,$vencimiento){
+        $mysqli = $this->crearConexion();
+        mysqli_query($mysqli,"CALL Web_Cupon_Insertar('$id','$correo','$vencimiento');");   
+    }       
 
 }

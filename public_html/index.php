@@ -39,12 +39,24 @@ switch ($action)
             $view_cupones->cuponesTemplate="../views/templates/cupon_tpl.php";
             $porcentaje = $existePromo[0]['Porcentaje'];
             $vencimientoCupon = $existePromo[0]['FechaVencimiento'];
-            $vencimientoCupon = $utilitarios->devolverFormatoFecha($vencimientoCupon);            
+            $vencCuponFormat = $utilitarios->devolverFormatoFecha($vencimientoCupon);            
             $color = $existePromo[0]['Color'];
         }
         if(isset($_REQUEST['cupon']))
         {
-            $view_cupones->cuponesTemplate="../views/templates/cupon_ok_tpl.php"; 
+            $nombre = $_REQUEST['nombre'];
+            $apellido = $_REQUEST['apellido'];
+            $correo = $_REQUEST['correo'];
+            $datos = $utilitarios->AgregarCupon($nombre, $apellido, $correo,$vencimientoCupon);
+            if($datos['AgregarCupon'] != FALSE)
+            {
+               // enviar mail
+               $view_cupones->cuponesTemplate="../views/templates/cupon_empty_tpl.php";  
+            }
+            else 
+            {
+                $view_cupones->cuponesTemplate="../views/templates/cupon_empty_tpl.php";
+            }            
         }
         $utilitarios->contador($ip);
         $view->contentTemplate="../views/templates/index_front.php"; // seteo el template que se va a mostrar
