@@ -175,26 +175,35 @@
             $id = rand(1, 2000000000);
             $modelo_cliente->InsertCliente($id,$nombre, $apellido, $correo);
             $modelo_cupon->InsertCupon($id, $correo, $vencimiento);
-            //agregar cupon
-            //$agregarCupon = TRUE;
+            // enviar mail
             $array = [
                 "AgregarCupon" => TRUE,
                 "CuponNuevo" => $id,
-                "CuponExistente" => "0",
+                "CuponExistente" => NULL,
             ];            
         }
         else
         {
-            //buscar cupon (correo, fechaVenc
-            //si no existe 
-            //agregar
-            //$agregarCupon = TRUE;
-            //else $agregarCupon = FALSE;
-            $array = [
-                "AgregarCupon" => TRUE,
-                "CuponNuevo" => 0,
-                "CuponExistente" => "0",
-            ];             
+            $cupon = $modelo_cupon->BuscarCupon($correo, $vencimiento);
+            if($cupon === NULL)
+            {
+                $id = rand(1, 2000000000);
+                $modelo_cupon->InsertCupon($id, $correo, $vencimiento);
+                // enviar mail
+                $array = [
+                    "AgregarCupon" => TRUE,
+                    "CuponNuevo" => $id,
+                    "CuponExistente" => NULL,
+                ];                  
+            }
+            else
+            {
+                $array = [
+                    "AgregarCupon" => FALSE,
+                    "CuponNuevo" => NULL,
+                    "CuponExistente" => $cupon[0]['Nro_cupon'],
+                ];                 
+            }
         }         
         return $array;
     }       
