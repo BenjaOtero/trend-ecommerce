@@ -4,7 +4,7 @@ include_once ("../controllers/componentes/utilitarios.php");
 include_once ("../models/cupones_mdl.php");
 include_once ("../models/items_mdl.php");
 include_once ("../models/articulos_mdl.php");
-require_once ("../models/generos_mdl.php");
+include_once ("../models/generos_mdl.php");
 $utilitarios = new Utilitarios();
 $modelo_cupon = new CuponMDL();
 $modelo_item = new ItemMDL();

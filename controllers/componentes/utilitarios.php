@@ -108,7 +108,7 @@
         return $anio."-".$mes."-".$dia." ".$hora;
     }
 
-    public static function devolverFormatoFecha($fecha) {
+    public function devolverFormatoFecha($fecha) {
         list($anio,$mes,$dia)=explode("-",$fecha);
         return $dia."/".$mes."/".$anio;
     }
@@ -160,10 +160,10 @@
            {
                return false;
            }
-        }        
+        }   
     }
     
-    public static function AgregarCupon($nombre, $apellido, $correo,$vencimiento)
+    public function AgregarCupon($nombre, $apellido, $correo,$vencimiento)
     {
         include_once ("../models/clientes_mdl.php");
         include_once ("../models/cupones_mdl.php");
@@ -204,32 +204,43 @@
                     "CuponExistente" => $cupon[0]['Nro_cupon'],
                 ];                 
             }
-        }         
+        }  
+        if($array["AgregarCupon"] === TRUE)
+        {             
+            $fechaVenc = $this->devolverFormatoFecha($vencimiento);
+            $html = "<div align='center' style='border: margin: 10px; padding: 10px;'>";        
+            $html .= "<img src=http://karminna.com/app_images/cupones_logo.jpg>";
+            $html .= "<br><br><br>";
+            $html .= "<p style='font-size:20px; margin:0;'>Nro cupón: ".$id."</p>";
+            $html .= "<p>Válido hasta el ".$fechaVenc."</p>";
+            $html .= "<p style='font-size:15px; margin-top:10px;color:red;'>";
+            $html .= "Acercate a nuestros locales, pasale el número de cupón a la vendedora y obtené un 20% de descuento.";
+            $html .= "</p>";
+            $html .= "</div>";     
+            $this->EnviarMail($correo, $html);             
+        }
         return $array;
     }   
     
-    function EnviarMail()
+    function EnviarMail($destinatario, $html)
     {
-        require("class.phpmailer.php");
+        require("../PHPMailer/PHPMailerAutoload.php");
         $mail = new PHPMailer();
         $mail->IsSMTP();
         $mail->SMTPAuth = true;
-        $mail->Host = ""; // SMTP a utilizar. Por ej. smtp.elserver.com
-        $mail->Username = ""; // Correo completo a utilizar
-        $mail->Password = ""; // Contraseña
-        $mail->Port = 25; // Puerto a utilizar
-        $mail->From = "info@elserver.com"; // Desde donde enviamos (Para mostrar)
-        $mail->FromName = "ELSERVER.COM";
-        $mail->AddAddress("correo"); // Esta es la dirección a donde enviamos
-        $mail->AddCC("cuenta@dominio.com"); // Copia
-        $mail->AddBCC("cuenta@dominio.com"); // Copia oculta
+        $mail->Host = "mail.karminna.com"; // SMTP a utilizar. Por ej. smtp.elserver.com
+        $mail->Username = "info@karminna.com"; // Correo completo a utilizar
+        $mail->Password = "8953#AFjn"; // Contraseña
+        $mail->Port = 587; // Puerto a utilizar
+        $mail->From = "info@karminna.com"; // Desde donde enviamos (Para mostrar)
+        $mail->FromName = "KARMINNA";
+        $mail->AddAddress($destinatario); // Esta es la dirección a donde enviamos
+       // $mail->AddCC("cuenta@dominio.com"); // Copia
+      //  $mail->AddBCC("cuenta@dominio.com"); // Copia oculta
         $mail->IsHTML(true); // El correo se envía como HTML
-        $mail->Subject = "Titulo"; // Este es el titulo del email.
-        $body = "Hola mundo. Esta es la primer línea<br />";
-        $body .= "Acá continuo el <strong>mensaje</strong>";
-        $mail->Body = $body; // Mensaje a enviar
-        $mail->AltBody = "Hola mundo. Esta es la primer línean Acá continuo el mensaje"; // Texto sin html
-        $mail->AddAttachment("imagenes/imagen.jpg", "imagen.jpg");
+        $mail->Subject = "Cupon de descuento"; // Este es el titulo del email.
+        $mail->Body = $html; // Mensaje a enviar
+    //    $mail->AddAttachment("imagenes/imagen.jpg", "imagen.jpg");
         $exito = $mail->Send(); // Envía el correo.
         if($exito){
             $mensaje = TRUE;
