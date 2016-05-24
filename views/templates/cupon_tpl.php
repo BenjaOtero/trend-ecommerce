@@ -19,14 +19,13 @@ $uri = $_SERVER['REQUEST_URI']; //La URI que se empleó para acceder a la págin
 $loginUrl = $helper->getLoginUrl('http://localhost/trend/trunk/private_html/index.php?action=cupon&dominio='.$dominio.'&uri='.$uri);
 ?>
 <div id="dialogo-cupon" align="center">
-    
         <div class="row">
-                <div class="col-xs-6 col-sm-4 col-lg-6 col-lg-offset-1" style="padding-right: 0px;">   
+                <div class="col-xs-6 col-sm-4 col-lg-1" style="padding-right: 0px;">   
                     <div id="numero" align="right">
                          <?php echo $porcentaje;?>
                     </div>
                 </div> 
-                <div class="col-xs-6 col-sm-4 col-lg-4">   
+                <div class="col-xs-6 col-sm-4 col-lg-1">   
                     <div class="row">
                         <div id="porcentaje" align="left"><p>%</p></div>
                         <div id="off" align="left"><p>OFF</p></div>
@@ -46,7 +45,7 @@ $loginUrl = $helper->getLoginUrl('http://localhost/trend/trunk/private_html/inde
             <p><a href="#">Acepto los términos de uso</a></p>
             <a href="#" style="display: inline;">Políticas de privacidad</a>
             <p id="cerrar-cupon">Cerrar</p>
-        </div>    
+        </div>          
 </div>                        
 <script type="text/javascript">
     $("#dialogo-cupon").css(<?php echo "'border','10px solid ".$color."'";?>); 

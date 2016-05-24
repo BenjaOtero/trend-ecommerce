@@ -61,7 +61,7 @@
         </div>    
         <?php include_once ($view->generosTemplate); // incluyo el template que corresponda ?>
     </header>
-    <div id="cupon">   
+    <div id="cupon" class="container">   
         <?php include_once ($view_cupones->cuponesTemplate); ?>
     </div>
     <div id="contacto">      
