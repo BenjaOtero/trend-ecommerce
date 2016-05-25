@@ -39,7 +39,7 @@ ul li {
     left:0;
     z-index: 599;
 }
-.modal-dialog {
+#modal-cargador {
     display: none;
     padding-top: 10px;
     top: 100px;
@@ -50,12 +50,12 @@ ul li {
 
 }
 
-.modal-sm {
+.modal-chica {
     width: 200px;
 }
 
-.modal-content {
-    position: relative;
+#modal-cargador-content {
+   // position: relative;
     background-color: #FFF;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -73,10 +73,6 @@ ul li {
 .modal-title {
     margin: 0px;
     line-height: 1.42857;
-}
-
-.modal-body {
-    position: relative;
 }
 .modal-body p{
     text-align: center;
