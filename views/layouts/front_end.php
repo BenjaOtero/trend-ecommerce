@@ -27,7 +27,7 @@
   </head>
   <body>  
     <div id="fondo-loader"></div> 
-    <div class="modal-dialog modal-sm">
+    <div id="modal-cargador" class="modal-dialog modal-chica">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">
