@@ -29,13 +29,13 @@
     <div id="fondo-loader"></div> 
     <div id="modal-cargador" class="modal-dialog modal-chica">
         <div id="modal-cargador-content" class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">
+            <div id="modal-cargador-header" class="modal-header">
+                <h4 id="modal-cargador-title" class="modal-title">
                     <span class="glyphicon glyphicon-time">
                     </span>Please Wait
                 </h4>
             </div>
-            <div class="modal-body">
+            <div id="modal-cargador-body" class="modal-body">
                 <div>
                     <div>
                         <p><img src="app_images/barraProgreso.gif" /></p>			  

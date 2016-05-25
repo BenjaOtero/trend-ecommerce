@@ -23,7 +23,7 @@ $(document).ready(function(){
         params.genero=genero;
         $('#div-contenido').load("index.php",params,function(){
             $('#fondo-loader').css("display", "none");
-          //  $('#modal-cargador').css("display", "none");
+            $('#modal-cargador').css("display", "none");
         });
     });  
     
