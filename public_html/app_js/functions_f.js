@@ -109,7 +109,8 @@ $(document).ready(function(){
     });  
                 
     $(document).on('click', '#cerrar-cupon', function() {  
-        $("#dialogo-cupon").remove();
+        $("#div-cupones").remove();
+        $("#modal-backdrop").css("display: none;")
     });  
             
     $(document).on('click', '#mobile-menu-button', function() {

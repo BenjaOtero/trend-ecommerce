@@ -22,12 +22,25 @@ $loginUrl = $helper->getLoginUrl('http://localhost/trend/trunk/private_html/inde
   <div class="modal-dialog">      
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-body" align="center">
+      <div id="div-cupones-body" class="modal-body" align="center">
           <img src="app_images/cupon.jpg">
           <p>En toda tu compra.</p>
+            <div id="facebook-login" align="center">
+                <p>Logueate con facebook y obtené tu cupón</p>   
+                <a href="<?php echo $loginUrl ?>">
+                    <img src="app_images/facebook_login.jpg">
+                </a>                        
+            </div>              
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div id="privacidad">
+            <p><?php echo "Válido hasta el  ".$vencimientoCupon;?></p>
+            <p>El cupón tiene un uso por persona y es intransferible</p>
+          <!--   <p><a href="#">Acepto los términos de uso</a></p>
+            <a href="#" style="display: inline;">Políticas de privacidad</a> -->
+            <button id="cerrar-cupon" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>            
+        </div>            
+        
       </div>
     </div>      
   </div>

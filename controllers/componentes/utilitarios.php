@@ -227,13 +227,14 @@
         require("../PHPMailer/PHPMailerAutoload.php");
         $mail = new PHPMailer();
         $mail->IsSMTP();
+        $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;
         $mail->Host = "mail.karminna.com"; // SMTP a utilizar. Por ej. smtp.elserver.com
         $mail->Username = "info@karminna.com"; // Correo completo a utilizar
         $mail->Password = "8953#AFjn"; // Contraseña
         $mail->Port = 587; // Puerto a utilizar
         $mail->From = "info@karminna.com"; // Desde donde enviamos (Para mostrar)
-        $mail->FromName = "KARMINNA";
+        $mail->FromName = "Karminna";
         $mail->AddAddress($destinatario); // Esta es la dirección a donde enviamos
        // $mail->AddCC("cuenta@dominio.com"); // Copia
       //  $mail->AddBCC("cuenta@dominio.com"); // Copia oculta

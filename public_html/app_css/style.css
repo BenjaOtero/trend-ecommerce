@@ -254,22 +254,10 @@ ul li {
 /* *************************************
 * ********** Cupon descuento ***********
 * ************************************ */
-#dialogo-cupon {
-    position: fixed;
-    top: 100px;
-    left: 50%;
-    margin-left: -220px;  
-    padding: 1px;
-    width: 400px;
-    background-color: #fff;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    z-index: 601;
-}
 
-#dialogo-cupon > p {
-    font-size: 17px;
+#div-cupones-body > p {
+    margin: 10px;
+    font-size: 25px;
     font-weight: bold;
     color: #800965;
 }
@@ -311,19 +299,17 @@ ul li {
 
 
 #privacidad {
-	margin-top: 30px;
-	border-top: 1px solid #AAA;
-	color: #777;
-	font-size: 9px;
-	font-size: 0.9rem;
-	text-align: left;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
+    color: #777;
+    font-size: 10px;
+    font-size: 1rem;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 #privacidad p{
-	margin: 0 10px 2px 0;     
+    margin: 0 10px 2px 0;     
 }
 
 #cerrar-cupon {
