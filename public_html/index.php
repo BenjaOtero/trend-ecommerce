@@ -55,7 +55,8 @@ switch ($action)
             }
             else 
             {
-                $view_cupones->cuponesTemplate="../views/templates/cupon_empty_tpl.php";
+                $nroCupon = $datos["CuponExistente"];
+                $view_cupones->cuponesTemplate="../views/templates/cupon_ok_tpl.php"; 
             }            
         }
         $utilitarios->contador($ip);

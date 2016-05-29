@@ -202,23 +202,21 @@
                     "AgregarCupon" => FALSE,
                     "CuponNuevo" => NULL,
                     "CuponExistente" => $cupon[0]['Nro_cupon'],
-                ];                 
+                ];  
+                $id = $cupon[0]['Nro_cupon'];
             }
-        }  
-        if($array["AgregarCupon"] === TRUE)
-        {             
-            $fechaVenc = $this->devolverFormatoFecha($vencimiento);
-            $html = "<div align='center' style='border: margin: 10px; padding: 10px;'>";        
-            $html .= "<img src=http://karminna.com/app_images/cupones_logo.jpg>";
-            $html .= "<br><br><br>";
-            $html .= "<p style='font-size:20px; margin:0;'>Nro cupón: ".$id."</p>";
-            $html .= "<p>Válido hasta el ".$fechaVenc."</p>";
-            $html .= "<p style='font-size:15px; margin-top:10px;color:red;'>";
-            $html .= "Acercate a nuestros locales, pasale el número de cupón a la vendedora y obtené un 20% de descuento.";
-            $html .= "</p>";
-            $html .= "</div>";     
-            $this->EnviarMail($correo, $html);             
-        }
+        }            
+        $fechaVenc = $this->devolverFormatoFecha($vencimiento);
+        $html = "<div align='center' style='border: margin: 10px; padding: 10px;'>";        
+        $html .= "<img src=http://karminna.com/app_images/cupones_logo.jpg>";
+        $html .= "<br><br><br>";
+        $html .= "<p style='font-size:20px; margin:0;'>Nro cupón: ".$id."</p>";
+        $html .= "<p>Válido hasta el ".$fechaVenc."</p>";
+        $html .= "<p style='font-size:15px; margin-top:10px;color:red;'>";
+        $html .= "Acercate a nuestros locales, pasale el número de cupón a la vendedora y obtené un 20% de descuento.";
+        $html .= "</p>";
+        $html .= "</div>";     
+        $this->EnviarMail($correo, $html);             
         return $array;
     }   
     

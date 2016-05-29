@@ -20,7 +20,7 @@
       </div>
       <div class="modal-footer">
         <div id="privacidad">
-            <p><?php echo "Válido hasta el  ".$vencimientoCupon;?></p>
+            <p><?php echo "Válido hasta el  ".$vencCuponFormat;?></p>
             <p>El cupón tiene un uso por persona y es intransferible</p>
           <!--   <p><a href="#">Acepto los términos de uso</a></p>
             <a href="#" style="display: inline;">Políticas de privacidad</a> -->
