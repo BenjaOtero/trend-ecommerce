@@ -163,7 +163,7 @@
         }   
     }
     
-    public function AgregarCupon($nombre, $apellido, $correo,$vencimiento)
+    public function AgregarCupon($nombre, $apellido, $correo,$vencimiento,$porcentaje)
     {
         include_once ("../models/clientes_mdl.php");
         include_once ("../models/cupones_mdl.php");
@@ -174,7 +174,7 @@
         {
             $id = rand(1, 2000000000);
             $modelo_cliente->InsertCliente($id,$nombre, $apellido, $correo);
-            $modelo_cupon->InsertCupon($id, $correo, $vencimiento);
+            $modelo_cupon->InsertCupon($id, $correo,$porcentaje,$vencimiento);
             // enviar mail
             $array = [
                 "AgregarCupon" => TRUE,
@@ -188,7 +188,7 @@
             if($cupon === NULL)
             {
                 $id = rand(1, 2000000000);
-                $modelo_cupon->InsertCupon($id, $correo, $vencimiento);
+                $modelo_cupon->InsertCupon($id, $correo,$porcentaje,$vencimiento);
                 // enviar mail
                 $array = [
                     "AgregarCupon" => TRUE,

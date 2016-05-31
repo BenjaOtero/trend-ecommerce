@@ -5,6 +5,7 @@ include_once ("../models/cupones_mdl.php");
 include_once ("../models/items_mdl.php");
 include_once ("../models/articulos_mdl.php");
 include_once ("../models/generos_mdl.php");
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 $utilitarios = new Utilitarios();
 $modelo_cupon = new CuponMDL();
 $modelo_item = new ItemMDL();
@@ -47,7 +48,7 @@ switch ($action)
             $nombre = $_REQUEST['nombre'];
             $apellido = $_REQUEST['apellido'];
             $correo = $_REQUEST['correo'];
-            $datos = $utilitarios->AgregarCupon($nombre, $apellido, $correo,$vencimientoCupon);
+            $datos = $utilitarios->AgregarCupon($nombre, $apellido, $correo,$vencimientoCupon,$porcentaje);
             if($datos['AgregarCupon'] != FALSE)
             {
                $nroCupon = $datos["CuponNuevo"];
