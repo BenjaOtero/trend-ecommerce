@@ -141,21 +141,30 @@ switch ($action)
     case 'cupon':
         $view->disableLayout=true;
         $view_cupones->cuponesTemplate="../views/templates/cupon_ok_tpl.php"; 
+        break; 
+    case 'unsuscribeNews':  
+        include_once ("../models/clientes_mdl.php");
+        $modelo_cliente = new ClienteMDL();
+        $modelo_cliente->UnsuscribeNews($_REQUEST['correo']);
+        $view->contentTemplate="../views/templates/unsuscribe_news_tpl.php";        
         break;    
     default :
 } 
     if($action==='maximizarArticulo'){
     {include_once ('../views/layouts/articulo_maximizar.php');} // el layout incluye el template adentro
-}   
-else if($action==='loNuevoOutside'){
-    include_once ('../views/layouts/front_end.php'); // el layout incluye el template adentro      
-    include_once ($view->contentTemplate);   
-}  
-else {
-    if($view->disableLayout==true) 
-        {include_once ($view->contentTemplate);}
-    else
-        {include_once ('../views/layouts/front_end.php');} // el layout incluye el template adentro     
-}   
+    }   
+    else if($action==='loNuevoOutside'){
+        include_once ('../views/layouts/front_end.php'); // el layout incluye el template adentro      
+        include_once ($view->contentTemplate);   
+    }  
+    else if($action==='unsuscribeNews'){
+        include_once ($view->contentTemplate);   
+    }  
+    else {
+        if($view->disableLayout==true) 
+            {include_once ($view->contentTemplate);}
+        else
+            {include_once ('../views/layouts/front_end.php');} // el layout incluye el template adentro     
+    }   
 
 

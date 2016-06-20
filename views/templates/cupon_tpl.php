@@ -16,7 +16,8 @@ if (isset($_SESSION['facebook_access_token'])) {
 $dominio = $_SERVER['HTTP_HOST'];
 $uri = $_SERVER['REQUEST_URI']; //La URI que se empleó para acceder a la página. Por ejemplo: '/index.html'. 
 
-$loginUrl = $helper->getLoginUrl('http://localhost/trend/trunk/private_html/index.php?action=cupon&dominio='.$dominio.'&uri='.$uri);
+//$loginUrl = $helper->getLoginUrl('http://localhost/trend/trunk/private_html/index.php?action=cupon&dominio='.$dominio.'&uri='.$uri);
+$loginUrl = $helper->getLoginUrl('https://trendsistemas.com/index.php?action=cupon&dominio='.$dominio.'&uri='.$uri);
 ?>
 <div class="modal fade" id="divCupones" role="dialog">
   <div class="modal-dialog">      

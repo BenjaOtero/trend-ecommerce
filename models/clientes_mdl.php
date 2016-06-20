@@ -24,5 +24,10 @@ class ClienteMDL extends DbAbstractMDL{
         $mysqli = $this->crearConexion();
         $result = mysqli_query($mysqli,"CALL Web_Clientes_Insertar('$id','$nombre','$apellido','$correo');");   
     }    
+    
+    public function UnsuscribeNews($correo){
+        $mysqli = $this->crearConexion();
+        $result = mysqli_query($mysqli,"CALL Web_Clientes_UnsuscribeNews('$correo');");   
+    }    
 
 }
