@@ -251,9 +251,9 @@
     
     public static function LoginFacebook() {        
         $fb = new Facebook\Facebook([
-          'app_id' => '1068588159868715',
-          'app_secret' => 'd3790d1f47df4805b47976f16199fd89',
-          'default_graph_version' => 'v2.6',
+          'app_id' => '1001867536575655',
+          'app_secret' => '19976532ea1af3e9c7540e07a556dc15',
+          'default_gra]ph_version' => 'v2.6',
           ]);
         $helper = $fb->getRedirectLoginHelper();
         $permissions = ['email']; // optional

@@ -1,8 +1,7 @@
 <?php
-require_once './fblogin-v5/src/Facebook/autoload.php';
 $fb = new Facebook\Facebook([
-  'app_id' => '1068588159868715',
-  'app_secret' => 'd3790d1f47df4805b47976f16199fd89',
+  'app_id' => '1001867536575655',
+  'app_secret' => '19976532ea1af3e9c7540e07a556dc15',
   'default_graph_version' => 'v2.6',
   ]);
 $helper = $fb->getRedirectLoginHelper();
@@ -15,9 +14,9 @@ if (isset($_SESSION['facebook_access_token'])) {
 }
 $dominio = $_SERVER['HTTP_HOST'];
 $uri = $_SERVER['REQUEST_URI']; //La URI que se empleó para acceder a la página. Por ejemplo: '/index.html'. 
-
 //$loginUrl = $helper->getLoginUrl('http://localhost/trend/trunk/private_html/index.php?action=cupon&dominio='.$dominio.'&uri='.$uri);
-$loginUrl = $helper->getLoginUrl('https://trendsistemas.com/index.php?action=cupon&dominio='.$dominio.'&uri='.$uri);
+//$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/index.php?cupon=cupon');
+$loginUrl = $helper->getLoginUrl('http://karminna.com/index.php?cupon=cupon');
 ?>
 <div class="modal fade" id="divCupones" role="dialog">
   <div class="modal-dialog">      

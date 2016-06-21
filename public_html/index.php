@@ -5,6 +5,7 @@ include_once ("../models/cupones_mdl.php");
 include_once ("../models/items_mdl.php");
 include_once ("../models/articulos_mdl.php");
 include_once ("../models/generos_mdl.php");
+require_once './fblogin-v5/src/Facebook/autoload.php';
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 $utilitarios = new Utilitarios();
 $modelo_cupon = new CuponMDL();
@@ -45,9 +46,10 @@ switch ($action)
         }
         if(isset($_REQUEST['cupon']))
         {
-            $nombre = $_REQUEST['nombre'];
-            $apellido = $_REQUEST['apellido'];
-            $correo = $_REQUEST['correo'];
+            $perfil = $utilitarios->LoginFacebook();
+            $nombre = $perfil['first_name'];
+            $apellido = $perfil['last_name'];
+            $correo = $perfil['email'];
             $datos = $utilitarios->AgregarCupon($nombre, $apellido, $correo,$vencimientoCupon,$porcentaje);
             if($datos['AgregarCupon'] != FALSE)
             {
