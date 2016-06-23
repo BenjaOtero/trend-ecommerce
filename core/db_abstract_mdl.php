@@ -2,6 +2,7 @@
 abstract class DbAbstractMDL {
     
     function crearConexion(){
+        //$servidor   = 'ns21a.cyberneticos.com';
         $servidor   = 'localhost';
         $nombreBD   = 'ncsoftwa_re';
         $usuario    = 'ncsoftwa_re';

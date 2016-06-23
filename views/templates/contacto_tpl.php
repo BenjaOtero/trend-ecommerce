@@ -26,7 +26,7 @@
                     <td colspan="2"><textarea id="txtArea"></textarea></td>
                 </tr>  
                 <tr>
-                    <td colspan="2" align="center"><input id="enviar" type="button" value="Enviar"/></textarea></td>
+                    <td colspan="2" align="center"><input id="enviar" type="button" value="Enviar"/></td>
                 </tr>  
             </table>
             <br />

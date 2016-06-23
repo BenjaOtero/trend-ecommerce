@@ -224,7 +224,14 @@
     {
         require("../PHPMailer/PHPMailerAutoload.php");
         $mail = new PHPMailer();
-        $mail->IsSMTP();
+        $mail->IsSMTP();        
+        $mail->SMTPOptions = array(
+        'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+        )
+        );          
         $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;
         $mail->Host = "mail.karminna.com"; // SMTP a utilizar. Por ej. smtp.elserver.com
@@ -242,17 +249,17 @@
     //    $mail->AddAttachment("imagenes/imagen.jpg", "imagen.jpg");
         $exito = $mail->Send(); // Envía el correo.
         if($exito){
-            $mensaje = TRUE;
+            $mensaje = "Exito";
         }else{
-            $mensaje = FALSE;
+            $mensaje = "Fracasado";
         }  
-        return $mensaje;
+        echo $mensaje;
     }    
     
     public static function LoginFacebook() {        
         $fb = new Facebook\Facebook([
-          'app_id' => '1001867536575655',
-          'app_secret' => '19976532ea1af3e9c7540e07a556dc15',
+          'app_id' => '1068588159868715',
+          'app_secret' => 'd3790d1f47df4805b47976f16199fd89',
           'default_gra]ph_version' => 'v2.6',
           ]);
         $helper = $fb->getRedirectLoginHelper();

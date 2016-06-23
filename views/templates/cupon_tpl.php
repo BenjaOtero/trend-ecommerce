@@ -1,7 +1,7 @@
 <?php
 $fb = new Facebook\Facebook([
-  'app_id' => '1001867536575655',
-  'app_secret' => '19976532ea1af3e9c7540e07a556dc15',
+  'app_id' => '1068588159868715',
+  'app_secret' => 'd3790d1f47df4805b47976f16199fd89',
   'default_graph_version' => 'v2.6',
   ]);
 $helper = $fb->getRedirectLoginHelper();
@@ -34,8 +34,10 @@ $loginUrl = $helper->getLoginUrl('http://karminna.com/index.php?cupon=cupon');
       </div>
       <div class="modal-footer">
         <div id="privacidad">
-            <p><?php echo "Válido hasta el  ".$vencimientoCupon;?></p>
-            <p>El cupón tiene un uso por persona y es intransferible</p>
+            <p style="font-weight: bold;color: #333333;">Válido pago contado efectivo únicamente</p>
+            <p><?php echo "Válido hasta el  ".$vencCuponFormat;?></p>
+            <p>El cupón tiene un uso por persona y es intransferible</p>            
+            <p>No aplicable a otras promociones</p>
           <!--   <p><a href="#">Acepto los términos de uso</a></p>
             <a href="#" style="display: inline;">Políticas de privacidad</a> -->
             <button id="cerrar-cupon" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>            

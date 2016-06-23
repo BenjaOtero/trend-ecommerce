@@ -13,15 +13,17 @@
                 Acercate a nuestros locales, pasale el número de cupón a la vendedora y obtené un 20% de descuento.
             </p>
             <p style='font-size:10px; margin-top:10px;color:red;'>
-                <?php echo "Te enviamos un mail a ".$correo." con los datos de la promo.";?>
+                <?php // echo "Te enviamos un mail a ".$correo." con los datos de la promo.";?>
             </p>
             </div>            
           
       </div>
       <div class="modal-footer">
         <div id="privacidad">
+            <p style="font-weight: bold;color: #333333;">Válido pago contado efectivo únicamente</p>
             <p><?php echo "Válido hasta el  ".$vencCuponFormat;?></p>
-            <p>El cupón tiene un uso por persona y es intransferible</p>
+            <p>El cupón tiene un uso por persona y es intransferible</p>            
+            <p>No aplicable a otras promociones</p>
           <!--   <p><a href="#">Acepto los términos de uso</a></p>
             <a href="#" style="display: inline;">Políticas de privacidad</a> -->
             <button id="cerrar-cupon" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>            

@@ -47,8 +47,8 @@ switch ($action)
         if(isset($_REQUEST['cupon']))
         {
             $perfil = $utilitarios->LoginFacebook();
-            $nombre = $perfil['first_name'];
-            $apellido = $perfil['last_name'];
+            $nombre = strtoupper($perfil['first_name']);
+            $apellido = strtoupper($perfil['last_name']);
             $correo = $perfil['email'];
             $datos = $utilitarios->AgregarCupon($nombre, $apellido, $correo,$vencimientoCupon,$porcentaje);
             if($datos['AgregarCupon'] != FALSE)
