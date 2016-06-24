@@ -39,6 +39,10 @@ $(document).ready(function(){
         });
     }); 
     
+    $(document).on('click', '#li-back', function() {  
+        window.history.back();
+    }); 
+    
     $(document).on('click', '#enviar', function() {          
     	if (document.frmContacto.txtNombre.value.length===0)
         {
