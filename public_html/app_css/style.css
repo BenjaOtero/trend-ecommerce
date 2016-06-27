@@ -134,6 +134,10 @@ ul li {
   overflow: hidden
 }
 
+.div-menu-xs a{
+  color: #ffffff;
+}
+
 .div-menu-xs:hover {
     cursor: pointer;
 }
@@ -375,6 +379,10 @@ footer{
       background-repeat: repeat-x;
       padding-top: 1px;
       color: #999999;
+    }
+
+    .div-menu a{
+        color:  #ffffff;
     }
 
     .div-menu li{

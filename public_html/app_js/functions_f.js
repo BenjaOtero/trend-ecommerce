@@ -15,8 +15,8 @@ $(document).ready(function(){
           
           
           this.get('#/:genero/:item/', function(context) {
-            //    $('#fondo-loader').css("display", "block");
-           //     $('.modal-dialog').css("display", "block");
+                $('#fondo-loader').css("display", "block");
+                $('.modal-dialog').css("display", "block");
                 $(".div-menu li").each(function (){$(this).removeClass('active');});
                 $(this).addClass('active');
                 var item = this.params['item'];

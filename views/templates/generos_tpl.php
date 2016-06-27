@@ -20,7 +20,9 @@
             <div class="div-menu-xs menu-own" data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
                 <img src="app_images/menu_xs.jpg" class="" alt="">            
                 <p>
-                    <?php echo $genero['DescripcionGEN'];?>
+                  <a href="<?php echo "#/".$genero['DescripcionGEN']."/Lo_nuevo/";?>">
+                      <?php echo $genero['DescripcionGEN'];?>
+                  </a>
                 </p>
             </div>
             <?php endforeach; ?>                               
