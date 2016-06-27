@@ -1,13 +1,49 @@
 $(document).ready(function(){
        
-    $('#index').on('click',function(){
-        $(".div-menu li").each(function (){$(this).removeClass('active');});
-        $(this).addClass('active');
-        params={};
-        params.action='refreshIndex';
-        $('#div-contenido').load("index.php", params, function(){
+        var ratPack = $.sammy(function() {
+		
+          this.element_selector = '#div-contenido';
+		    
+          this.get('#/inicio', function(context) {
+                $(".div-menu li").each(function (){$(this).removeClass('active');});
+                $(this).addClass('active');
+                params={};
+                params.action='refreshIndex';
+                $('#div-contenido').load("index.php", params, function(){
+                });
+          });
+          
+          this.get('#/:name', function(context) {
+              if(this.params['name'] === "NIÑOS")
+              {
+
+              }
+              context.app.swap('');
+              context.$element().append('<h1>' + this.params['name'] + '</h1>'); 
+          });
+          
+          this.get('#/compose', function(context) {
+              context.app.swap('');
+              context.$element().append('<h1>say hello to?</h1>'
+                + '<form action="#/compose" method="post">'
+                + '<input type="text" name="to" />'
+                + '<input type="submit" name="submit" />'
+                + '</form>'); 
+          });
+          
+          this.post('#/compose', function(context) {
+              context.app.swap('');
+              var to = this.params['to'];
+              context.$element().append('<h1>hi ' + to + '</h1>');
+          });
+
         });
-    });    
+
+        $(function() {
+          ratPack.run('#/inbox');
+        });       
+       
+   
       
     $(document).on('click', '.menu-own', function() {  
         $('#fondo-loader').css("display", "block");
@@ -39,14 +75,9 @@ $(document).ready(function(){
         });
     }); 
     
-    $(document).on('click', '#li-back', function() {  
-        window.history.back();
-    }); 
-    
     $(document).on('click', '#enviar', function() {          
     	if (document.frmContacto.txtNombre.value.length===0)
         {
-           alert("Tiene que escribir un nombre");
            document.frmContacto.txtNombre.focus();
            return false;
         }

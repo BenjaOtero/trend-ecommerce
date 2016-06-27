@@ -3,13 +3,12 @@
         <div class="col-xs-12 col-md-10 col-md-offset-1 div-menu">
             <ul>
               <li id="li-contacto">CONTACTO</li>
-              <li id="li-back">Atras</li>
               <?php foreach ($view->generos as $genero):  // uso la otra sintaxis de php para templates ?>
-              <li class="menu-own" data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
-                <?php echo $genero['DescripcionGEN'];?>
+              <li data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
+                  <a href="<?php echo "#/".$genero['DescripcionGEN'];?>"><?php echo $genero['DescripcionGEN'];?></a>
               </li>
               <?php endforeach; ?>
-              <li id="index" class="active">INICIO</li>
+              <li><a class="active" href="#/inicio">INICIO</a></li>
             </ul>  
         </div>
     </div>           
