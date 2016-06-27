@@ -90,14 +90,14 @@ switch ($action)
         $ip = $_SERVER["REMOTE_ADDR"];
         $utilitarios->contador($ip);        
         $view->disableLayout=true;
-        $idItem=$_REQUEST['item'];
-        $idGenero=$_REQUEST['genero'];
+        $item=$_REQUEST['item'];
+        $genero=$_REQUEST['genero'];
         $view_items = new stdClass();
-        $view_items->items=$modelo_item->Listar($idGenero);  
+        $view_items->items=$modelo_item->Listar($genero);  
         $view_items->itemsTemplate="../views/templates/items_tpl.php";
         $view_items->itemsXsTemplate="../views/templates/items_xs_tpl.php";
         $registro = current($view_items->items);
-        $view_articulos->articulos=$modelo_articulo->Articulos($idItem, $idGenero);                        
+        $view_articulos->articulos=$modelo_articulo->Articulos($item, $genero);                        
         $view_articulos->articulosTemplate="../views/templates/articulos_tpl.php";
         $view->contentTemplate="../views/templates/catalogo_tpl.php";
         $titulo = "Lo nuevo";

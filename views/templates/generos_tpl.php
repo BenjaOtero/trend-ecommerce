@@ -4,8 +4,10 @@
             <ul>
               <li id="li-contacto">CONTACTO</li>
               <?php foreach ($view->generos as $genero):  // uso la otra sintaxis de php para templates ?>
-              <li data-idItem="0" data-idGenero="<?php echo $genero['IdGeneroGEN'];?>">
-                  <a href="<?php echo "#/".$genero['DescripcionGEN'];?>"><?php echo $genero['DescripcionGEN'];?></a>
+              <li>
+                  <a href="<?php echo "#/".$genero['DescripcionGEN']."/Lo_nuevo/";?>">
+                      <?php echo $genero['DescripcionGEN'];?>
+                  </a>
               </li>
               <?php endforeach; ?>
               <li><a class="active" href="#/inicio">INICIO</a></li>

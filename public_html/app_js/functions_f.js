@@ -13,13 +13,23 @@ $(document).ready(function(){
                 });
           });
           
-          this.get('#/:name', function(context) {
-              if(this.params['name'] === "NIÑOS")
-              {
-
-              }
-              context.app.swap('');
-              context.$element().append('<h1>' + this.params['name'] + '</h1>'); 
+          
+          this.get('#/:genero/:item/', function(context) {
+            //    $('#fondo-loader').css("display", "block");
+           //     $('.modal-dialog').css("display", "block");
+                $(".div-menu li").each(function (){$(this).removeClass('active');});
+                $(this).addClass('active');
+                var item = this.params['item'];
+                var genero = this.params['genero'];  //obtengo el id que guardamos en data-idGenero
+                //preparo los parametros
+                params={};
+                params.action='itemsYarticulos';
+                params.item=item;
+                params.genero=genero;
+                $('#div-contenido').load("index.php",params,function(){
+                    $('#fondo-loader').css("display", "none");
+                    $('#modal-cargador').css("display", "none");
+                });
           });
           
           this.get('#/compose', function(context) {
@@ -40,28 +50,9 @@ $(document).ready(function(){
         });
 
         $(function() {
-          ratPack.run('#/inbox');
+          ratPack.run('#/inicio');
         });       
-       
-   
-      
-    $(document).on('click', '.menu-own', function() {  
-        $('#fondo-loader').css("display", "block");
-        $('.modal-dialog').css("display", "block");
-        $(".div-menu li").each(function (){$(this).removeClass('active');});
-        $(this).addClass('active');
-        var genero=$(this).attr('data-idGenero');  //obtengo el id que guardamos en data-idGenero
-        var item=$(this).attr('data-idItem');  //obtengo el id que guardamos en data-idItem
-        //preparo los parametros
-        params={};
-        params.action='itemsYarticulos';
-        params.item=item;
-        params.genero=genero;
-        $('#div-contenido').load("index.php",params,function(){
-            $('#fondo-loader').css("display", "none");
-            $('#modal-cargador').css("display", "none");
-        });
-    });  
+              
     
     $(document).on('click', '#li-contacto', function() {  
         $('#fondo-loader').css("display", "block");
