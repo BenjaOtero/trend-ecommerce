@@ -86,21 +86,32 @@ switch ($action)
         $view->contentTemplate="../views/templates/catalogo_tpl.php";
         $titulo = "Lo nuevo";        
         break;
-    case 'itemsYarticulos':
+    case 'items_articulos':
         $ip = $_SERVER["REMOTE_ADDR"];
         $utilitarios->contador($ip);        
         $view->disableLayout=true;
         $item=$_REQUEST['item'];
         $genero=$_REQUEST['genero'];
-        $view_items = new stdClass();
-        $view_items->items=$modelo_item->Listar($genero);  
-        $view_items->itemsTemplate="../views/templates/items_tpl.php";
-        $view_items->itemsXsTemplate="../views/templates/items_xs_tpl.php";
-        $registro = current($view_items->items);
-        $view_articulos->articulos=$modelo_articulo->Articulos($item, $genero);                        
-        $view_articulos->articulosTemplate="../views/templates/articulos_tpl.php";
-        $view->contentTemplate="../views/templates/catalogo_tpl.php";
-        $titulo = "Lo nuevo";
+        if($item === "Lo_nuevo")
+        {
+            $view_items = new stdClass();
+            $view_items->items=$modelo_item->Listar($genero);  
+            $view_items->itemsTemplate="../views/templates/items_tpl.php";
+            $view_items->itemsXsTemplate="../views/templates/items_xs_tpl.php";
+            $registro = current($view_items->items);
+            $view_articulos->articulos=$modelo_articulo->Articulos($item, $genero);  
+            $articulos = current($view_articulos->articulos);
+            $view_articulos->articulosTemplate="../views/templates/articulos_tpl.php";
+            $view->contentTemplate="../views/templates/catalogo_tpl.php";
+            $titulo = "Lo nuevo";            
+        }
+        else
+        {
+            $view_articulos->articulos=$modelo_articulo->Articulos($item, $genero);
+            $registro = current($view_articulos->articulos);        
+            $view->contentTemplate="../views/templates/articulos_tpl.php"; // seteo el template que se va a mostrar  
+            $titulo = $item;
+        }
         break;
     case 'byItem':
         $view->disableLayout=true;
@@ -153,7 +164,7 @@ switch ($action)
     default :
 } 
     if($action==='maximizarArticulo'){
-    {include_once ('../views/layouts/articulo_maximizar.php');} // el layout incluye el template adentro
+        {include_once ('../views/layouts/articulo_maximizar.php');} // el layout incluye el template adentro
     }   
     else if($action==='loNuevoOutside'){
         include_once ('../views/layouts/front_end.php'); // el layout incluye el template adentro      

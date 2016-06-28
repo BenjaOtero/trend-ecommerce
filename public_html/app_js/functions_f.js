@@ -1,57 +1,65 @@
 $(document).ready(function(){
        
-        var ratPack = $.sammy(function() {
-		
-          this.element_selector = '#div-contenido';
-		    
-          this.get('#/inicio', function(context) {
-                $(".div-menu li").each(function (){$(this).removeClass('active');});
-                $(this).addClass('active');
-                params={};
-                params.action='refreshIndex';
-                $('#div-contenido').load("index.php", params, function(){
-                });
-          });
-          
-          
-          this.get('#/:genero/:item/', function(context) {
-                $('#fondo-loader').css("display", "block");
-                $('.modal-dialog').css("display", "block");
-                $(".div-menu li").each(function (){$(this).removeClass('active');});
-                $(this).addClass('active');
-                var item = this.params['item'];
-                var genero = this.params['genero'];  //obtengo el id que guardamos en data-idGenero
-                //preparo los parametros
-                params={};
-                params.action='itemsYarticulos';
-                params.item=item;
-                params.genero=genero;
+    var ratPack = $.sammy(function() {
+      this.element_selector = '#div-contenido';
+
+      this.get('#/inicio', function(context) {
+            $(".div-menu li").each(function (){$(this).removeClass('active');});
+            $(this).addClass('active');
+            params={};
+            params.action='refreshIndex';
+            $('#div-contenido').load("index.php", params, function(){
+            });
+      });
+
+      this.get('#/:genero/:item/', function(context) {
+            $('#fondo-loader').css("display", "block");
+            $('.modal-dialog').css("display", "block");
+            $(".div-menu li").each(function (){$(this).removeClass('active');});
+            $(this).addClass('active');
+            var item = this.params['item'];
+            var genero = this.params['genero'];  //obtengo el id que guardamos en data-idGenero
+            //preparo los parametros
+            params={};
+            params.action='items_articulos';
+            params.item=item;
+            params.genero=genero;
+            if(item=="Lo_nuevo")
+            {
                 $('#div-contenido').load("index.php",params,function(){
                     $('#fondo-loader').css("display", "none");
                     $('#modal-cargador').css("display", "none");
-                });
-          });
-          
-          this.get('#/compose', function(context) {
-              context.app.swap('');
-              context.$element().append('<h1>say hello to?</h1>'
-                + '<form action="#/compose" method="post">'
-                + '<input type="text" name="to" />'
-                + '<input type="submit" name="submit" />'
-                + '</form>'); 
-          });
-          
-          this.post('#/compose', function(context) {
-              context.app.swap('');
-              var to = this.params['to'];
-              context.$element().append('<h1>hi ' + to + '</h1>');
-          });
+                });                
+            }
+            else
+            {
+                $('#columna-articulos').load("index.php",params,function(){
+                    $('#fondo-loader').css("display", "none");
+                    $('.modal-dialog').css("display", "none");
+                });                
+            }
+      });
 
-        });
+      this.get('#/compose', function(context) {
+          context.app.swap('');
+          context.$element().append('<h1>say hello to?</h1>'
+            + '<form action="#/compose" method="post">'
+            + '<input type="text" name="to" />'
+            + '<input type="submit" name="submit" />'
+            + '</form>'); 
+      });
 
-        $(function() {
-          ratPack.run('#/inicio');
-        });       
+      this.post('#/compose', function(context) {
+          context.app.swap('');
+          var to = this.params['to'];
+          context.$element().append('<h1>hi ' + to + '</h1>');
+      });
+
+    });
+
+    $(function() {
+      ratPack.run('#/inicio');
+    });       
               
     
     $(document).on('click', '#li-contacto', function() {  
