@@ -167,6 +167,13 @@ ul li {
   font-size: 0.9rem;
 }
 
+.div-menu-items-xs a {
+  color: #fff; 
+  margin-top: -26px; 
+  margin-left: 50px;
+  font-size: 0.9rem;
+}
+
 /* *************************************
 * *************** Contacto *************
 * ************************************ */
@@ -354,6 +361,21 @@ footer{
   font-size: 0.9rem;  
 }
 
+    #menu-categorias{
+      color: #ffffff;
+    }
+    
+    #menu-categorias > li{
+      background-image: url('../app_images/menu_items_xs.jpg'); 
+      height: 40px; 
+      padding-top: 10px; 
+      padding-left: 60px;
+    }
+    
+    #menu-categorias a{
+      color: #FFFFFF; 
+      width: 700px;
+    }
 /* *************************************
 * *********** Media queries ************
 * ************************************ */
@@ -382,7 +404,7 @@ footer{
     }
 
     .div-menu a{
-        color:  #ffffff;
+      //  color:  #ffffff;
     }
 
     .div-menu li{
@@ -400,8 +422,10 @@ footer{
       color: #ffffff;
     }
     .active{
-      color: #ffffff;
+      color: red;
     }
+    
+
 
     .main-logo {
       width: 100%;
