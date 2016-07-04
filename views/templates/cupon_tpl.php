@@ -18,7 +18,7 @@ $uri = $_SERVER['REQUEST_URI']; //La URI que se empleó para acceder a la págin
 //$loginUrl = $helper->getLoginUrl('http://localhost/Ecommerce/trunk/public_html/index.php?cupon=cupon');
 $loginUrl = $helper->getLoginUrl('http://karminna.com/index.php?cupon=cupon');
 ?>
-<div class="modal fade" id="divCupones" role="dialog">
+<div class="modal fade hidden-xs" id="divCupones" role="dialog">
   <div class="modal-dialog">      
     <!-- Modal content-->
     <div class="modal-content">
@@ -46,8 +46,38 @@ $loginUrl = $helper->getLoginUrl('http://karminna.com/index.php?cupon=cupon');
       </div>
     </div>      
   </div>
-</div>       
+</div> 
+<div id="divCupones-xs">
+    <div class="row hidden-lg hidden-md hidden-sm">
+        <div class="col-xs-12 col-md-10 col-md-offset-1" style="background-color: rgb(255, 255, 255);">
+            <div align="center">
+                <br>
+                <img src="app_images/cupon_xs.jpg">
+                <p>En toda tu compra.</p>
+                  <div id="facebook-login" align="center">
+                      <p>Logueate con facebook y obtené tu cupón</p>   
+                      <a href="<?php echo $loginUrl ?>">
+                          <img src="app_images/facebook_login.jpg">
+                      </a>                        
+                  </div>              
+            </div>
+              <div id="privacidad">
+                  <p style="font-weight: bold;color: #333333;">Válido pago contado efectivo únicamente</p>
+                  <p><?php echo "Válido hasta el  ".$vencCuponFormat;?></p>
+                  <p>El cupón tiene un uso por persona y es intransferible</p>            
+                  <p>No aplicable a otras promociones</p>
+                <!--   <p><a href="#">Acepto los términos de uso</a></p>
+                  <a href="#" style="display: inline;">Políticas de privacidad</a> -->           
+              </div>                    
+            
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript">
-    $('#divCupones').modal('show'); 
+    var ventana_ancho = $(window).width();
+    if(ventana_ancho>750)
+    {
+        $('#divCupones').modal('show'); 
+    }    	
 </script>            

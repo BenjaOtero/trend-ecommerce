@@ -59,12 +59,12 @@
                     <h1 class="main-logo">KARMINNA<span class="ocote">ON LINE STORE</span></h1>
                 </div>        
             </div>               
-        </div>    
+        </div>   
+        <div id="cupon" class="container">   
+            <?php include_once ($view_cupones->cuponesTemplate); ?>
+        </div>        
         <?php include_once ($view->generosTemplate); // incluyo el template que corresponda ?>
     </header>
-    <div id="cupon" class="container">   
-        <?php include_once ($view_cupones->cuponesTemplate); ?>
-    </div>
     <div id="contacto">      
     </div>
     <div id="div-contenido">      
@@ -72,21 +72,25 @@
     </div>
     <footer>
         <div class="container">
-            <div class="row hidden-xs">
-                <div class="col-xs-12 col-md-10 col-md-offset-1 direccion">
-                      <p>Av. Colón 3502 local 3, ciudad de Córdoba.<br/>TE 0351 487 0111</p>
-                      <p>Tucumán 481, ciudad de Jesús María.<br/>TE  03525 606 403</p>
-                      <p class="copyright">&copy;&nbsp;All rights reserved - Powered by Trend Sistemas</p>
+            <div class="rows">
+
+                <div class="row hidden-xs">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1 direccion">
+                          <p>Av. Colón 3502 local 3, ciudad de Córdoba.<br/>TE 0351 487 0111</p>
+                          <p>Tucumán 481, ciudad de Jesús María.<br/>TE  03525 606 403</p>
+                          <p class="copyright">&copy;&nbsp;All rights reserved - Powered by Trend Sistemas</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row visible-xs" style="overflow: hidden;">
-                <img src="app_images/footer_xs.jpg" class="" alt="">
-                <div class="col-xs-12 direccion">                    
-                      <p>Av. Colón 3502 local 3, ciudad de Córdoba.<br/>TE 0351 487 0111</p>
-                      <p>Tucumán 481, ciudad de Jesús María.<br/>TE  03525 606 403</p>
-                      <p class="copyright">&copy;&nbsp;All rights reserved - Powered by Trend Sistemas</p>            
-                </div>
-            </div>              
+                <div class="row visible-xs" style="overflow: hidden;">
+                    <img src="app_images/footer_xs.jpg" class="" alt="">
+                    <div class="col-xs-12 direccion">                    
+                          <p>Av. Colón 3502 local 3, ciudad de Córdoba.<br/>TE 0351 487 0111</p>
+                          <p>Tucumán 481, ciudad de Jesús María.<br/>TE  03525 606 403</p>
+                          <p class="copyright">&copy;&nbsp;All rights reserved - Powered by Trend Sistemas</p>            
+                    </div>
+                </div>                  
+                
+            </div>            
         </div>
     </footer>    
   </body>

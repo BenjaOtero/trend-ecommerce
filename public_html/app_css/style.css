@@ -266,6 +266,10 @@ ul li {
 * ********** Cupon descuento ***********
 * ************************************ */
 
+    #divCupones{
+        display: none;
+    }  
+
 #div-cupones-body > p {
     margin: 10px;
     font-size: 25px;
@@ -301,11 +305,10 @@ ul li {
 #facebook-login p {
 	font-size: 16px;
 	color: #000000;
-	margin-top: 10px;
 }
 
 #facebook-login {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 
@@ -404,7 +407,7 @@ footer{
     }
 
     .div-menu a{
-      //  color:  #ffffff;
+        color:  #ffffff;
     }
 
     .div-menu li{
@@ -422,7 +425,7 @@ footer{
       color: #ffffff;
     }
     .active{
-      color: red;
+      color: white;
     }
     
 
@@ -447,6 +450,16 @@ footer{
       font-size: 1.7rem;
     }
 
+    #facebook-login p {
+            font-size: 16px;
+            color: #000000;
+            margin-top: 10px;
+    }
+
+    #facebook-login {
+        margin-top: 30px;
+    } 
+    
     #div-contenido{
         margin-top: 0px;
     }    
