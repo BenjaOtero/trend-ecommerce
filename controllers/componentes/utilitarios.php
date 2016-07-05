@@ -127,9 +127,10 @@
         $registro = $modelo_contador->Listar($ip);
         if($registro != NULL)
         {
-           $diferencia = $registro[0]['diferencia'];
-           $tiempoTrascurrido=(int)substr($diferencia,0,2); 
-            if($tiempoTrascurrido>0)
+            $diferencia = $registro[0]['diferencia'];
+            $tiempoTrascurrido = explode(":", $diferencia);
+            $horasTranscurridas = (int)$tiempoTrascurrido[0];
+            if($horasTranscurridas>0)
             {
                 $modelo_contador->Insertar($ip); 
             }
@@ -138,6 +139,7 @@
         {
             $modelo_contador->Insertar($ip);  
         }
+        //-01:37:42 a las y 22
     }
     
     public static function CuponConfig()            
