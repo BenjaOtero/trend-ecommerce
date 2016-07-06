@@ -25,7 +25,24 @@ $server->register(
                 // use: encoded or literal
                 'encoded',
                 // description: documentation for the method
-                'A simple Hello World web method');
+                'Redimensiona las imagenes.');
+$server->register(
+                // method name:
+                'BorrarImagenes', 		 
+                // parameter list:
+                array('name'=>'xsd:string'), 
+                // return value(s):
+                array('return'=>'xsd:string'),
+                // namespace:
+                $namespace,
+                // soapaction: (use default)
+                false,
+                // style: rpc or document
+                'rpc',
+                // use: encoded or literal
+                'encoded',
+                // description: documentation for the method
+                'Borra imagenes en el servidor.');
                 
 // Get our posted data if the service is being consumed
 // otherwise leave this data blank.                
@@ -184,5 +201,46 @@ function TratarImagenes($articulo) {
             imagejpeg($tmp,"images/".$nombre,$calidad);                          
         }            
         return $articulo;
+}
 
+function BorrarImagenes($articulos) {
+    $imagenes = explode(";",$articulos);
+    foreach ($imagenes as $imagen) {
+        if($imagen !="")
+        {
+            if(file_exists("images/".$imagen."_col.jpg"))
+            {
+                unlink("images/".$imagen."_col.jpg");
+            }
+            if(file_exists("images/".$imagen."_large.jpg"))
+            {
+                unlink("images/".$imagen."_large.jpg");
+            }
+            if(file_exists("images/".$imagen."_medium.jpg"))
+            {
+                unlink("images/".$imagen."_medium.jpg");
+            }
+            if(file_exists("images/".$imagen."_small.jpg"))
+            {
+                unlink("images/".$imagen."_small.jpg");
+            }
+            if(file_exists("images/".$imagen."_xsmall.jpg"))
+            {
+                unlink("images/".$imagen."_xsmall.jpg");
+            }
+            
+            if(file_exists("images/".$imagen."_bck_large.jpg"))
+            {
+                unlink("images/".$imagen."_bck_large.jpg");
+            }
+            if(file_exists("images/".$imagen."_bck_medium.jpg"))
+            {
+                unlink("images/".$imagen."_bck_medium.jpg");
+            }
+            if(file_exists("images/".$imagen."_bck_xsmall.jpg"))
+            {
+                unlink("images/".$imagen."_bck_xsmall.jpg");
+            }
+        }
+    }
 }
