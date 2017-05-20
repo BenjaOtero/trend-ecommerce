@@ -11,7 +11,7 @@ $(document).ready(function(){
             $('#div-contenido').load("index.php", params, function(){
             });
       });
-
+      /*
       this.get('#/:genero/:item/', function(context) {
             $('#fondo-loader').css("display", "block");
             $('.modal-dialog').css("display", "block");
@@ -56,7 +56,7 @@ $(document).ready(function(){
       });
 
     });
-
+*/
     $(function() {
       ratPack.run('#/inicio');
     });       
@@ -246,7 +246,7 @@ $(document).ready(function(){
         var articulo = $(this).attr('data-articulo');
         $("#" + articulo).removeClass("talle-inactivos");       
     });   
-    
+
     $(document).on('mouseover', '.color', function() {             
         var imagen=$(this).attr('data-mini');
         $('#img-articulo').attr('src',imagen);      
